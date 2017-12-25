@@ -1,0 +1,9 @@
+ 12/24/2017 - 
+ -Build schematic
+    -Create blank parts for Mechanica
+    -Resolve appropriate selectedId for each blank part to retrieve part data from the cdb
+    -Load cdb data onto blank parts
+    -Set Mechanica parts to newly generated parts
+-Test Mechanica
+    -Try printing data from Mechanica after building the schematic
+    -If successful, begin working on building sprite from parts

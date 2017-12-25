@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+    <chrome name = "background" center_x = "true" center_y = "true" x="0" y="0" width="160" height="320"/>
+    <button x = "background.center-32" y = "background.top+16"  label = "Build Schematic">
+        <param type = "string" value = "build_schematic"/>
+    </button>
+    <button x = "background.center-32" y = "background.top+48" label = "Hangar">
+        <param type = "string" value = "hangar"/>
+    </button>
+    <button x = "background.center-32" y = "background.top+80" label = "Quit"/>
+</data>

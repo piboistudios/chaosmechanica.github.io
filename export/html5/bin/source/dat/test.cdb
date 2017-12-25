@@ -1,0 +1,49 @@
+{
+	"sheets": [
+		{
+			"name": "parts",
+			"columns": [
+				{
+					"typeStr": "0",
+					"name": "id"
+				},
+				{
+					"typeStr": "5:head,core,arms,legs,thruster,equip1,equip2,os,slot1,slot2,software",
+					"name": "type",
+					"display": null
+				},
+				{
+					"typeStr": "1",
+					"name": "number",
+					"display": null
+				},
+				{
+					"typeStr": "1",
+					"name": "desc"
+				},
+				{
+					"typeStr": "4",
+					"name": "weight"
+				},
+				{
+					"typeStr": "4",
+					"name": "tempCutoff"
+				}
+			],
+			"lines": [
+				{
+					"id": "standardLOCO",
+					"desc": "ASSY STANDARD LOCO",
+					"number": "x0000-0000",
+					"weight": 90.25,
+					"type": 3,
+					"tempCutoff": 0
+				}
+			],
+			"separators": [],
+			"props": {}
+		}
+	],
+	"customTypes": [],
+	"compress": false
+}
