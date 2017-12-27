@@ -5,8 +5,11 @@
 -D lime=2.9.1
 -cp C:/Users/Dell/openfl/3,6,1
 -D openfl=3.6.1
--cp C:/Users/Dell/hxcpp/3,4,188
--D hxcpp=3.4.188
+-cp C:/Users/Dell/hxcpp/git
+-D hxcpp=3.4.0
+--macro keep('IntIterator')
+-cp C:/Users/Dell/hscript/2,1,1
+-D hscript=2.1.1
 -cp C:/Users/Dell/flixel-addons/2,5,0
 -D flixel-addons=2.5.0
 -cp C:/Users/Dell/flixel-ui/2,2,0

@@ -3,10 +3,13 @@
 //implement String interface!
 import flixel.addons.ui.StrNameLabel;
 import dat.Data;
+import util.mechanica.Mechanica;
 
+import util.control.PlayerController;
 
 class Player
 {
+	public var controller:PlayerController;
 	public var partList:Array<StrNameLabel>;
 	private var mechanica:Array<Mechanica>;
 	private var current:Int = 0;
@@ -16,6 +19,7 @@ class Player
 			var pList = ["standardBrainCase","standardLocomote","standardKernel",
 		"standardThruster","standardPistol","standardRifle","standardCarrier"
 		];
+			controller = new PlayerController();
 			mechanica = new Array<Mechanica>();
 			setMechanica(1);
 			partList = new Array<StrNameLabel>();
@@ -34,6 +38,7 @@ class Player
 		if(mechanica[current] == null)
 		{
 			mechanica[current] = new Mechanica();
+			mechanica[current].loadGraphic(AssetPaths.blank__png);
 		}
 		return true;
 	}

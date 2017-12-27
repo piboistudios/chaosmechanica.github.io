@@ -4,6 +4,8 @@
     <button x = "background.center-32" y = "background.top+16"  label = "Build Schematic">
         <param type = "string" value = "build_schematic"/>
     </button>
-    <button x = "background.center-32" y = "background.top+48" label = "Load Schematic"/>
+    <button x = "background.center-32" y = "background.top+48" label = "Hangar">
+        <param type = "string" value = "hangar"/>
+    </button>
     <button x = "background.center-32" y = "background.top+80" label = "Quit"/>
 </data>
