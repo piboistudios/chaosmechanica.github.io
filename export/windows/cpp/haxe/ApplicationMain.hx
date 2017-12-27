@@ -138,7 +138,7 @@ class ApplicationMain {
 			(true ? flash.Lib.RESIZABLE : 0) |
 			(false ? flash.Lib.BORDERLESS : 0) |
 			(true ? flash.Lib.VSYNC : 0) |
-			(false ? flash.Lib.FULLSCREEN : 0) |
+			(true ? flash.Lib.FULLSCREEN : 0) |
 			(0 == 4 ? flash.Lib.HW_AA_HIRES : 0) |
 			(0 == 2 ? flash.Lib.HW_AA : 0),
 			"ChaosMechanica",
@@ -635,7 +635,7 @@ class ApplicationMain {
 		
 		config = {
 			
-			build: "381",
+			build: "672",
 			company: "HaxeFlixel",
 			file: "ChaosMechanica",
 			fps: 60,
@@ -651,7 +651,7 @@ class ApplicationMain {
 					borderless: false,
 					depthBuffer: false,
 					display: 0,
-					fullscreen: false,
+					fullscreen: true,
 					hardware: true,
 					height: 480,
 					parameters: "{}",

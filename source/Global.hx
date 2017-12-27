@@ -1,11 +1,13 @@
 ﻿import dat.Data;
 import flixel.addons.ui.FlxUIText;
-import flixel.FlxBasic;
+import flixel.system.debug.log.LogStyle;
 
 class Global
 {
 	static public var text:FlxUIText;
 	static public var player:Player;
+	static public var logStyle:LogStyle;
+	
 	static public function log(_text:String):Void
 	{
 		text.text = _text;

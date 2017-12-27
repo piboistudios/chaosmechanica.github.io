@@ -59,7 +59,7 @@
 					"armorRating": 15,
 					"categoricalData": "standardHeadU",
 					"make": 0,
-					"imageFile": "head.png"
+					"imageFile": "standard-rev1/head.png"
 				},
 				{
 					"id": "standardLocomote",
@@ -70,7 +70,8 @@
 					"tempCutoff": 845,
 					"enUsage": 8,
 					"armorRating": 45,
-					"make": 0
+					"make": 0,
+					"imageFile": "standard-rev1/legs.png"
 				},
 				{
 					"id": "standardKernel",
@@ -81,7 +82,8 @@
 					"weight": 100,
 					"tempCutoff": 1350,
 					"enUsage": 16,
-					"armorRating": 50
+					"armorRating": 50,
+					"imageFile": "standard-rev1/core.png"
 				},
 				{
 					"id": "standardCarrier",
@@ -92,7 +94,8 @@
 					"weight": 54,
 					"tempCutoff": 350,
 					"enUsage": 5,
-					"armorRating": 20
+					"armorRating": 20,
+					"imageFile": "standard-rev1/arms.png"
 				},
 				{
 					"id": "standardThruster",
@@ -103,7 +106,8 @@
 					"weight": 57,
 					"tempCutoff": 1750,
 					"enUsage": 5,
-					"armorRating": 15
+					"armorRating": 15,
+					"imageFile": "standard-rev1/thruster.png"
 				},
 				{
 					"id": "standardPistol",
@@ -114,7 +118,8 @@
 					"weight": 15,
 					"tempCutoff": 900,
 					"enUsage": 2,
-					"armorRating": 0
+					"armorRating": 0,
+					"imageFile": "standard-rev1/head.png"
 				},
 				{
 					"id": "standardRifle",
@@ -125,7 +130,8 @@
 					"weight": 43,
 					"tempCutoff": 1205,
 					"enUsage": 4,
-					"armorRating": 0
+					"armorRating": 0,
+					"imageFile": "standard-rev1/head.png"
 				}
 			],
 			"separators": [],
@@ -201,6 +207,11 @@
 				},
 				{
 					"typeStr": "4",
+					"name": "performanceWeightCapacity",
+					"display": 1
+				},
+				{
+					"typeStr": "4",
 					"name": "weightCapacity"
 				},
 				{
@@ -215,12 +226,14 @@
 					"id": "standardLocomote",
 					"stability": 50,
 					"weightCapacity": 550,
-					"legRef": "standard"
+					"legRef": "standard",
+					"performanceWeightCapacity": 0.4
 				},
 				{
 					"id": "standardCarrier",
 					"stability": 20,
-					"weightCapacity": 300
+					"weightCapacity": 300,
+					"performanceWeightCapacity": 0.5
 				}
 			],
 			"separators": [],
@@ -242,13 +255,34 @@
 					"typeStr": "4",
 					"name": "acceleration",
 					"display": 1
+				},
+				{
+					"typeStr": "4",
+					"name": "brakingForce"
+				},
+				{
+					"typeStr": "4",
+					"name": "turningSpeed"
+				},
+				{
+					"typeStr": "2",
+					"name": "animated",
+					"display": null
+				},
+				{
+					"typeStr": "3",
+					"name": "frameRate"
 				}
 			],
 			"lines": [
 				{
 					"id": "standard",
-					"topSpeed": 20,
-					"acceleration": 0.3
+					"topSpeed": 135,
+					"acceleration": 0.05,
+					"turningSpeed": 5,
+					"brakingForce": 600,
+					"animated": false,
+					"frameRate": 6
 				}
 			],
 			"separators": [],
