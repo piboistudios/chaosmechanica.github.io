@@ -50,6 +50,14 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.TEXT);
 		
 		
+		urls.push ("assets/data/TestZone.oel");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("assets/data/TestZone.oep");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
 		urls.push ("assets/gfx/test.ase");
 		types.push (lime.Assets.AssetType.BINARY);
 		
@@ -96,10 +104,6 @@ class ApplicationMain {
 		
 		urls.push ("assets/images/standard-rev1/legs.png");
 		types.push (lime.Assets.AssetType.IMAGE);
-		
-		
-		urls.push ("assets/images/standard-rev1/mechanica.ase");
-		types.push (lime.Assets.AssetType.BINARY);
 		
 		
 		urls.push ("assets/images/standard-rev1/thruster.png");
@@ -339,7 +343,7 @@ class ApplicationMain {
 		
 		config = {
 			
-			build: "642",
+			build: "776",
 			company: "HaxeFlixel",
 			file: "ChaosMechanica",
 			fps: 60,

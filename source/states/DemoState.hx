@@ -3,57 +3,126 @@ package states;
 import flixel.FlxState;
 import flixel.addons.editors.ogmo.FlxOgmoLoader;
 import flixel.FlxObject;
-import flixel.math.FlxRect;
+//import flixel.math.FlxRect;
 import flixel.FlxG;
-import flixel.system.debug.FlxDebugger;
+//import flixel.system.debug.FlxDebugger;
 import flixel.system.debug.watch.Tracker;
 import math.MoreMath;
+import util.interfaces.ICollider;
 import util.mechanica.Mechanica;
 import flixel.tile.FlxTilemap;
-import flixel.math.FlxPoint;
+import util.control.Controller;
+//import flixel.math.FlxPoint;
 import flixel.addons.display.FlxZoomCamera;
-import flixel.math.FlxMath;
+//import flixel.math.FlxMath;
+import flixel.FlxSprite;
 
 class DemoState extends FlxState
 {
     private var mapData:FlxOgmoLoader;
-    private var map:FlxTilemap;
+    public var map:FlxTilemap;
+    private var playerMech:Mechanica;
+    private var testMech:Mechanica;
+    private var testMech2:Mechanica;
 
     override public function create()
     {
         super.create();
+        playerMech = Global.player.getMechanica();
+        setupEnvironment();
+        setupDebugger();
+
+    }
+    private function setupEnvironment():Void
+    {
+        Global.setup();
+        
         FlxG.worldBounds.set(720,720);
         mapData = new FlxOgmoLoader(AssetPaths.TestZone__oel); //generate map data from demozone map
         map = mapData.loadTilemap(AssetPaths.demozone__png, 32, 32, "environment"); //load map data to a tilemap
         //map.follow();//lock camera to map edges
         map.setTileProperties(1, FlxObject.NONE);
         map.setTileProperties(2, FlxObject.ANY);
+        Global.map = map;
         add(map);
-        add(Global.player.getMechanica());
-        mapData.loadEntities(placeEntities, "entities");
-        FlxG.cameras.remove(FlxG.camera);
-        FlxG.camera = FlxG.cameras.add(new FlxZoomCamera(0,0,640, 480, 1));
 
-        FlxG.camera.follow(Global.player.getMechanica().core);
-        FlxG.debugger.addTrackerProfile(new TrackerProfile(Mechanica, ["speed","velocity","drag"]));
-        FlxG.debugger.track(Global.player.getMechanica());
+        Global.add(playerMech);
+        testMech = buildTestMech();
+        testMech2 = buildTestMech();
+        testMech.enable();
+        testMech2.enable();
+        Global.add(testMech);
+        Global.add(testMech2);
+        mapData.loadEntities(placeEntities, "entities");
         
-        
-       
+        FlxG.cameras.remove(FlxG.camera);
+        FlxG.camera = FlxG.cameras.add(new FlxZoomCamera(0,0,640, 480, 1.4));
+
+        FlxG.camera.follow(playerMech.core);
+        Global.mechGroupA.add(playerMech);
+        Global.mechGroupA.add(testMech2);
+        Global.mechGroupB.add(testMech);
     }
-    
+    private function buildTestMech():Mechanica
+    {
+        var mech = new Mechanica();
+        mech.buildFromParts("standardBrainCase", "standardKernel", "standardCarrier","standardLocomote","standardThruster","standardPistol","standardPistol");
+        return mech;
+
+    }
+    private function setupDebugger():Void
+
+    {
+        FlxG.debugger.addTrackerProfile(new TrackerProfile(Mechanica, ["speed","velocity","drag", "locomotionStatus"]));
+        
+        FlxG.debugger.track(playerMech);
+        //setup commands
+        FlxG.console.registerClass(Global);
+        registerMechanicaParts();
+        
+    }
+    private function registerMechanicaParts():Void
+    {
+            FlxG.console.registerObject("head", playerMech.head);
+            FlxG.console.registerObject("core", playerMech.core);
+            FlxG.console.registerObject("arms", playerMech.arms);
+            FlxG.console.registerObject("legs", playerMech.legs);
+            FlxG.console.registerObject("thruster", playerMech.thruster);
+            //FlxG.console.registerObject("core", playerMech.core);
+    }
     override public function update(elapsed:Float):Void
     {
-        fixJitter();
+     //-   fixJitter();
         super.update(elapsed);
-        var mechanica = Global.player.getMechanica();
+        var mechanica = playerMech;
         FlxG.camera.angle = MoreMath.lerpAngle(FlxG.camera.angle, mechanica.angle * -1, elapsed * 5);
       //  FlxG.camera.angle = MoreMath.wrapAngle(FlxG.camera.angle);
         //FlxG.camera.setPosition(mechanica.x,mechanica.y);//FlxPoint.weak(mechanica.x, mechanica.y));
-        FlxG.collide(mechanica, map);
+        FlxG.collide(Global.colliders, map);
+        
     
         
-       // FlxG.camera.angle = -Global.player.getMechanica().angle;
+       // FlxG.camera.angle = -playerMech.angle;
+    }
+    private function collision(col1:Dynamic, col2:Dynamic):Void
+    {
+        var collider1:ICollider = null;
+        var collider2:ICollider = null;
+        FlxG.watch.addQuick("Collision", col1.toString() + ", " + col2.toString());
+        if(Std.is(col1, ICollider))
+        {
+            collider1 = cast(col1, ICollider);
+            collider1.collideWith(col2);
+
+        }
+        if(Std.is(col1, ICollider))
+        {
+            collider2 = cast(col1, ICollider);
+            collider2.collideWith(col1);
+
+        }
+        if(collider1 != null) collider1.postCollision();
+        if(collider2 != null) collider2.postCollision();
     }
     private function fixJitter():Void
     {
@@ -65,8 +134,21 @@ class DemoState extends FlxState
         var y:Int = Std.parseInt(entDat.get("x"));
         if(entName == "player")
         {
-            Global.player.getMechanica().x = x;
-            Global.player.getMechanica().y = y;
+            playerMech.x = x;
+            playerMech.y = y;
+        }
+        if(entName == "testMech")
+        {
+            testMech.x = x;
+            testMech.y = y;
+            testMech.controller = new Controller();
+        }
+        if(entName == "testMech2")
+        
+        {
+            testMech2.x = x;
+            testMech2.y = y;
+            testMech2.controller = new Controller();
         }
     }
 

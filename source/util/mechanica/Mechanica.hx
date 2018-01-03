@@ -6,33 +6,42 @@ pseudocode below:*/
 package util.mechanica;
 
 import flixel.addons.display.FlxNestedSprite;
+import flixel.group.FlxSpriteGroup;
 import util.mechanica.Part;
 import util.PartFactory;
 import util.control.Controller;
+import flixel.FlxSprite;
 import util.mechanica.MechanicaH;
 import flixel.math.FlxMath;
 import flixel.FlxG;
 import flixel.math.FlxPoint;
 import math.MoreMath;
+import util.mechanica.MechGroup;
+import util.mechanica.MechBullet;
+// import util.interfaces.ICollider;
+import flixel.FlxObject;
+import util.mechanica.Part;
 
 class Mechanica extends FlxNestedSprite
 {
 	public var name = "Blank Schematic";
-	
+	//PARTS
 	public var head:HeadUnit;
 	public var core:CoreUnit;
 	public var arms:ArmUnits;
 	public var legs:LegUnits;
 	public var thruster:ThrusterUnit;
 	public var controller:Controller;
-	public var equip1:EquipmentUnit;
+	public var equip1:FirearmUnit;
+	public var team:MechGroup;
+	public var equip2:FirearmUnit;
 	
-	public var equip2:EquipmentUnit;
-	
-	
+	//INTERNAL CONTROLS
 	private var enabled = false; 		//can this mechanica receive and process input?
-	private var speed:Float;
-	private var locomotionStatus:LocomotionStatus;		
+	private var speed:Float;			//current speed
+	private var locomotionStatus:LocomotionStatus; //Used to determine how locomotion input data is processed 
+	private var animatedThisFrame = false;			//Flag to prevent double-animating in the case of strafing while moving in two directions
+
 
 	override public function new(?X:Float, ?Y:Float)//, ?Head:Null<HeadUnit>, ?Core:Null<CoreUnit>, ?Arms:Null<ArmUnits>, ?Legs:Null<LegUnits>, ?Thruster:Null<ThrusterUnit>, ?Equip1:Null<EquipmentUnit>, ?Equip2:Null<EquipmentUnit>)
 	{
@@ -40,64 +49,118 @@ class Mechanica extends FlxNestedSprite
 		
 		
 	}
-	public function getWeight():Float{
+	override public function add(v:FlxNestedSprite):FlxNestedSprite
+	{
+		super.add(v);
+		if(Std.is(v, Part)) cast(v, Part).parent = this;
+		return v;
+	}
+	public function getWeight():Float{ 			//this is the total weight of the mechanica
 		return head.weight + core.weight + arms.weight + legs.weight + thruster.weight + ((equip1 != null) ? equip1.weight : 0) + ((equip2 != null) ? equip2.weight : 0);
 	}
-	public function getLoad():Float
+	public function getLoad():Float				//this is the load currently being carried by the leg units
 	{
 		return getWeight() - legs.weight;
 	}
-	public function valid():Bool
+	public function valid():Bool				//is this a valid mechanica?
 	{
 		return (head != null && core != null && arms != null && legs != null && thruster != null);
+	}
+	public function bump(col1:Dynamic, col2:Dynamic):Bool
+	{
+	//	FlxG.log.advanced(name + " was hit by " + col);
+		if(Std.is(col2, FlxObject))
+		{
+			if(Std.is(col2, MechBullet))
+			{
+				var bullet = cast(col2, MechBullet);
+				if(bullet.parent.team != this.team)
+				{
+					struckBy(bullet);
+					return true;
+				}
+				else return false;
+			}
+			FlxObject.separate(this, cast(col2, FlxObject));
+		}
+		return true;
+	}
+	public function struckBy(bullet:MechBullet):Void
+	{
+		FlxG.log.advanced(name + " was shot by " + bullet.parent.name);
+	}
+	public function postCollision():Void
+	{
+
 	}
 	private function runInput(paramsXml:Xml):Void
 	{
 		if(!enabled) return;
-	
+		
 		switch(paramsXml.get("action"))
 			{
 				case "locomote":
 					{
-						//do walking stuff
-						var direction = Std.parseInt(paramsXml.get("direction"));
+
+						//do math
+						var direction = Std.parseInt(paramsXml.get("direction"));							//Which directional input was used
+						var angleOffset = (paramsXml.get("axis")=="x" ? -90 : 0);
 						var performanceRedux = (
 									(( getLoad() - (legs.performanceWeightCapacity * legs.weightCapacity) )
 									/
 									( legs.weightCapacity - (legs.weightCapacity * legs.performanceWeightCapacity ))
 									));
-						var limit = (performanceRedux > 0 ? (1-performanceRedux) * legs.topSpeed : legs.topSpeed);
-						if(direction != 0)//if receiving movement input
-						{
-						//l	centerOrigin();
-							var a = Math.cos(MoreMath.degToRad(angle+90));
-							var b = Math.sin(MoreMath.degToRad(angle+90));
-							var speedFactor = legs.topSpeed * legs._acceleration;
-							speed += speedFactor;
-							velocity.set(a*speed*direction, b*speed*direction);
-							speed = Math.min(speed, limit);
-							
-							
-							locomotionStatus = Walking;
-						}
-						else //initiate braking
-						{
-							speed = Math.max(speed-2, 0);
-							locomotionStatus = Braking;
-						}
-						if(legs.animated && locomotionStatus != ThrusterEngaged && MoreMath.magnitude(velocity) >= 10)//if the mech hasn't come to a complete stop
+						var baseSpeed = (locomotionStatus != ThrusterEngaged ? legs.topSpeed * legs._acceleration : thruster.topSpeed * thruster._acceleration);
+						baseSpeed *= Global.speedScale;
+						var limit = (performanceRedux > 0 ? (1-performanceRedux) * baseSpeed : baseSpeed);
+						//handle animations
+						var animate = !animatedThisFrame;
+						if(animate)
+						{	
+							animatedThisFrame = true;
+							if(legs.animated && locomotionStatus != ThrusterEngaged && MoreMath.magnitude(velocity) >= 10)//if the mech hasn't come to a complete stop
 							{
 								legs.animation.getByName("locomote").frameRate = Std.int(Math.max(speed/limit * legs.frameRate, 2));
 								legs.animation.play("locomote");
 							}
-						else //if the mech has come to a complete stop
-						{
-							locomotionStatus = Standing;
-							if(legs.animated && legs.animation.curAnim != null && (legs.animation.curAnim.curFrame == 0 || legs.animation.curAnim.curFrame == 4))
+							else //if the mech has come to a complete stop
 							{
-								legs.animation.finish();
+								if(locomotionStatus != ThrusterEngaged) locomotionStatus = Standing;
+								if(legs.animated && legs.animation.curAnim != null)
+								{
+									legs.animation.pause();
+								}
 							}
 						}
+						//do movement stuff
+						
+						if(direction != 0)//if receiving movement input
+						{
+						//l	centerOrigin();
+							var a = Math.cos(MoreMath.degToRad(angle+90+angleOffset));
+							var b = Math.sin(MoreMath.degToRad(angle+90+angleOffset));
+							//var speedFactor = baseSpeed * legs._acceleration;
+							if(animate) 
+								{
+								speed += baseSpeed;
+								velocity.set(a*speed*direction, b*speed*direction);
+								}
+							else
+							{
+
+								velocity.add(a*speed*direction, b*speed*direction);
+							}
+							speed = Math.min(speed, limit);
+							
+							
+							if(locomotionStatus != ThrusterEngaged) locomotionStatus = Walking;
+						}
+						else //initiate braking
+						{
+							if(locomotionStatus == Walking || locomotionStatus == Standing) speed = Math.max(speed-2, 0);
+							locomotionStatus = Braking;
+						}
+					
 						
 						FlxG.watch.addQuick("magnitude:", MoreMath.magnitude(velocity));
 						
@@ -109,6 +172,7 @@ class Mechanica extends FlxNestedSprite
 					if(direction != 0)//if receiving steering input
 					{
 					//	centerOrigin();
+					//	locomotionStatus.getName();
 						angle += legs.turningSpeed * direction;
 						speed--;
 						if(angle < 0)
@@ -121,17 +185,42 @@ class Mechanica extends FlxNestedSprite
 						}
 					}
 				}
-				case "thruster":
+				case "boost":
 				{
-					//do thruster stuff
+					var mode = paramsXml.get("mode");
+					
+					var mobile = locomotionStatus == Walking || locomotionStatus == ThrusterEngaged;
+					switch(mode)
+					{	
+						case "fire":
+						{
+							if(mobile)
+							{
+								locomotionStatus = ThrusterEngaged;
+								thruster.flareSprite.visible = true;
+
+								thruster.flareSprite.animation.play("engage");
+								
+
+							}
+						}
+						case "shutoff":
+						{
+		
+							locomotionStatus = Standing;
+							thruster.flareSprite.visible = false;
+							thruster.flareSprite.animation.finish();
+						}
+					}
 				}
-				case "equip1":
+				case "fire1":
 				{
 					//do equipment 1 stuff
+					equip1.fire(angle-90);
 				}
-				case "equip2":
+				case "fire2":
 				{
-
+					equip2.fire(angle-90);
 				}
 				case "aux1":
 				{
@@ -149,14 +238,21 @@ class Mechanica extends FlxNestedSprite
 		processInput();
 		//Global.log("p: (" + Std.string(FlxMath.roundDecimal(x,1))+", "+Std.string(FlxMath.roundDecimal(y,1))+")   v: (" + Std.string(limevelocity.x) + ", " + Std.string(velocity.y) + ")");
 		super.update(e);
+		FlxG.overlap(this, Global.colliders, null, bump);
 	}
 	private function processInput():Void
 	{
+		if(controller == null) return;
 		var inputBuffer = controller.getBuffer();
 		for(i in 0...inputBuffer.length)
 		{
 			runInput(inputBuffer[i]);
 		}
+		concludeInput();
+	}
+	private function concludeInput():Void
+	{
+		animatedThisFrame = false;
 	}
 	//simply builds all the part ids via the PartFactory and then attempts to equip them, will return true if successful 
 	//(if this is false, then valid() would have returned false for the build).
@@ -177,15 +273,24 @@ class Mechanica extends FlxNestedSprite
 		{
 			returnBool = (returnBool && buildPart(EquipType.Equipment2, _equip2));
 		}
-		drag.x = drag.y = Math.max(legs.brakingForce - getLoad(), 25);
+		drag.x = drag.y = Math.min(Math.max(legs.brakingForce - getLoad(), 25), legs.topSpeed/2);
 		rearrangeChildren();
 		return returnBool;
 	}
+	/*private function removeAll():Void
+	{
+		for(i in this)
+		{
+			remove(i);
+		}
+	}*/
 	private function rearrangeChildren():Void
 	{
 		removeAll();
-		add(thruster);
+
 		add(legs);
+		add(thruster);
+		
 		add(arms);
 		add(core);
 		if(equip1 != null)
@@ -209,6 +314,7 @@ class Mechanica extends FlxNestedSprite
 	public function enable():Void
 	{
 		enabled = true;
+		loadGraphic(AssetPaths.blank__png, false, 32, 32);
 	//	generateSprite();
 	}
 	public function disable():Void
@@ -264,11 +370,16 @@ class Mechanica extends FlxNestedSprite
 			{
 				if(equip1 != null) remove(equip1);
 				equip1 = part;
+				equip1.setOffset(8,0);
+				equip1.setup(this);
 			}
 			case EquipType.Equipment2:
 			{
 				if(equip2 != null) remove(equip2);
 				equip2 = part;
+				equip2.setOffset(24,0);
+				equip2.flipX = true;
+				equip2.setup(this);
 			}
 			default:
 				return false;

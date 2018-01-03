@@ -281,7 +281,7 @@
 					"acceleration": 0.05,
 					"turningSpeed": 5,
 					"brakingForce": 600,
-					"animated": false,
+					"animated": true,
 					"frameRate": 6
 				}
 			],
@@ -312,6 +312,11 @@
 				{
 					"typeStr": "4",
 					"name": "ignitionEnUsage"
+				},
+				{
+					"typeStr": "1",
+					"name": "flareImageFile",
+					"display": null
 				}
 			],
 			"lines": [
@@ -320,7 +325,8 @@
 					"topSpeed": 50,
 					"acceleration": 2,
 					"driveEnUsage": 25,
-					"ignitionEnUsage": 35
+					"ignitionEnUsage": 35,
+					"flareImageFile": "standard-rev1/flare.png"
 				}
 			],
 			"separators": [],

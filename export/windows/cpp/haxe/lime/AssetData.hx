@@ -34,6 +34,8 @@ class AssetData {
 			type.set ("assets/gfx/test.ase", Reflect.field (AssetType, "binary".toUpperCase ()));
 			path.set ("assets/gfx/test.png", "assets/gfx/test.png");
 			type.set ("assets/gfx/test.png", Reflect.field (AssetType, "image".toUpperCase ()));
+			path.set ("assets/images/bullets/shell.png", "assets/images/bullets/shell.png");
+			type.set ("assets/images/bullets/shell.png", Reflect.field (AssetType, "image".toUpperCase ()));
 			path.set ("assets/images/environment/demozone.ase", "assets/images/environment/demozone.ase");
 			type.set ("assets/images/environment/demozone.ase", Reflect.field (AssetType, "binary".toUpperCase ()));
 			path.set ("assets/images/environment/demozone.png", "assets/images/environment/demozone.png");
@@ -50,12 +52,14 @@ class AssetData {
 			type.set ("assets/images/standard-rev1/core.png", Reflect.field (AssetType, "image".toUpperCase ()));
 			path.set ("assets/images/standard-rev1/flare.png", "assets/images/standard-rev1/flare.png");
 			type.set ("assets/images/standard-rev1/flare.png", Reflect.field (AssetType, "image".toUpperCase ()));
+			path.set ("assets/images/standard-rev1/flaret.png", "assets/images/standard-rev1/flaret.png");
+			type.set ("assets/images/standard-rev1/flaret.png", Reflect.field (AssetType, "image".toUpperCase ()));
 			path.set ("assets/images/standard-rev1/head.png", "assets/images/standard-rev1/head.png");
 			type.set ("assets/images/standard-rev1/head.png", Reflect.field (AssetType, "image".toUpperCase ()));
 			path.set ("assets/images/standard-rev1/legs.png", "assets/images/standard-rev1/legs.png");
 			type.set ("assets/images/standard-rev1/legs.png", Reflect.field (AssetType, "image".toUpperCase ()));
-			path.set ("assets/images/standard-rev1/mechanica.ase", "assets/images/standard-rev1/mechanica.ase");
-			type.set ("assets/images/standard-rev1/mechanica.ase", Reflect.field (AssetType, "binary".toUpperCase ()));
+			path.set ("assets/images/standard-rev1/pistol.png", "assets/images/standard-rev1/pistol.png");
+			type.set ("assets/images/standard-rev1/pistol.png", Reflect.field (AssetType, "image".toUpperCase ()));
 			path.set ("assets/images/standard-rev1/thruster.png", "assets/images/standard-rev1/thruster.png");
 			type.set ("assets/images/standard-rev1/thruster.png", Reflect.field (AssetType, "image".toUpperCase ()));
 			path.set ("assets/music/music-goes-here.txt", "assets/music/music-goes-here.txt");

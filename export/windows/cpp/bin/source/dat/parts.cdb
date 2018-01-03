@@ -119,7 +119,7 @@
 					"tempCutoff": 900,
 					"enUsage": 2,
 					"armorRating": 0,
-					"imageFile": "standard-rev1/head.png"
+					"imageFile": "standard-rev1/pistol.png"
 				},
 				{
 					"id": "standardRifle",
@@ -278,7 +278,7 @@
 				{
 					"id": "standard",
 					"topSpeed": 135,
-					"acceleration": 0.05,
+					"acceleration": 0.12,
 					"turningSpeed": 5,
 					"brakingForce": 600,
 					"animated": true,
@@ -312,15 +312,26 @@
 				{
 					"typeStr": "4",
 					"name": "ignitionEnUsage"
+				},
+				{
+					"typeStr": "1",
+					"name": "flareImageFile",
+					"display": null
+				},
+				{
+					"typeStr": "3",
+					"name": "flareSize"
 				}
 			],
 			"lines": [
 				{
 					"id": "standardThruster",
-					"topSpeed": 50,
-					"acceleration": 2,
+					"topSpeed": 280,
+					"acceleration": 0.33,
 					"driveEnUsage": 25,
-					"ignitionEnUsage": 35
+					"ignitionEnUsage": 35,
+					"flareImageFile": "standard-rev1/flare.png",
+					"flareSize": 48
 				}
 			],
 			"separators": [],
@@ -338,16 +349,47 @@
 					"typeStr": "2",
 					"name": "twoHanded",
 					"display": null
+				},
+				{
+					"typeStr": "4",
+					"name": "recoil"
+				},
+				{
+					"typeStr": "4",
+					"name": "bulletLifespan"
+				},
+				{
+					"typeStr": "4",
+					"name": "bulletSpeed"
+				},
+				{
+					"typeStr": "4",
+					"name": "firingRate"
+				},
+				{
+					"typeStr": "1",
+					"name": "bulletType",
+					"display": null
 				}
 			],
 			"lines": [
 				{
 					"twoHanded": false,
-					"id": "standardPistol"
+					"id": "standardPistol",
+					"recoil": 0,
+					"bulletLifespan": 5,
+					"bulletSpeed": 325,
+					"firingRate": 0.2,
+					"bulletType": "util.mechanica.MechBullet.ShellBullet"
 				},
 				{
 					"twoHanded": false,
-					"id": "standardRifle"
+					"id": "standardRifle",
+					"recoil": 0,
+					"bulletLifespan": 0,
+					"bulletSpeed": 0,
+					"firingRate": 0,
+					"bulletType": "util.mechanica.MechBullet.ShellBullet"
 				}
 			],
 			"separators": [],

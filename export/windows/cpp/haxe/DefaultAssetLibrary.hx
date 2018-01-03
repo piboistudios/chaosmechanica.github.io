@@ -86,6 +86,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
+		
+		
 		Font.registerFont (__ASSET__flixel_fonts_nokiafc22_ttf);
 		Font.registerFont (__ASSET__flixel_fonts_monsterrat_ttf);
 		
@@ -125,6 +127,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 		#if (windows || mac || linux)
 		
 		var useManifest = false;
+		useManifest = true;
+		useManifest = true;
 		useManifest = true;
 		useManifest = true;
 		useManifest = true;
@@ -804,6 +808,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
+		
+		
 		openfl.text.Font.registerFont (__ASSET__OPENFL__flixel_fonts_nokiafc22_ttf);
 		openfl.text.Font.registerFont (__ASSET__OPENFL__flixel_fonts_monsterrat_ttf);
 		
@@ -861,6 +867,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/gfx/test.ase", AssetType.BINARY);
 		path.set ("assets/gfx/test.png", "assets/gfx/test.png");
 		type.set ("assets/gfx/test.png", AssetType.IMAGE);
+		path.set ("assets/images/bullets/shell.png", "assets/images/bullets/shell.png");
+		type.set ("assets/images/bullets/shell.png", AssetType.IMAGE);
 		path.set ("assets/images/environment/demozone.ase", "assets/images/environment/demozone.ase");
 		type.set ("assets/images/environment/demozone.ase", AssetType.BINARY);
 		path.set ("assets/images/environment/demozone.png", "assets/images/environment/demozone.png");
@@ -877,12 +885,14 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/images/standard-rev1/core.png", AssetType.IMAGE);
 		path.set ("assets/images/standard-rev1/flare.png", "assets/images/standard-rev1/flare.png");
 		type.set ("assets/images/standard-rev1/flare.png", AssetType.IMAGE);
+		path.set ("assets/images/standard-rev1/flaret.png", "assets/images/standard-rev1/flaret.png");
+		type.set ("assets/images/standard-rev1/flaret.png", AssetType.IMAGE);
 		path.set ("assets/images/standard-rev1/head.png", "assets/images/standard-rev1/head.png");
 		type.set ("assets/images/standard-rev1/head.png", AssetType.IMAGE);
 		path.set ("assets/images/standard-rev1/legs.png", "assets/images/standard-rev1/legs.png");
 		type.set ("assets/images/standard-rev1/legs.png", AssetType.IMAGE);
-		path.set ("assets/images/standard-rev1/mechanica.ase", "assets/images/standard-rev1/mechanica.ase");
-		type.set ("assets/images/standard-rev1/mechanica.ase", AssetType.BINARY);
+		path.set ("assets/images/standard-rev1/pistol.png", "assets/images/standard-rev1/pistol.png");
+		type.set ("assets/images/standard-rev1/pistol.png", AssetType.IMAGE);
 		path.set ("assets/images/standard-rev1/thruster.png", "assets/images/standard-rev1/thruster.png");
 		type.set ("assets/images/standard-rev1/thruster.png", AssetType.IMAGE);
 		path.set ("assets/music/music-goes-here.txt", "assets/music/music-goes-here.txt");
@@ -1003,6 +1013,9 @@ class DefaultAssetLibrary extends AssetLibrary {
 		id = "assets/gfx/test.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
+		id = "assets/images/bullets/shell.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
 		id = "assets/images/environment/demozone.ase";
 		path.set (id, id);
 		type.set (id, AssetType.BINARY);
@@ -1027,15 +1040,18 @@ class DefaultAssetLibrary extends AssetLibrary {
 		id = "assets/images/standard-rev1/flare.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
+		id = "assets/images/standard-rev1/flaret.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
 		id = "assets/images/standard-rev1/head.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
 		id = "assets/images/standard-rev1/legs.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
-		id = "assets/images/standard-rev1/mechanica.ase";
+		id = "assets/images/standard-rev1/pistol.png";
 		path.set (id, id);
-		type.set (id, AssetType.BINARY);
+		type.set (id, AssetType.IMAGE);
 		id = "assets/images/standard-rev1/thruster.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
@@ -1221,6 +1237,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 		#if (windows || mac || linux)
 		
 		var useManifest = false;
+		useManifest = true;
+		useManifest = true;
 		useManifest = true;
 		useManifest = true;
 		useManifest = true;
@@ -2103,6 +2121,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 
+
+
 @:keep @:bind #if display private #end class __ASSET__flixel_sounds_beep_ogg extends null { }
 @:keep @:bind #if display private #end class __ASSET__flixel_sounds_flixel_ogg extends null { }
 @:keep @:bind #if display private #end class __ASSET__flixel_fonts_nokiafc22_ttf extends null { }
@@ -2142,6 +2162,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 #elseif html5
+
+
 
 
 
