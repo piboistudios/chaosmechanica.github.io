@@ -79,6 +79,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
+		
 		openfl.text.Font.registerFont (__ASSET__OPENFL__flixel_fonts_nokiafc22_ttf);
 		openfl.text.Font.registerFont (__ASSET__OPENFL__flixel_fonts_monsterrat_ttf);
 		
@@ -128,6 +129,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/data/DemoZone2.oep", AssetType.TEXT);
 		className.set ("assets/data/test.cdb", __ASSET__assets_data_test_cdb);
 		type.set ("assets/data/test.cdb", AssetType.TEXT);
+		className.set ("assets/data/TestZone.oel", __ASSET__assets_data_testzone_oel);
+		type.set ("assets/data/TestZone.oel", AssetType.TEXT);
+		className.set ("assets/data/TestZone.oep", __ASSET__assets_data_testzone_oep);
+		type.set ("assets/data/TestZone.oep", AssetType.TEXT);
 		className.set ("assets/gfx/test.ase", __ASSET__assets_gfx_test_ase);
 		type.set ("assets/gfx/test.ase", AssetType.BINARY);
 		className.set ("assets/gfx/test.png", __ASSET__assets_gfx_test_png);
@@ -152,8 +157,6 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/images/standard-rev1/head.png", AssetType.IMAGE);
 		className.set ("assets/images/standard-rev1/legs.png", __ASSET__assets_images_standard_rev1_legs_png);
 		type.set ("assets/images/standard-rev1/legs.png", AssetType.IMAGE);
-		className.set ("assets/images/standard-rev1/mechanica.ase", __ASSET__assets_images_standard_rev1_mechanica_ase);
-		type.set ("assets/images/standard-rev1/mechanica.ase", AssetType.BINARY);
 		className.set ("assets/images/standard-rev1/thruster.png", __ASSET__assets_images_standard_rev1_thruster_png);
 		type.set ("assets/images/standard-rev1/thruster.png", AssetType.IMAGE);
 		className.set ("assets/music/music-goes-here.txt", __ASSET__assets_music_music_goes_here_txt);
@@ -267,6 +270,14 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		
 		type.set (id, AssetType.TEXT);
+		id = "assets/data/TestZone.oel";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "assets/data/TestZone.oep";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
 		id = "assets/gfx/test.ase";
 		path.set (id, id);
 		
@@ -315,10 +326,6 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		
 		type.set (id, AssetType.IMAGE);
-		id = "assets/images/standard-rev1/mechanica.ase";
-		path.set (id, id);
-		
-		type.set (id, AssetType.BINARY);
 		id = "assets/images/standard-rev1/thruster.png";
 		path.set (id, id);
 		
@@ -528,6 +535,12 @@ class DefaultAssetLibrary extends AssetLibrary {
 		className.set ("assets/data/test.cdb", __ASSET__assets_data_test_cdb);
 		type.set ("assets/data/test.cdb", AssetType.TEXT);
 		
+		className.set ("assets/data/TestZone.oel", __ASSET__assets_data_testzone_oel);
+		type.set ("assets/data/TestZone.oel", AssetType.TEXT);
+		
+		className.set ("assets/data/TestZone.oep", __ASSET__assets_data_testzone_oep);
+		type.set ("assets/data/TestZone.oep", AssetType.TEXT);
+		
 		className.set ("assets/gfx/test.ase", __ASSET__assets_gfx_test_ase);
 		type.set ("assets/gfx/test.ase", AssetType.BINARY);
 		
@@ -563,9 +576,6 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		className.set ("assets/images/standard-rev1/legs.png", __ASSET__assets_images_standard_rev1_legs_png);
 		type.set ("assets/images/standard-rev1/legs.png", AssetType.IMAGE);
-		
-		className.set ("assets/images/standard-rev1/mechanica.ase", __ASSET__assets_images_standard_rev1_mechanica_ase);
-		type.set ("assets/images/standard-rev1/mechanica.ase", AssetType.BINARY);
 		
 		className.set ("assets/images/standard-rev1/thruster.png", __ASSET__assets_images_standard_rev1_thruster_png);
 		type.set ("assets/images/standard-rev1/thruster.png", AssetType.IMAGE);
@@ -1348,6 +1358,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:keep @:bind #if display private #end class __ASSET__assets_data_demozone2_oel extends null { }
 @:keep @:bind #if display private #end class __ASSET__assets_data_demozone2_oep extends null { }
 @:keep @:bind #if display private #end class __ASSET__assets_data_test_cdb extends null { }
+@:keep @:bind #if display private #end class __ASSET__assets_data_testzone_oel extends null { }
+@:keep @:bind #if display private #end class __ASSET__assets_data_testzone_oep extends null { }
 @:keep @:bind #if display private #end class __ASSET__assets_gfx_test_ase extends null { }
 @:keep @:bind #if display private #end class __ASSET__assets_gfx_test_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_environment_demozone_ase extends null { }
@@ -1360,7 +1372,6 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:keep @:bind #if display private #end class __ASSET__assets_images_standard_rev1_flare_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_standard_rev1_head_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_standard_rev1_legs_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
-@:keep @:bind #if display private #end class __ASSET__assets_images_standard_rev1_mechanica_ase extends null { }
 @:keep @:bind #if display private #end class __ASSET__assets_images_standard_rev1_thruster_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_music_music_goes_here_txt extends null { }
 @:keep @:bind #if display private #end class __ASSET__assets_sounds_sounds_go_here_txt extends null { }
@@ -1408,6 +1419,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 #elseif html5
+
 
 
 
@@ -1485,6 +1497,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:file("assets/data/DemoZone2.oel") #if display private #end class __ASSET__assets_data_demozone2_oel extends lime.utils.Bytes {}
 @:file("assets/data/DemoZone2.oep") #if display private #end class __ASSET__assets_data_demozone2_oep extends lime.utils.Bytes {}
 @:file("assets/data/test.cdb") #if display private #end class __ASSET__assets_data_test_cdb extends lime.utils.Bytes {}
+@:file("assets/data/TestZone.oel") #if display private #end class __ASSET__assets_data_testzone_oel extends lime.utils.Bytes {}
+@:file("assets/data/TestZone.oep") #if display private #end class __ASSET__assets_data_testzone_oep extends lime.utils.Bytes {}
 @:file("assets/gfx/test.ase") #if display private #end class __ASSET__assets_gfx_test_ase extends lime.utils.Bytes {}
 @:image("assets/gfx/test.png") #if display private #end class __ASSET__assets_gfx_test_png extends lime.graphics.Image {}
 @:file("assets/images/environment/demozone.ase") #if display private #end class __ASSET__assets_images_environment_demozone_ase extends lime.utils.Bytes {}
@@ -1497,7 +1511,6 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:image("assets/images/standard-rev1/flare.png") #if display private #end class __ASSET__assets_images_standard_rev1_flare_png extends lime.graphics.Image {}
 @:image("assets/images/standard-rev1/head.png") #if display private #end class __ASSET__assets_images_standard_rev1_head_png extends lime.graphics.Image {}
 @:image("assets/images/standard-rev1/legs.png") #if display private #end class __ASSET__assets_images_standard_rev1_legs_png extends lime.graphics.Image {}
-@:file("assets/images/standard-rev1/mechanica.ase") #if display private #end class __ASSET__assets_images_standard_rev1_mechanica_ase extends lime.utils.Bytes {}
 @:image("assets/images/standard-rev1/thruster.png") #if display private #end class __ASSET__assets_images_standard_rev1_thruster_png extends lime.graphics.Image {}
 @:file("assets/music/music-goes-here.txt") #if display private #end class __ASSET__assets_music_music_goes_here_txt extends lime.utils.Bytes {}
 @:file("assets/sounds/sounds-go-here.txt") #if display private #end class __ASSET__assets_sounds_sounds_go_here_txt extends lime.utils.Bytes {}

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<chrome name="background" center_x="true" center_y="true" x="0" y="0" width="300" height="440"/>
+
+	<!--Set up text labels-->
+	<text text="Schematic Name" center_x="true" y="background.top-16" name="Label"/>
+	<text text="Head:" x="background.x+32" y="Label.y+64" name = "headLabel"/>
+	<text text="Core:" x="background.x+32" y="headLabel.y+24" name="coreLabel"/>
+	<text text="Legs:" x="background.x+32" y="coreLabel.y+24" name="legsLabel"/>
+	<text text="Arms:" x="background.x+32" y="legsLabel.y+24" name="armsLabel"/>
+	<text text="Thruster:" x="background.x+32" y="armsLabel.y+24" name="thrusterLabel"/>
+	<text text = "Equip 1:" x="background.x+32" y="thrusterLabel.y+24" name="equip1Label"/>
+	<text text = "Equip 2:" x="background.x+32" y="equip1Label.y+24" name="equip2Label"/>
+
+	<!--Set up dropdowns-->
+	<dropdown name="headDrop" x="headLabel.x+thrusterLabel.halfwidth" y="headLabel.y"/>
+	<dropdown name="coreDrop" x="coreLabel.x+thrusterLabel.halfwidth" y="coreLabel.y"/>
+	<dropdown name="armsDrop" x="armsLabel.x+thrusterLabel.halfwidth" y="armsLabel.y"/>
+	<dropdown name="legsDrop" x="legsLabel.x+thrusterLabel.halfwidth" y="legsLabel.y"/>
+	<dropdown name="thrusterDrop" x="thrusterLabel.x+thrusterLabel.halfwidth" y="thrusterLabel.y"/>
+	<dropdown name="equip1Drop" x="equip1Label.x+thrusterLabel.halfwidth" y="equip1Label.y"/>
+	<dropdown name="equip2Drop" x="equip2Label.x+thrusterLabel.halfwidth" y="equip2Label.y"/>
+	<button name ="buildSchematic" center_x="true" y = "equip2Label.y+32" label="Build">
+		<param type="string" value="build"/>
+	</button>
+
+</data>

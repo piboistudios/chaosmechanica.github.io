@@ -1,8 +1,11 @@
 package util;
+import flixel.addons.display.FlxNestedSprite;
 import dat.Data;
 import util.mechanica.Part;
 import util.mechanica.Mechanica;
 import flixel.FlxG;
+import flixel.FlxSprite;
+import flixel.util.FlxColor;
 //static class used for building parts from the castle database
 
 class PartFactory {
@@ -14,9 +17,10 @@ class PartFactory {
 
 			return null;
 		}
-        var partDat = Data.part.resolve(part);
+        var partDat = Data.part.resolve(part);//Data.part.get(standardBrainCase);
 		var catData = partDat.categoricalData;
 		var partObj:Part;
+		
 		FlxG.log.advanced("Fetching categorical part data...", Global.logStyle);
 		
 		switch(catData.partType)
@@ -82,12 +86,18 @@ class PartFactory {
 			case dat.Data.CatData_partType.equip:
 			{
 				FlxG.log.advanced("Building equipment: " + part, Global.logStyle);
-				partObj = new EquipmentUnit();
-				var catPartObj = cast(partObj, EquipmentUnit);
+				//switch(dat.Data.)
+				partObj = new FirearmUnit();
+				var catPartObj = cast(partObj, FirearmUnit);
 				var catPartData = catData.equipDataObj;
+				catPartObj.recoil = catPartData.recoil;
+				catPartObj.bulletLifespan = catPartData.bulletLifespan;
+				catPartObj.bulletSpeed = catPartData.bulletSpeed;
+				catPartObj.bulletType = catPartData.bulletType;
 				catPartObj.twoHanded = catPartData.twoHanded;
-
-			}
+				catPartObj.firingRate = catPartData.firingRate;
+				
+			}	
 			default:
 				return null;
 		}
@@ -107,12 +117,28 @@ class PartFactory {
 		partObj.armorRating = partDat.armorRating;
 		if(partDat.imageFile != "")
 		{
-			partObj.imageFile = "assets/images/" + partDat.imageFile;
+			var assetPath = "assets/images/";
+			partObj.imageFile = assetPath + partDat.imageFile;
 			partObj.loadGraphic(partObj.imageFile, true, 32, 32);
+			// partObj.loadGraphic(AssetPaths.flare__png, true, 32, 32);
 			if(catData.partType == dat.Data.CatData_partType.legs && catData.carrierDataObj.legRef.animated)
 			{
-				partObj.animation.add("locomote", [2, 3, 4, 5, 6, 7, 0, 1, 2], cast(partObj, LegUnits).frameRate, false);
-
+				partObj.animation.add("locomote", [2, 3, 4, 5, 6, 7, 0, 1], cast(partObj, LegUnits).frameRate, false);
+				// partObj.animation.add("locomote", [0, 1, 2, 3], cast(partObj, LegUnits).frameRate, false);
+			}
+			else if(catData.partType == dat.Data.CatData_partType.thruster)
+			{
+				var partAsThruster = cast(partObj, ThrusterUnit);
+				var flare = new FlxNestedSprite();
+				flare.loadGraphic(AssetPaths.flaret__png, true, catData.thrusterDataObj.flareSize, catData.thrusterDataObj.flareSize);
+				flare.relativeX = flare.relativeY = (catData.thrusterDataObj.flareSize - 32)/-2;
+			//	FlxG.log.advanced("Thruster image file:" + assetPath + catData.thrusterDataObj.flareImageFile + " vs " + AssetPaths.flaret__png, Global.logStyle);
+				flare.animation.add("engage", [0,1,2,3], 10, true);
+	//			flare.origin.set(16, 16);
+				//flare.makeGraphic(32, 32, FlxColor.RED);
+				partAsThruster.add(flare);
+				flare.visible = false;
+				partAsThruster.flareSprite = flare;
 			}
 		}
         return partObj;

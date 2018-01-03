@@ -34,6 +34,10 @@ ApplicationMain.create = function() {
 	types.push("TEXT");
 	urls.push("assets/data/test.cdb");
 	types.push("TEXT");
+	urls.push("assets/data/TestZone.oel");
+	types.push("TEXT");
+	urls.push("assets/data/TestZone.oep");
+	types.push("TEXT");
 	urls.push("assets/gfx/test.ase");
 	types.push("BINARY");
 	urls.push("assets/gfx/test.png");
@@ -58,8 +62,6 @@ ApplicationMain.create = function() {
 	types.push("IMAGE");
 	urls.push("assets/images/standard-rev1/legs.png");
 	types.push("IMAGE");
-	urls.push("assets/images/standard-rev1/mechanica.ase");
-	types.push("BINARY");
 	urls.push("assets/images/standard-rev1/thruster.png");
 	types.push("IMAGE");
 	urls.push("assets/music/music-goes-here.txt");
@@ -176,7 +178,7 @@ ApplicationMain.init = function() {
 	}
 };
 ApplicationMain.main = function() {
-	ApplicationMain.config = { build : "642", company : "HaxeFlixel", file : "ChaosMechanica", fps : 60, name : "ChaosMechanica", orientation : "", packageName : "com.example.myapp", version : "0.0.1", windows : [{ antialiasing : 0, background : 0, borderless : false, depthBuffer : false, display : 0, fullscreen : false, hardware : false, height : 480, parameters : "{}", resizable : false, stencilBuffer : true, title : "ChaosMechanica", vsync : true, width : 640, x : null, y : null}]};
+	ApplicationMain.config = { build : "776", company : "HaxeFlixel", file : "ChaosMechanica", fps : 60, name : "ChaosMechanica", orientation : "", packageName : "com.example.myapp", version : "0.0.1", windows : [{ antialiasing : 0, background : 0, borderless : false, depthBuffer : false, display : 0, fullscreen : false, hardware : false, height : 480, parameters : "{}", resizable : false, stencilBuffer : true, title : "ChaosMechanica", vsync : true, width : 640, x : null, y : null}]};
 };
 ApplicationMain.start = function() {
 	var hasMain = false;
@@ -2402,7 +2404,7 @@ var DefaultAssetLibrary = function() {
 	} else {
 		_this9.h[id] = value4;
 	}
-	id = "assets/gfx/test.ase";
+	id = "assets/data/TestZone.oel";
 	var _this10 = this.path;
 	if(__map_reserved[id] != null) {
 		_this10.setReserved(id,id);
@@ -2410,13 +2412,13 @@ var DefaultAssetLibrary = function() {
 		_this10.h[id] = id;
 	}
 	var _this11 = this.type;
-	var value5 = "BINARY";
+	var value5 = "TEXT";
 	if(__map_reserved[id] != null) {
 		_this11.setReserved(id,value5);
 	} else {
 		_this11.h[id] = value5;
 	}
-	id = "assets/gfx/test.png";
+	id = "assets/data/TestZone.oep";
 	var _this12 = this.path;
 	if(__map_reserved[id] != null) {
 		_this12.setReserved(id,id);
@@ -2424,13 +2426,13 @@ var DefaultAssetLibrary = function() {
 		_this12.h[id] = id;
 	}
 	var _this13 = this.type;
-	var value6 = "IMAGE";
+	var value6 = "TEXT";
 	if(__map_reserved[id] != null) {
 		_this13.setReserved(id,value6);
 	} else {
 		_this13.h[id] = value6;
 	}
-	id = "assets/images/environment/demozone.ase";
+	id = "assets/gfx/test.ase";
 	var _this14 = this.path;
 	if(__map_reserved[id] != null) {
 		_this14.setReserved(id,id);
@@ -2444,7 +2446,7 @@ var DefaultAssetLibrary = function() {
 	} else {
 		_this15.h[id] = value7;
 	}
-	id = "assets/images/environment/demozone.png";
+	id = "assets/gfx/test.png";
 	var _this16 = this.path;
 	if(__map_reserved[id] != null) {
 		_this16.setReserved(id,id);
@@ -2458,7 +2460,7 @@ var DefaultAssetLibrary = function() {
 	} else {
 		_this17.h[id] = value8;
 	}
-	id = "assets/images/images-go-here.txt";
+	id = "assets/images/environment/demozone.ase";
 	var _this18 = this.path;
 	if(__map_reserved[id] != null) {
 		_this18.setReserved(id,id);
@@ -2466,13 +2468,13 @@ var DefaultAssetLibrary = function() {
 		_this18.h[id] = id;
 	}
 	var _this19 = this.type;
-	var value9 = "TEXT";
+	var value9 = "BINARY";
 	if(__map_reserved[id] != null) {
 		_this19.setReserved(id,value9);
 	} else {
 		_this19.h[id] = value9;
 	}
-	id = "assets/images/misc/blank.ase";
+	id = "assets/images/environment/demozone.png";
 	var _this20 = this.path;
 	if(__map_reserved[id] != null) {
 		_this20.setReserved(id,id);
@@ -2480,13 +2482,13 @@ var DefaultAssetLibrary = function() {
 		_this20.h[id] = id;
 	}
 	var _this21 = this.type;
-	var value10 = "BINARY";
+	var value10 = "IMAGE";
 	if(__map_reserved[id] != null) {
 		_this21.setReserved(id,value10);
 	} else {
 		_this21.h[id] = value10;
 	}
-	id = "assets/images/misc/blank.png";
+	id = "assets/images/images-go-here.txt";
 	var _this22 = this.path;
 	if(__map_reserved[id] != null) {
 		_this22.setReserved(id,id);
@@ -2494,13 +2496,13 @@ var DefaultAssetLibrary = function() {
 		_this22.h[id] = id;
 	}
 	var _this23 = this.type;
-	var value11 = "IMAGE";
+	var value11 = "TEXT";
 	if(__map_reserved[id] != null) {
 		_this23.setReserved(id,value11);
 	} else {
 		_this23.h[id] = value11;
 	}
-	id = "assets/images/standard-rev1/arms.png";
+	id = "assets/images/misc/blank.ase";
 	var _this24 = this.path;
 	if(__map_reserved[id] != null) {
 		_this24.setReserved(id,id);
@@ -2508,13 +2510,13 @@ var DefaultAssetLibrary = function() {
 		_this24.h[id] = id;
 	}
 	var _this25 = this.type;
-	var value12 = "IMAGE";
+	var value12 = "BINARY";
 	if(__map_reserved[id] != null) {
 		_this25.setReserved(id,value12);
 	} else {
 		_this25.h[id] = value12;
 	}
-	id = "assets/images/standard-rev1/core.png";
+	id = "assets/images/misc/blank.png";
 	var _this26 = this.path;
 	if(__map_reserved[id] != null) {
 		_this26.setReserved(id,id);
@@ -2528,7 +2530,7 @@ var DefaultAssetLibrary = function() {
 	} else {
 		_this27.h[id] = value13;
 	}
-	id = "assets/images/standard-rev1/flare.png";
+	id = "assets/images/standard-rev1/arms.png";
 	var _this28 = this.path;
 	if(__map_reserved[id] != null) {
 		_this28.setReserved(id,id);
@@ -2542,7 +2544,7 @@ var DefaultAssetLibrary = function() {
 	} else {
 		_this29.h[id] = value14;
 	}
-	id = "assets/images/standard-rev1/head.png";
+	id = "assets/images/standard-rev1/core.png";
 	var _this30 = this.path;
 	if(__map_reserved[id] != null) {
 		_this30.setReserved(id,id);
@@ -2556,7 +2558,7 @@ var DefaultAssetLibrary = function() {
 	} else {
 		_this31.h[id] = value15;
 	}
-	id = "assets/images/standard-rev1/legs.png";
+	id = "assets/images/standard-rev1/flare.png";
 	var _this32 = this.path;
 	if(__map_reserved[id] != null) {
 		_this32.setReserved(id,id);
@@ -2570,7 +2572,7 @@ var DefaultAssetLibrary = function() {
 	} else {
 		_this33.h[id] = value16;
 	}
-	id = "assets/images/standard-rev1/mechanica.ase";
+	id = "assets/images/standard-rev1/head.png";
 	var _this34 = this.path;
 	if(__map_reserved[id] != null) {
 		_this34.setReserved(id,id);
@@ -2578,13 +2580,13 @@ var DefaultAssetLibrary = function() {
 		_this34.h[id] = id;
 	}
 	var _this35 = this.type;
-	var value17 = "BINARY";
+	var value17 = "IMAGE";
 	if(__map_reserved[id] != null) {
 		_this35.setReserved(id,value17);
 	} else {
 		_this35.h[id] = value17;
 	}
-	id = "assets/images/standard-rev1/thruster.png";
+	id = "assets/images/standard-rev1/legs.png";
 	var _this36 = this.path;
 	if(__map_reserved[id] != null) {
 		_this36.setReserved(id,id);
@@ -2598,7 +2600,7 @@ var DefaultAssetLibrary = function() {
 	} else {
 		_this37.h[id] = value18;
 	}
-	id = "assets/music/music-goes-here.txt";
+	id = "assets/images/standard-rev1/thruster.png";
 	var _this38 = this.path;
 	if(__map_reserved[id] != null) {
 		_this38.setReserved(id,id);
@@ -2606,13 +2608,13 @@ var DefaultAssetLibrary = function() {
 		_this38.h[id] = id;
 	}
 	var _this39 = this.type;
-	var value19 = "TEXT";
+	var value19 = "IMAGE";
 	if(__map_reserved[id] != null) {
 		_this39.setReserved(id,value19);
 	} else {
 		_this39.h[id] = value19;
 	}
-	id = "assets/sounds/sounds-go-here.txt";
+	id = "assets/music/music-goes-here.txt";
 	var _this40 = this.path;
 	if(__map_reserved[id] != null) {
 		_this40.setReserved(id,id);
@@ -2626,7 +2628,7 @@ var DefaultAssetLibrary = function() {
 	} else {
 		_this41.h[id] = value20;
 	}
-	id = "assets/xml/build_schematic.xml";
+	id = "assets/sounds/sounds-go-here.txt";
 	var _this42 = this.path;
 	if(__map_reserved[id] != null) {
 		_this42.setReserved(id,id);
@@ -2640,7 +2642,7 @@ var DefaultAssetLibrary = function() {
 	} else {
 		_this43.h[id] = value21;
 	}
-	id = "assets/xml/hangar.xml";
+	id = "assets/xml/build_schematic.xml";
 	var _this44 = this.path;
 	if(__map_reserved[id] != null) {
 		_this44.setReserved(id,id);
@@ -2654,7 +2656,7 @@ var DefaultAssetLibrary = function() {
 	} else {
 		_this45.h[id] = value22;
 	}
-	id = "assets/xml/main_menu.xml";
+	id = "assets/xml/hangar.xml";
 	var _this46 = this.path;
 	if(__map_reserved[id] != null) {
 		_this46.setReserved(id,id);
@@ -2668,7 +2670,7 @@ var DefaultAssetLibrary = function() {
 	} else {
 		_this47.h[id] = value23;
 	}
-	id = "source/dat/parts.cdb";
+	id = "assets/xml/main_menu.xml";
 	var _this48 = this.path;
 	if(__map_reserved[id] != null) {
 		_this48.setReserved(id,id);
@@ -2682,7 +2684,7 @@ var DefaultAssetLibrary = function() {
 	} else {
 		_this49.h[id] = value24;
 	}
-	id = "source/dat/Data.hx";
+	id = "source/dat/parts.cdb";
 	var _this50 = this.path;
 	if(__map_reserved[id] != null) {
 		_this50.setReserved(id,id);
@@ -2696,7 +2698,7 @@ var DefaultAssetLibrary = function() {
 	} else {
 		_this51.h[id] = value25;
 	}
-	id = "flixel/sounds/beep.ogg";
+	id = "source/dat/Data.hx";
 	var _this52 = this.path;
 	if(__map_reserved[id] != null) {
 		_this52.setReserved(id,id);
@@ -2704,13 +2706,13 @@ var DefaultAssetLibrary = function() {
 		_this52.h[id] = id;
 	}
 	var _this53 = this.type;
-	var value26 = "SOUND";
+	var value26 = "TEXT";
 	if(__map_reserved[id] != null) {
 		_this53.setReserved(id,value26);
 	} else {
 		_this53.h[id] = value26;
 	}
-	id = "flixel/sounds/flixel.ogg";
+	id = "flixel/sounds/beep.ogg";
 	var _this54 = this.path;
 	if(__map_reserved[id] != null) {
 		_this54.setReserved(id,id);
@@ -2724,51 +2726,51 @@ var DefaultAssetLibrary = function() {
 	} else {
 		_this55.h[id] = value27;
 	}
-	id = "flixel/fonts/nokiafc22.ttf";
-	var _this56 = this.className;
-	var value28 = _$_$ASSET_$_$flixel_$fonts_$nokiafc22_$ttf;
+	id = "flixel/sounds/flixel.ogg";
+	var _this56 = this.path;
 	if(__map_reserved[id] != null) {
-		_this56.setReserved(id,value28);
+		_this56.setReserved(id,id);
 	} else {
-		_this56.h[id] = value28;
+		_this56.h[id] = id;
 	}
 	var _this57 = this.type;
-	var value29 = "FONT";
+	var value28 = "SOUND";
 	if(__map_reserved[id] != null) {
-		_this57.setReserved(id,value29);
+		_this57.setReserved(id,value28);
 	} else {
-		_this57.h[id] = value29;
+		_this57.h[id] = value28;
 	}
-	id = "flixel/fonts/monsterrat.ttf";
+	id = "flixel/fonts/nokiafc22.ttf";
 	var _this58 = this.className;
-	var value30 = _$_$ASSET_$_$flixel_$fonts_$monsterrat_$ttf;
+	var value29 = _$_$ASSET_$_$flixel_$fonts_$nokiafc22_$ttf;
 	if(__map_reserved[id] != null) {
-		_this58.setReserved(id,value30);
+		_this58.setReserved(id,value29);
 	} else {
-		_this58.h[id] = value30;
+		_this58.h[id] = value29;
 	}
 	var _this59 = this.type;
-	var value31 = "FONT";
+	var value30 = "FONT";
 	if(__map_reserved[id] != null) {
-		_this59.setReserved(id,value31);
+		_this59.setReserved(id,value30);
 	} else {
-		_this59.h[id] = value31;
+		_this59.h[id] = value30;
 	}
-	id = "flixel/images/ui/button.png";
-	var _this60 = this.path;
+	id = "flixel/fonts/monsterrat.ttf";
+	var _this60 = this.className;
+	var value31 = _$_$ASSET_$_$flixel_$fonts_$monsterrat_$ttf;
 	if(__map_reserved[id] != null) {
-		_this60.setReserved(id,id);
+		_this60.setReserved(id,value31);
 	} else {
-		_this60.h[id] = id;
+		_this60.h[id] = value31;
 	}
 	var _this61 = this.type;
-	var value32 = "IMAGE";
+	var value32 = "FONT";
 	if(__map_reserved[id] != null) {
 		_this61.setReserved(id,value32);
 	} else {
 		_this61.h[id] = value32;
 	}
-	id = "flixel/images/logo/default.png";
+	id = "flixel/images/ui/button.png";
 	var _this62 = this.path;
 	if(__map_reserved[id] != null) {
 		_this62.setReserved(id,id);
@@ -2782,7 +2784,7 @@ var DefaultAssetLibrary = function() {
 	} else {
 		_this63.h[id] = value33;
 	}
-	id = "flixel/flixel-ui/img/box.png";
+	id = "flixel/images/logo/default.png";
 	var _this64 = this.path;
 	if(__map_reserved[id] != null) {
 		_this64.setReserved(id,id);
@@ -2796,7 +2798,7 @@ var DefaultAssetLibrary = function() {
 	} else {
 		_this65.h[id] = value34;
 	}
-	id = "flixel/flixel-ui/img/button.png";
+	id = "flixel/flixel-ui/img/box.png";
 	var _this66 = this.path;
 	if(__map_reserved[id] != null) {
 		_this66.setReserved(id,id);
@@ -2810,7 +2812,7 @@ var DefaultAssetLibrary = function() {
 	} else {
 		_this67.h[id] = value35;
 	}
-	id = "flixel/flixel-ui/img/button_arrow_down.png";
+	id = "flixel/flixel-ui/img/button.png";
 	var _this68 = this.path;
 	if(__map_reserved[id] != null) {
 		_this68.setReserved(id,id);
@@ -2824,7 +2826,7 @@ var DefaultAssetLibrary = function() {
 	} else {
 		_this69.h[id] = value36;
 	}
-	id = "flixel/flixel-ui/img/button_arrow_left.png";
+	id = "flixel/flixel-ui/img/button_arrow_down.png";
 	var _this70 = this.path;
 	if(__map_reserved[id] != null) {
 		_this70.setReserved(id,id);
@@ -2838,7 +2840,7 @@ var DefaultAssetLibrary = function() {
 	} else {
 		_this71.h[id] = value37;
 	}
-	id = "flixel/flixel-ui/img/button_arrow_right.png";
+	id = "flixel/flixel-ui/img/button_arrow_left.png";
 	var _this72 = this.path;
 	if(__map_reserved[id] != null) {
 		_this72.setReserved(id,id);
@@ -2852,7 +2854,7 @@ var DefaultAssetLibrary = function() {
 	} else {
 		_this73.h[id] = value38;
 	}
-	id = "flixel/flixel-ui/img/button_arrow_up.png";
+	id = "flixel/flixel-ui/img/button_arrow_right.png";
 	var _this74 = this.path;
 	if(__map_reserved[id] != null) {
 		_this74.setReserved(id,id);
@@ -2866,7 +2868,7 @@ var DefaultAssetLibrary = function() {
 	} else {
 		_this75.h[id] = value39;
 	}
-	id = "flixel/flixel-ui/img/button_thin.png";
+	id = "flixel/flixel-ui/img/button_arrow_up.png";
 	var _this76 = this.path;
 	if(__map_reserved[id] != null) {
 		_this76.setReserved(id,id);
@@ -2880,7 +2882,7 @@ var DefaultAssetLibrary = function() {
 	} else {
 		_this77.h[id] = value40;
 	}
-	id = "flixel/flixel-ui/img/button_toggle.png";
+	id = "flixel/flixel-ui/img/button_thin.png";
 	var _this78 = this.path;
 	if(__map_reserved[id] != null) {
 		_this78.setReserved(id,id);
@@ -2894,7 +2896,7 @@ var DefaultAssetLibrary = function() {
 	} else {
 		_this79.h[id] = value41;
 	}
-	id = "flixel/flixel-ui/img/check_box.png";
+	id = "flixel/flixel-ui/img/button_toggle.png";
 	var _this80 = this.path;
 	if(__map_reserved[id] != null) {
 		_this80.setReserved(id,id);
@@ -2908,7 +2910,7 @@ var DefaultAssetLibrary = function() {
 	} else {
 		_this81.h[id] = value42;
 	}
-	id = "flixel/flixel-ui/img/check_mark.png";
+	id = "flixel/flixel-ui/img/check_box.png";
 	var _this82 = this.path;
 	if(__map_reserved[id] != null) {
 		_this82.setReserved(id,id);
@@ -2922,7 +2924,7 @@ var DefaultAssetLibrary = function() {
 	} else {
 		_this83.h[id] = value43;
 	}
-	id = "flixel/flixel-ui/img/chrome.png";
+	id = "flixel/flixel-ui/img/check_mark.png";
 	var _this84 = this.path;
 	if(__map_reserved[id] != null) {
 		_this84.setReserved(id,id);
@@ -2936,7 +2938,7 @@ var DefaultAssetLibrary = function() {
 	} else {
 		_this85.h[id] = value44;
 	}
-	id = "flixel/flixel-ui/img/chrome_flat.png";
+	id = "flixel/flixel-ui/img/chrome.png";
 	var _this86 = this.path;
 	if(__map_reserved[id] != null) {
 		_this86.setReserved(id,id);
@@ -2950,7 +2952,7 @@ var DefaultAssetLibrary = function() {
 	} else {
 		_this87.h[id] = value45;
 	}
-	id = "flixel/flixel-ui/img/chrome_inset.png";
+	id = "flixel/flixel-ui/img/chrome_flat.png";
 	var _this88 = this.path;
 	if(__map_reserved[id] != null) {
 		_this88.setReserved(id,id);
@@ -2964,7 +2966,7 @@ var DefaultAssetLibrary = function() {
 	} else {
 		_this89.h[id] = value46;
 	}
-	id = "flixel/flixel-ui/img/chrome_light.png";
+	id = "flixel/flixel-ui/img/chrome_inset.png";
 	var _this90 = this.path;
 	if(__map_reserved[id] != null) {
 		_this90.setReserved(id,id);
@@ -2978,7 +2980,7 @@ var DefaultAssetLibrary = function() {
 	} else {
 		_this91.h[id] = value47;
 	}
-	id = "flixel/flixel-ui/img/dropdown_mark.png";
+	id = "flixel/flixel-ui/img/chrome_light.png";
 	var _this92 = this.path;
 	if(__map_reserved[id] != null) {
 		_this92.setReserved(id,id);
@@ -2992,7 +2994,7 @@ var DefaultAssetLibrary = function() {
 	} else {
 		_this93.h[id] = value48;
 	}
-	id = "flixel/flixel-ui/img/finger_big.png";
+	id = "flixel/flixel-ui/img/dropdown_mark.png";
 	var _this94 = this.path;
 	if(__map_reserved[id] != null) {
 		_this94.setReserved(id,id);
@@ -3006,7 +3008,7 @@ var DefaultAssetLibrary = function() {
 	} else {
 		_this95.h[id] = value49;
 	}
-	id = "flixel/flixel-ui/img/finger_small.png";
+	id = "flixel/flixel-ui/img/finger_big.png";
 	var _this96 = this.path;
 	if(__map_reserved[id] != null) {
 		_this96.setReserved(id,id);
@@ -3020,7 +3022,7 @@ var DefaultAssetLibrary = function() {
 	} else {
 		_this97.h[id] = value50;
 	}
-	id = "flixel/flixel-ui/img/hilight.png";
+	id = "flixel/flixel-ui/img/finger_small.png";
 	var _this98 = this.path;
 	if(__map_reserved[id] != null) {
 		_this98.setReserved(id,id);
@@ -3034,7 +3036,7 @@ var DefaultAssetLibrary = function() {
 	} else {
 		_this99.h[id] = value51;
 	}
-	id = "flixel/flixel-ui/img/invis.png";
+	id = "flixel/flixel-ui/img/hilight.png";
 	var _this100 = this.path;
 	if(__map_reserved[id] != null) {
 		_this100.setReserved(id,id);
@@ -3048,7 +3050,7 @@ var DefaultAssetLibrary = function() {
 	} else {
 		_this101.h[id] = value52;
 	}
-	id = "flixel/flixel-ui/img/minus_mark.png";
+	id = "flixel/flixel-ui/img/invis.png";
 	var _this102 = this.path;
 	if(__map_reserved[id] != null) {
 		_this102.setReserved(id,id);
@@ -3062,7 +3064,7 @@ var DefaultAssetLibrary = function() {
 	} else {
 		_this103.h[id] = value53;
 	}
-	id = "flixel/flixel-ui/img/plus_mark.png";
+	id = "flixel/flixel-ui/img/minus_mark.png";
 	var _this104 = this.path;
 	if(__map_reserved[id] != null) {
 		_this104.setReserved(id,id);
@@ -3076,7 +3078,7 @@ var DefaultAssetLibrary = function() {
 	} else {
 		_this105.h[id] = value54;
 	}
-	id = "flixel/flixel-ui/img/radio.png";
+	id = "flixel/flixel-ui/img/plus_mark.png";
 	var _this106 = this.path;
 	if(__map_reserved[id] != null) {
 		_this106.setReserved(id,id);
@@ -3090,7 +3092,7 @@ var DefaultAssetLibrary = function() {
 	} else {
 		_this107.h[id] = value55;
 	}
-	id = "flixel/flixel-ui/img/radio_dot.png";
+	id = "flixel/flixel-ui/img/radio.png";
 	var _this108 = this.path;
 	if(__map_reserved[id] != null) {
 		_this108.setReserved(id,id);
@@ -3104,7 +3106,7 @@ var DefaultAssetLibrary = function() {
 	} else {
 		_this109.h[id] = value56;
 	}
-	id = "flixel/flixel-ui/img/swatch.png";
+	id = "flixel/flixel-ui/img/radio_dot.png";
 	var _this110 = this.path;
 	if(__map_reserved[id] != null) {
 		_this110.setReserved(id,id);
@@ -3118,7 +3120,7 @@ var DefaultAssetLibrary = function() {
 	} else {
 		_this111.h[id] = value57;
 	}
-	id = "flixel/flixel-ui/img/tab.png";
+	id = "flixel/flixel-ui/img/swatch.png";
 	var _this112 = this.path;
 	if(__map_reserved[id] != null) {
 		_this112.setReserved(id,id);
@@ -3132,7 +3134,7 @@ var DefaultAssetLibrary = function() {
 	} else {
 		_this113.h[id] = value58;
 	}
-	id = "flixel/flixel-ui/img/tab_back.png";
+	id = "flixel/flixel-ui/img/tab.png";
 	var _this114 = this.path;
 	if(__map_reserved[id] != null) {
 		_this114.setReserved(id,id);
@@ -3146,7 +3148,7 @@ var DefaultAssetLibrary = function() {
 	} else {
 		_this115.h[id] = value59;
 	}
-	id = "flixel/flixel-ui/img/tooltip_arrow.png";
+	id = "flixel/flixel-ui/img/tab_back.png";
 	var _this116 = this.path;
 	if(__map_reserved[id] != null) {
 		_this116.setReserved(id,id);
@@ -3160,7 +3162,7 @@ var DefaultAssetLibrary = function() {
 	} else {
 		_this117.h[id] = value60;
 	}
-	id = "flixel/flixel-ui/xml/defaults.xml";
+	id = "flixel/flixel-ui/img/tooltip_arrow.png";
 	var _this118 = this.path;
 	if(__map_reserved[id] != null) {
 		_this118.setReserved(id,id);
@@ -3168,13 +3170,13 @@ var DefaultAssetLibrary = function() {
 		_this118.h[id] = id;
 	}
 	var _this119 = this.type;
-	var value61 = "TEXT";
+	var value61 = "IMAGE";
 	if(__map_reserved[id] != null) {
 		_this119.setReserved(id,value61);
 	} else {
 		_this119.h[id] = value61;
 	}
-	id = "flixel/flixel-ui/xml/default_loading_screen.xml";
+	id = "flixel/flixel-ui/xml/defaults.xml";
 	var _this120 = this.path;
 	if(__map_reserved[id] != null) {
 		_this120.setReserved(id,id);
@@ -3188,7 +3190,7 @@ var DefaultAssetLibrary = function() {
 	} else {
 		_this121.h[id] = value62;
 	}
-	id = "flixel/flixel-ui/xml/default_popup.xml";
+	id = "flixel/flixel-ui/xml/default_loading_screen.xml";
 	var _this122 = this.path;
 	if(__map_reserved[id] != null) {
 		_this122.setReserved(id,id);
@@ -3202,6 +3204,20 @@ var DefaultAssetLibrary = function() {
 	} else {
 		_this123.h[id] = value63;
 	}
+	id = "flixel/flixel-ui/xml/default_popup.xml";
+	var _this124 = this.path;
+	if(__map_reserved[id] != null) {
+		_this124.setReserved(id,id);
+	} else {
+		_this124.h[id] = id;
+	}
+	var _this125 = this.type;
+	var value64 = "TEXT";
+	if(__map_reserved[id] != null) {
+		_this125.setReserved(id,value64);
+	} else {
+		_this125.h[id] = value64;
+	}
 	var assetsPrefix = null;
 	if(ApplicationMain.config != null && Object.prototype.hasOwnProperty.call(ApplicationMain.config,"assetsPrefix")) {
 		assetsPrefix = ApplicationMain.config.assetsPrefix;
@@ -3211,13 +3227,13 @@ var DefaultAssetLibrary = function() {
 		while(k.hasNext()) {
 			var k1 = k.next();
 			var this1 = this.path;
-			var _this124 = this.path;
-			var value64 = assetsPrefix + (__map_reserved[k1] != null ? _this124.getReserved(k1) : _this124.h[k1]);
-			var _this125 = this1;
+			var _this126 = this.path;
+			var value65 = assetsPrefix + (__map_reserved[k1] != null ? _this126.getReserved(k1) : _this126.h[k1]);
+			var _this127 = this1;
 			if(__map_reserved[k1] != null) {
-				_this125.setReserved(k1,value64);
+				_this127.setReserved(k1,value65);
 			} else {
-				_this125.h[k1] = value64;
+				_this127.h[k1] = value65;
 			}
 		}
 	}
@@ -5415,7 +5431,7 @@ dat__$Data_ThrusterKind_$Impl_$.toString = function(this1) {
 var dat__$Data_Thruster_$Impl_$ = {};
 $hxClasses["dat._Data.Thruster_Impl_"] = dat__$Data_Thruster_$Impl_$;
 dat__$Data_Thruster_$Impl_$.__name__ = ["dat","_Data","Thruster_Impl_"];
-dat__$Data_Thruster_$Impl_$.__properties__ = {get_ignitionEnUsage:"get_ignitionEnUsage",get_driveEnUsage:"get_driveEnUsage",get_acceleration:"get_acceleration",get_topSpeed:"get_topSpeed",get_id:"get_id"};
+dat__$Data_Thruster_$Impl_$.__properties__ = {get_flareImageFile:"get_flareImageFile",get_ignitionEnUsage:"get_ignitionEnUsage",get_driveEnUsage:"get_driveEnUsage",get_acceleration:"get_acceleration",get_topSpeed:"get_topSpeed",get_id:"get_id"};
 dat__$Data_Thruster_$Impl_$.get_id = function(this1) {
 	return this1.id;
 };
@@ -5430,6 +5446,9 @@ dat__$Data_Thruster_$Impl_$.get_driveEnUsage = function(this1) {
 };
 dat__$Data_Thruster_$Impl_$.get_ignitionEnUsage = function(this1) {
 	return this1.ignitionEnUsage;
+};
+dat__$Data_Thruster_$Impl_$.get_flareImageFile = function(this1) {
+	return this1.flareImageFile;
 };
 var dat__$Data_EquipKind_$Impl_$ = {};
 $hxClasses["dat._Data.EquipKind_Impl_"] = dat__$Data_EquipKind_$Impl_$;
@@ -55706,6 +55725,146 @@ flixel_ui__$FlxButton_FlxButtonEvent.prototype = {
 	}
 	,__class__: flixel_ui__$FlxButton_FlxButtonEvent
 };
+var flixel_ui_FlxVirtualPad = function(DPad,Action) {
+	flixel_group_FlxTypedSpriteGroup.call(this);
+	this.scrollFactor.set();
+	if(DPad == null) {
+		DPad = flixel_ui_FlxDPadMode.FULL;
+	}
+	if(Action == null) {
+		Action = flixel_ui_FlxActionMode.A_B_C;
+	}
+	this.dPad = new flixel_group_FlxTypedSpriteGroup();
+	this.dPad.scrollFactor.set();
+	this.actions = new flixel_group_FlxTypedSpriteGroup();
+	this.actions.scrollFactor.set();
+	switch(DPad[1]) {
+	case 0:
+		break;
+	case 1:
+		this.dPad.add(this.add(this.buttonUp = this.createButton(0,flixel_FlxG.height - 85,44,45,"up")));
+		this.dPad.add(this.add(this.buttonDown = this.createButton(0,flixel_FlxG.height - 45,44,45,"down")));
+		break;
+	case 2:
+		this.dPad.add(this.add(this.buttonLeft = this.createButton(0,flixel_FlxG.height - 45,44,45,"left")));
+		this.dPad.add(this.add(this.buttonRight = this.createButton(42,flixel_FlxG.height - 45,44,45,"right")));
+		break;
+	case 3:
+		this.dPad.add(this.add(this.buttonUp = this.createButton(35,flixel_FlxG.height - 81,44,45,"up")));
+		this.dPad.add(this.add(this.buttonLeft = this.createButton(0,flixel_FlxG.height - 45,44,45,"left")));
+		this.dPad.add(this.add(this.buttonRight = this.createButton(69,flixel_FlxG.height - 45,44,45,"right")));
+		break;
+	case 4:
+		this.dPad.add(this.add(this.buttonUp = this.createButton(35,flixel_FlxG.height - 116,44,45,"up")));
+		this.dPad.add(this.add(this.buttonLeft = this.createButton(0,flixel_FlxG.height - 81,44,45,"left")));
+		this.dPad.add(this.add(this.buttonRight = this.createButton(69,flixel_FlxG.height - 81,44,45,"right")));
+		this.dPad.add(this.add(this.buttonDown = this.createButton(35,flixel_FlxG.height - 45,44,45,"down")));
+		break;
+	}
+	switch(Action[1]) {
+	case 0:
+		break;
+	case 1:
+		this.actions.add(this.add(this.buttonA = this.createButton(flixel_FlxG.width - 44,flixel_FlxG.height - 45,44,45,"a")));
+		break;
+	case 2:
+		this.actions.add(this.add(this.buttonA = this.createButton(flixel_FlxG.width - 44,flixel_FlxG.height - 45,44,45,"a")));
+		this.actions.add(this.add(this.buttonB = this.createButton(flixel_FlxG.width - 86,flixel_FlxG.height - 45,44,45,"b")));
+		break;
+	case 3:
+		this.actions.add(this.add(this.buttonA = this.createButton(flixel_FlxG.width - 128,flixel_FlxG.height - 45,44,45,"a")));
+		this.actions.add(this.add(this.buttonB = this.createButton(flixel_FlxG.width - 86,flixel_FlxG.height - 45,44,45,"b")));
+		this.actions.add(this.add(this.buttonC = this.createButton(flixel_FlxG.width - 44,flixel_FlxG.height - 45,44,45,"c")));
+		break;
+	case 4:
+		this.actions.add(this.add(this.buttonY = this.createButton(flixel_FlxG.width - 86,flixel_FlxG.height - 85,44,45,"y")));
+		this.actions.add(this.add(this.buttonX = this.createButton(flixel_FlxG.width - 44,flixel_FlxG.height - 85,44,45,"x")));
+		this.actions.add(this.add(this.buttonB = this.createButton(flixel_FlxG.width - 86,flixel_FlxG.height - 45,44,45,"b")));
+		this.actions.add(this.add(this.buttonA = this.createButton(flixel_FlxG.width - 44,flixel_FlxG.height - 45,44,45,"a")));
+		break;
+	}
+};
+$hxClasses["flixel.ui.FlxVirtualPad"] = flixel_ui_FlxVirtualPad;
+flixel_ui_FlxVirtualPad.__name__ = ["flixel","ui","FlxVirtualPad"];
+flixel_ui_FlxVirtualPad.__super__ = flixel_group_FlxTypedSpriteGroup;
+flixel_ui_FlxVirtualPad.prototype = $extend(flixel_group_FlxTypedSpriteGroup.prototype,{
+	buttonA: null
+	,buttonB: null
+	,buttonC: null
+	,buttonY: null
+	,buttonX: null
+	,buttonLeft: null
+	,buttonUp: null
+	,buttonRight: null
+	,buttonDown: null
+	,dPad: null
+	,actions: null
+	,destroy: function() {
+		flixel_group_FlxTypedSpriteGroup.prototype.destroy.call(this);
+		this.dPad = flixel_util_FlxDestroyUtil.destroy(this.dPad);
+		this.actions = flixel_util_FlxDestroyUtil.destroy(this.actions);
+		this.dPad = null;
+		this.actions = null;
+		this.buttonA = null;
+		this.buttonB = null;
+		this.buttonC = null;
+		this.buttonY = null;
+		this.buttonX = null;
+		this.buttonLeft = null;
+		this.buttonUp = null;
+		this.buttonDown = null;
+		this.buttonRight = null;
+	}
+	,createButton: function(X,Y,Width,Height,Graphic,OnClick) {
+		var button = new flixel_ui_FlxButton(X,Y);
+		var frame = flixel_system_FlxAssets.getVirtualInputFrames().framesHash.get(Graphic);
+		var point = flixel_math_FlxPoint._pool.get().set(Width,Height);
+		point._inPool = false;
+		button.set_frames(flixel_graphics_frames_FlxTileFrames.fromFrame(frame,point));
+		button.set_width(button.frameWidth);
+		button.set_height(button.frameHeight);
+		button.set_solid(false);
+		button.set_immovable(true);
+		button.scrollFactor.set();
+		if(OnClick != null) {
+			button.onDown.callback = OnClick;
+		}
+		return button;
+	}
+	,__class__: flixel_ui_FlxVirtualPad
+});
+var flixel_ui_FlxDPadMode = $hxClasses["flixel.ui.FlxDPadMode"] = { __ename__ : ["flixel","ui","FlxDPadMode"], __constructs__ : ["NONE","UP_DOWN","LEFT_RIGHT","UP_LEFT_RIGHT","FULL"] };
+flixel_ui_FlxDPadMode.NONE = ["NONE",0];
+flixel_ui_FlxDPadMode.NONE.toString = $estr;
+flixel_ui_FlxDPadMode.NONE.__enum__ = flixel_ui_FlxDPadMode;
+flixel_ui_FlxDPadMode.UP_DOWN = ["UP_DOWN",1];
+flixel_ui_FlxDPadMode.UP_DOWN.toString = $estr;
+flixel_ui_FlxDPadMode.UP_DOWN.__enum__ = flixel_ui_FlxDPadMode;
+flixel_ui_FlxDPadMode.LEFT_RIGHT = ["LEFT_RIGHT",2];
+flixel_ui_FlxDPadMode.LEFT_RIGHT.toString = $estr;
+flixel_ui_FlxDPadMode.LEFT_RIGHT.__enum__ = flixel_ui_FlxDPadMode;
+flixel_ui_FlxDPadMode.UP_LEFT_RIGHT = ["UP_LEFT_RIGHT",3];
+flixel_ui_FlxDPadMode.UP_LEFT_RIGHT.toString = $estr;
+flixel_ui_FlxDPadMode.UP_LEFT_RIGHT.__enum__ = flixel_ui_FlxDPadMode;
+flixel_ui_FlxDPadMode.FULL = ["FULL",4];
+flixel_ui_FlxDPadMode.FULL.toString = $estr;
+flixel_ui_FlxDPadMode.FULL.__enum__ = flixel_ui_FlxDPadMode;
+var flixel_ui_FlxActionMode = $hxClasses["flixel.ui.FlxActionMode"] = { __ename__ : ["flixel","ui","FlxActionMode"], __constructs__ : ["NONE","A","A_B","A_B_C","A_B_X_Y"] };
+flixel_ui_FlxActionMode.NONE = ["NONE",0];
+flixel_ui_FlxActionMode.NONE.toString = $estr;
+flixel_ui_FlxActionMode.NONE.__enum__ = flixel_ui_FlxActionMode;
+flixel_ui_FlxActionMode.A = ["A",1];
+flixel_ui_FlxActionMode.A.toString = $estr;
+flixel_ui_FlxActionMode.A.__enum__ = flixel_ui_FlxActionMode;
+flixel_ui_FlxActionMode.A_B = ["A_B",2];
+flixel_ui_FlxActionMode.A_B.toString = $estr;
+flixel_ui_FlxActionMode.A_B.__enum__ = flixel_ui_FlxActionMode;
+flixel_ui_FlxActionMode.A_B_C = ["A_B_C",3];
+flixel_ui_FlxActionMode.A_B_C.toString = $estr;
+flixel_ui_FlxActionMode.A_B_C.__enum__ = flixel_ui_FlxActionMode;
+flixel_ui_FlxActionMode.A_B_X_Y = ["A_B_X_Y",4];
+flixel_ui_FlxActionMode.A_B_X_Y.toString = $estr;
+flixel_ui_FlxActionMode.A_B_X_Y.__enum__ = flixel_ui_FlxActionMode;
 var flixel_util_FlxArrayUtil = function() { };
 $hxClasses["flixel.util.FlxArrayUtil"] = flixel_util_FlxArrayUtil;
 flixel_util_FlxArrayUtil.__name__ = ["flixel","util","FlxArrayUtil"];
@@ -79002,6 +79161,29 @@ $hxClasses["math.MoreMath"] = math_MoreMath;
 math_MoreMath.__name__ = ["math","MoreMath"];
 math_MoreMath.degToRad = function(v) {
 	return v * 0.017453292519943295;
+};
+math_MoreMath.lerpAngle = function(v1,v2,r) {
+	v1 = math_MoreMath.wrapAngle(v1);
+	v2 = math_MoreMath.wrapAngle(v2);
+	var deltaAngle = v1 - v2;
+	if(Math.abs(deltaAngle) > 180) {
+		if(v2 < 180) {
+			v2 += 360;
+		} else {
+			v2 -= 360;
+		}
+	}
+	v1 += r * (v2 - v1);
+	return v1;
+};
+math_MoreMath.wrapAngle = function(v) {
+	if(v > 360) {
+		return math_MoreMath.wrapAngle(v - 360);
+	} else if(v < 0) {
+		return math_MoreMath.wrapAngle(v + 360);
+	} else {
+		return v;
+	}
 };
 math_MoreMath.clampMagnitude = function(v,limit) {
 	var lengthSquared = math_MoreMath.magnitudeSquared(v);
@@ -102539,22 +102721,20 @@ states_DemoState.prototype = $extend(flixel_FlxState.prototype,{
 	,map: null
 	,create: function() {
 		flixel_FlxState.prototype.create.call(this);
-		this.mapData = new flixel_addons_editors_ogmo_FlxOgmoLoader("assets/data/DemoZone2.oel");
-		this.map = this.mapData.loadTilemap("assets/images/environment/demozone.png",32,32,"environment");
-		this.map.setTileProperties(1,0);
-		this.map.setTileProperties(2,4369);
-		this.add(this.map);
-		this.add(Global.player.getMechanica());
 		var _this = flixel_FlxG.worldBounds;
 		_this.x = 720;
 		_this.y = 720;
 		_this.width = 0;
 		_this.height = 0;
+		this.mapData = new flixel_addons_editors_ogmo_FlxOgmoLoader("assets/data/TestZone.oel");
+		this.map = this.mapData.loadTilemap("assets/images/environment/demozone.png",32,32,"environment");
+		this.map.setTileProperties(1,0);
+		this.map.setTileProperties(2,4369);
+		this.add(this.map);
+		this.add(Global.player.getMechanica());
 		this.mapData.loadEntities($bind(this,this.placeEntities),"entities");
-		var _g = Global.player.getMechanica();
-		_g.set_y(_g.y - 96);
 		flixel_FlxG.cameras.remove(flixel_FlxG.camera);
-		flixel_FlxG.camera = flixel_FlxG.cameras.add(new flixel_addons_display_FlxZoomCamera(0,0,640,480,1));
+		flixel_FlxG.camera = flixel_FlxG.cameras.add(new flixel_addons_display_FlxZoomCamera(0,0,640,480,1.4));
 		flixel_FlxG.camera.follow(Global.player.getMechanica().core);
 		var _this1 = flixel_FlxG["debugger"];
 		var Profile = new flixel_system_debug_watch_TrackerProfile(util_mechanica_Mechanica,["speed","velocity","drag"]);
@@ -102564,6 +102744,7 @@ states_DemoState.prototype = $extend(flixel_FlxState.prototype,{
 		this.fixJitter();
 		flixel_FlxState.prototype.update.call(this,elapsed);
 		var mechanica = Global.player.getMechanica();
+		flixel_FlxG.camera.set_angle(math_MoreMath.lerpAngle(flixel_FlxG.camera.angle,mechanica.angle * -1,elapsed * 5));
 		flixel_FlxG.overlap(mechanica,this.map,null,flixel_FlxObject.separate);
 	}
 	,fixJitter: function() {
@@ -102659,6 +102840,7 @@ util_PartFactory.buildPart = function(part) {
 		catPartObj2.turningSpeed = dat__$Data_CarrierUnits_$Impl_$.get_legRef(catPartData2).turningSpeed;
 		catPartObj2.brakingForce = dat__$Data_CarrierUnits_$Impl_$.get_legRef(catPartData2).brakingForce;
 		catPartObj2.frameRate = dat__$Data_CarrierUnits_$Impl_$.get_legRef(catPartData2).frameRate;
+		catPartObj2.animated = dat__$Data_CarrierUnits_$Impl_$.get_legRef(catPartData2).animated;
 		break;
 	case 3:
 		flixel_FlxG.log.advanced("Building arms: " + part,Global.logStyle);
@@ -102704,10 +102886,18 @@ util_PartFactory.buildPart = function(part) {
 	flixel_FlxG.log.advanced("Reading armorRating...",Global.logStyle);
 	partObj.armorRating = partDat.armorRating;
 	if(partDat.imageFile != "") {
-		partObj.imageFile = "assets/images/" + partDat.imageFile;
+		var assetPath = "assets/images/";
+		partObj.imageFile = assetPath + partDat.imageFile;
 		partObj.loadGraphic(partObj.imageFile,true,32,32);
 		if(catData.partType == 2 && dat__$Data_CarrierUnits_$Impl_$.get_legRef(dat__$Data_CatData_$Impl_$.get_carrierDataObj(catData)).animated) {
-			partObj.animation.add("locomote",[2,3,4,5,6,7,0,1,2],(js_Boot.__cast(partObj , util_mechanica_LegUnits)).frameRate,false);
+			partObj.animation.add("locomote",[2,3,4,5,6,7,0,1],(js_Boot.__cast(partObj , util_mechanica_LegUnits)).frameRate,false);
+		} else if(catData.partType == 4) {
+			var partAsThruster = js_Boot.__cast(partObj , util_mechanica_ThrusterUnit);
+			partAsThruster.flareSprite = new flixel_FlxSprite();
+			partAsThruster.flareSprite.loadGraphic("assets/images/standard-rev1/flare.png",true,32,32);
+			flixel_FlxG.log.advanced("Thruster image file:" + assetPath + dat__$Data_CatData_$Impl_$.get_thrusterDataObj(catData).flareImageFile + " vs " + "assets/images/standard-rev1/flare.png",Global.logStyle);
+			partAsThruster.flareSprite.animation.add("engage",[0,1,2,3],10,false);
+			partAsThruster.flareSprite.set_visible(false);
 		}
 	}
 	return partObj;
@@ -102738,6 +102928,8 @@ util_control_Controller.prototype = {
 	,__class__: util_control_Controller
 };
 var util_control_PlayerController = function() {
+	this.PRESSED = 2;
+	this.boostInput = false;
 	this.rightInput = false;
 	this.leftInput = false;
 	this.upInput = false;
@@ -102752,12 +102944,16 @@ util_control_PlayerController.prototype = $extend(util_control_Controller.protot
 	,upInput: null
 	,leftInput: null
 	,rightInput: null
+	,boostInput: null
+	,virtualPad: null
+	,PRESSED: null
 	,populateBuffer: function() {
 		util_control_Controller.prototype.populateBuffer.call(this);
 		this.upInput = flixel_FlxG.keys.checkKeyArrayState([38,87],1);
 		this.downInput = flixel_FlxG.keys.checkKeyArrayState([40,83],1);
 		this.leftInput = flixel_FlxG.keys.checkKeyArrayState([37,65],1);
 		this.rightInput = flixel_FlxG.keys.checkKeyArrayState([39,68],1);
+		this.boostInput = flixel_FlxG.keys.checkKeyArrayState([32,70],1);
 		if(this.upInput && this.downInput) {
 			this.upInput = this.downInput = false;
 		}
@@ -102775,9 +102971,13 @@ util_control_PlayerController.prototype = $extend(util_control_Controller.protot
 			} else if(this.rightInput) {
 				this.bufferAction("steer","direction","1");
 			}
+			if(this.boostInput) {
+				this.bufferAction("boost","mode","fire");
+			}
 		} else {
 			this.bufferAction("locomote","direction","0");
 			this.bufferAction("steer","direction","0");
+			this.bufferAction("boost","mode","shutoff");
 		}
 	}
 	,__class__: util_control_PlayerController
@@ -102785,7 +102985,7 @@ util_control_PlayerController.prototype = $extend(util_control_Controller.protot
 var util_mechanica_Mechanica = function(X,Y) {
 	this.enabled = false;
 	this.name = "Blank Schematic";
-	flixel_addons_display_FlxNestedSprite.call(this,X,Y);
+	flixel_group_FlxTypedSpriteGroup.call(this,X,Y);
 };
 $hxClasses["util.mechanica.Mechanica"] = util_mechanica_Mechanica;
 util_mechanica_Mechanica.__name__ = ["util","mechanica","Mechanica"];
@@ -102796,8 +102996,8 @@ util_mechanica_Mechanica.makeToString = function(make) {
 		return "HYSPD";
 	}
 };
-util_mechanica_Mechanica.__super__ = flixel_addons_display_FlxNestedSprite;
-util_mechanica_Mechanica.prototype = $extend(flixel_addons_display_FlxNestedSprite.prototype,{
+util_mechanica_Mechanica.__super__ = flixel_group_FlxTypedSpriteGroup;
+util_mechanica_Mechanica.prototype = $extend(flixel_group_FlxTypedSpriteGroup.prototype,{
 	name: null
 	,head: null
 	,core: null
@@ -102833,6 +103033,28 @@ util_mechanica_Mechanica.prototype = $extend(flixel_addons_display_FlxNestedSpri
 			break;
 		case "aux2":
 			break;
+		case "boost":
+			var mode = paramsXml.get("mode");
+			var mobile = this.locomotionStatus == util_mechanica_LocomotionStatus.Walking || this.locomotionStatus == util_mechanica_LocomotionStatus.ThrusterEngaged;
+			var _this = flixel_FlxG.watch;
+			switch(mode) {
+			case "fire":
+				if(mobile) {
+					this.locomotionStatus = util_mechanica_LocomotionStatus.ThrusterEngaged;
+					this.thruster.flareSprite.set_visible(true);
+					this.thruster.drawFrame(true);
+					this.thruster.flareSprite.animation.play("engage");
+				}
+				break;
+			case "shutoff":
+				if(mobile) {
+					this.locomotionStatus = util_mechanica_LocomotionStatus.Standing;
+					this.thruster.flareSprite.set_visible(false);
+					this.thruster.flareSprite.animation.finish();
+				}
+				break;
+			}
+			break;
 		case "equip1":
 			break;
 		case "equip2":
@@ -102853,41 +103075,43 @@ util_mechanica_Mechanica.prototype = $extend(flixel_addons_display_FlxNestedSpri
 				this.speed = Math.max(this.speed - 2,0);
 				this.locomotionStatus = util_mechanica_LocomotionStatus.Braking;
 			}
-			if(this.locomotionStatus != util_mechanica_LocomotionStatus.ThrusterEngaged && math_MoreMath.magnitude(this.velocity) >= 10) {
+			if(this.legs.animated && this.locomotionStatus != util_mechanica_LocomotionStatus.ThrusterEngaged && math_MoreMath.magnitude(this.velocity) >= 10) {
 				this.legs.animation._animations.get("locomote").set_frameRate(Math.max(this.speed / limit * this.legs.frameRate,2) | 0);
 				this.legs.animation.play("locomote");
 			} else {
 				this.locomotionStatus = util_mechanica_LocomotionStatus.Standing;
-				if(this.legs.animation._curAnim != null && (this.legs.animation._curAnim.curFrame == 0 || this.legs.animation._curAnim.curFrame == 4)) {
-					this.legs.animation.finish();
+				if(this.legs.animated && this.legs.animation._curAnim != null) {
+					var _this1 = this.legs.animation;
+					if(_this1._curAnim != null) {
+						_this1._curAnim.pause();
+					}
 				}
 			}
-			var _this = flixel_FlxG.watch;
+			var _this2 = flixel_FlxG.watch;
 			var value = math_MoreMath.magnitude(this.velocity);
 			break;
 		case "steer":
 			var direction1 = Std.parseInt(paramsXml.get("direction"));
 			if(direction1 != 0) {
+				var e = this.locomotionStatus;
 				var _g1 = this;
 				_g1.set_angle(_g1.angle + this.legs.turningSpeed * direction1);
 				this.speed--;
-				if(this.angle >= 360) {
+				if(this.angle < 0) {
 					var _g2 = this;
-					_g2.set_angle(_g2.angle - 360);
+					_g2.set_angle(_g2.angle + 360);
 				}
-				if(this.angle <= -360) {
+				if(this.angle > 360) {
 					var _g3 = this;
-					_g3.set_angle(_g3.angle + 360);
+					_g3.set_angle(_g3.angle - 360);
 				}
 			}
-			break;
-		case "thruster":
 			break;
 		}
 	}
 	,update: function(e) {
 		this.processInput();
-		flixel_addons_display_FlxNestedSprite.prototype.update.call(this,e);
+		flixel_group_FlxTypedSpriteGroup.prototype.update.call(this,e);
 	}
 	,processInput: function() {
 		var inputBuffer = this.controller.getBuffer();
@@ -102944,10 +103168,18 @@ util_mechanica_Mechanica.prototype = $extend(flixel_addons_display_FlxNestedSpri
 		this.rearrangeChildren();
 		return returnBool;
 	}
+	,removeAll: function() {
+		var i = new flixel_group_FlxTypedGroupIterator(this.group.members,null);
+		while(i.hasNext()) {
+			var i1 = i.next();
+			this.remove(i1);
+		}
+	}
 	,rearrangeChildren: function() {
 		this.removeAll();
-		this.add(this.thruster);
+		this.add(this.thruster.flareSprite);
 		this.add(this.legs);
+		this.add(this.thruster);
 		this.add(this.arms);
 		this.add(this.core);
 		if(this.equip1 != null) {
@@ -103088,13 +103320,13 @@ var util_mechanica_Part = function(X,Y,SimpleGraphic) {
 	this.temp = 0;
 	this.desc = "No notes";
 	this.weight = 0;
-	flixel_addons_display_FlxNestedSprite.call(this,X,Y,SimpleGraphic);
+	flixel_FlxSprite.call(this,X,Y,SimpleGraphic);
 };
 $hxClasses["util.mechanica.Part"] = util_mechanica_Part;
 util_mechanica_Part.__name__ = ["util","mechanica","Part"];
 util_mechanica_Part.__interfaces__ = [util_mechanica_IPart];
-util_mechanica_Part.__super__ = flixel_addons_display_FlxNestedSprite;
-util_mechanica_Part.prototype = $extend(flixel_addons_display_FlxNestedSprite.prototype,{
+util_mechanica_Part.__super__ = flixel_FlxSprite;
+util_mechanica_Part.prototype = $extend(flixel_FlxSprite.prototype,{
 	weight: null
 	,desc: null
 	,temp: null
@@ -103160,6 +103392,7 @@ util_mechanica_ArmUnits.prototype = $extend(util_mechanica_CarrierUnit.prototype
 	__class__: util_mechanica_ArmUnits
 });
 var util_mechanica_LegUnits = function(X,Y) {
+	this.animated = true;
 	this.frameRate = 8;
 	util_mechanica_CarrierUnit.call(this,X,Y);
 	this.type = "legs";
@@ -103173,9 +103406,11 @@ util_mechanica_LegUnits.prototype = $extend(util_mechanica_CarrierUnit.prototype
 	,turningSpeed: null
 	,brakingForce: null
 	,frameRate: null
+	,animated: null
 	,__class__: util_mechanica_LegUnits
 });
 var util_mechanica_ThrusterUnit = function(X,Y) {
+	this.canFire = true;
 	util_mechanica_Part.call(this,X,Y);
 	this.type = "thruster";
 };
@@ -103187,6 +103422,14 @@ util_mechanica_ThrusterUnit.prototype = $extend(util_mechanica_Part.prototype,{
 	,driveEnUsage: null
 	,topSpeed: null
 	,_acceleration: null
+	,flareSprite: null
+	,canFire: null
+	,ready: function() {
+		return this.canFire;
+	}
+	,fire: function() {
+		this.canFire = false;
+	}
 	,__class__: util_mechanica_ThrusterUnit
 });
 var util_mechanica_EquipmentUnit = function(X,Y) {
@@ -103278,6 +103521,8 @@ AssetPaths.DemoZone__oel = "assets/data/DemoZone.oel";
 AssetPaths.DemoZone2__oel = "assets/data/DemoZone2.oel";
 AssetPaths.DemoZone2__oep = "assets/data/DemoZone2.oep";
 AssetPaths.test__cdb = "assets/data/test.cdb";
+AssetPaths.TestZone__oel = "assets/data/TestZone.oel";
+AssetPaths.TestZone__oep = "assets/data/TestZone.oep";
 AssetPaths.test__ase = "assets/gfx/test.ase";
 AssetPaths.test__png = "assets/gfx/test.png";
 AssetPaths.demozone__ase = "assets/images/environment/demozone.ase";
@@ -103290,7 +103535,6 @@ AssetPaths.core__png = "assets/images/standard-rev1/core.png";
 AssetPaths.flare__png = "assets/images/standard-rev1/flare.png";
 AssetPaths.head__png = "assets/images/standard-rev1/head.png";
 AssetPaths.legs__png = "assets/images/standard-rev1/legs.png";
-AssetPaths.mechanica__ase = "assets/images/standard-rev1/mechanica.ase";
 AssetPaths.thruster__png = "assets/images/standard-rev1/thruster.png";
 AssetPaths.music_goes_here__txt = "assets/music/music-goes-here.txt";
 AssetPaths.sounds_go_here__txt = "assets/sounds/sounds-go-here.txt";
