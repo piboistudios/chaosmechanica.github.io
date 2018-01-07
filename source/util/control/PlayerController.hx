@@ -21,23 +21,25 @@ class PlayerController extends Controller
         super();
       //  virtualPad = new FlxVirtualPad(FlxDPadMode.FULL, FlxActionMode.A_B_X_Y);
     }
-    override public function populateBuffer():Void
+    public function retrieveInputs():Void
     {
-        super.populateBuffer();
-
-        //Driving and steering:
-           upInput = FlxG.keys.anyPressed([UP, W]);
+        upInput = FlxG.keys.anyPressed([UP, W]);
          downInput = FlxG.keys.anyPressed([DOWN, S]);
          leftInput = FlxG.keys.anyPressed([LEFT, A]);
         rightInput = FlxG.keys.anyPressed([RIGHT, D]);
         boostInput = FlxG.keys.anyPressed([SPACE, F]);
-        strafeInput = FlxG.keys.anyPressed([Z,J]);
-        fire1Input = FlxG.keys.anyPressed([K,X]);
-        fire2Input = FlxG.keys.anyPressed([L, C]);
-        /* upInput = virtualPad.buttonUp.status == PRESSED;
-        downInput = virtualPad.buttonDown.status == PRESSED;
-        leftInput = virtualPad.buttonLeft.status == PRESSED;
-        rightInput = virtualPad.buttonRight.status==PRESSED; */
+        strafeInput = FlxG.keys.anyPressed([Z,SEMICOLON]);
+        fire1Input = FlxG.keys.anyPressed([J,C]);
+        fire2Input = FlxG.keys.anyPressed([K, V]);
+    }
+    override public function populateBuffer():Void
+    {
+        super.populateBuffer();
+        retrieveInputs();
+        processInputs();
+    }
+    public function processInputs():Void
+    {
         if(strafeInput) bufferAction("strafe");
         if(fire1Input)
         {
@@ -81,5 +83,6 @@ class PlayerController extends Controller
          }
          if(boostInput) bufferAction("boost","mode","fire");                                        //engage thrusters if the thruster button is pressed
          else bufferAction("boost","mode","shutoff");                                               //if not cut them off, gas ain't cheap
+         
     }
 }

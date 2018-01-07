@@ -145,7 +145,7 @@ class BuildSchematicState extends FlxUIState
                                     FlxG.log.advanced("Build succeeded", Global.logStyle);
                                     playerMech.name = input.text;
                                     playerMech.enable();
-                                    playerMech.controller = Global.player.controller;
+                                    playerMech.controller = (!Global.server ? Global.player.controller : new util.control.TestNetworkController());
                                     haxe.Timer.delay(startDemo, 10);
                                    
                                 }

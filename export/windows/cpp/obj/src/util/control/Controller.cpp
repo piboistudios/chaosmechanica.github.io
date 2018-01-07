@@ -12,7 +12,7 @@ HX_DEFINE_STACK_FRAME(_hx_pos_bda06cece05dd168_8_new,"util.control.Controller","
 HX_LOCAL_STACK_FRAME(_hx_pos_bda06cece05dd168_12_initializeBuffer,"util.control.Controller","initializeBuffer",0xa911af65,"util.control.Controller.initializeBuffer","util/control/Controller.hx",12,0x0fd8d703)
 HX_LOCAL_STACK_FRAME(_hx_pos_bda06cece05dd168_15_getBuffer,"util.control.Controller","getBuffer",0xedf7c8a1,"util.control.Controller.getBuffer","util/control/Controller.hx",15,0x0fd8d703)
 HX_LOCAL_STACK_FRAME(_hx_pos_bda06cece05dd168_20_bufferAction,"util.control.Controller","bufferAction",0xde05bf4b,"util.control.Controller.bufferAction","util/control/Controller.hx",20,0x0fd8d703)
-HX_LOCAL_STACK_FRAME(_hx_pos_bda06cece05dd168_31_populateBuffer,"util.control.Controller","populateBuffer",0xb91dd53f,"util.control.Controller.populateBuffer","util/control/Controller.hx",31,0x0fd8d703)
+HX_LOCAL_STACK_FRAME(_hx_pos_bda06cece05dd168_32_populateBuffer,"util.control.Controller","populateBuffer",0xb91dd53f,"util.control.Controller.populateBuffer","util/control/Controller.hx",32,0x0fd8d703)
 namespace util{
 namespace control{
 
@@ -68,15 +68,15 @@ HXDLIN(  23)		if (_hx_tmp) {
 HXLINE(  23)			xml->set(value2,value3);
             		}
 HXLINE(  25)		this->buffer->push(xml);
-HXLINE(  26)		return xml;
+HXLINE(  27)		return xml;
             	}
 
 
 HX_DEFINE_DYNAMIC_FUNC3(Controller_obj,bufferAction,return )
 
 void Controller_obj::populateBuffer(){
-            	HX_STACKFRAME(&_hx_pos_bda06cece05dd168_31_populateBuffer)
-HXDLIN(  31)		this->initializeBuffer();
+            	HX_STACKFRAME(&_hx_pos_bda06cece05dd168_32_populateBuffer)
+HXDLIN(  32)		this->initializeBuffer();
             	}
 
 

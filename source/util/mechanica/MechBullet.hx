@@ -1,7 +1,6 @@
 package util.mechanica;
 import flixel.addons.weapon.FlxBullet;
 import flixel.FlxG;
-import flixel.FlxObject;
 import util.interfaces.ICollider;
 import util.mechanica.Mechanica;
 class MechBullet extends FlxBullet implements ICollider

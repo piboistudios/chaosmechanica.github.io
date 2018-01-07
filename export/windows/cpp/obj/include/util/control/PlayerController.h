@@ -64,7 +64,13 @@ class HXCPP_CLASS_ATTRIBUTES PlayerController_obj : public  ::util::control::Con
 		bool fire2Input;
 		 ::flixel::ui::FlxVirtualPad virtualPad;
 		int PRESSED;
+		void retrieveInputs();
+		::Dynamic retrieveInputs_dyn();
+
 		void populateBuffer();
+
+		void processInputs();
+		::Dynamic processInputs_dyn();
 
 };
 

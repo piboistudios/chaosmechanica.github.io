@@ -370,6 +370,9 @@
 #ifndef INCLUDED_openfl__legacy_Assets
 #include <openfl/_legacy/Assets.h>
 #endif
+#ifndef INCLUDED_lib_hxudp_UdpSocket
+#include <lib/hxudp/UdpSocket.h>
+#endif
 #ifndef INCLUDED_hscript_Parser
 #include <hscript/Parser.h>
 #endif
@@ -987,6 +990,9 @@
 #endif
 #ifndef INCLUDED_util_interfaces_ICollider
 #include <util/interfaces/ICollider.h>
+#endif
+#ifndef INCLUDED_util_control_TestNetworkController
+#include <util/control/TestNetworkController.h>
 #endif
 #ifndef INCLUDED_util_control_PlayerController
 #include <util/control/PlayerController.h>
@@ -1984,6 +1990,9 @@
 #ifndef INCLUDED_IntIterator
 #include <IntIterator.h>
 #endif
+#ifndef INCLUDED_General
+#include <General.h>
+#endif
 #ifndef INCLUDED_EReg
 #include <EReg.h>
 #endif
@@ -2183,6 +2192,7 @@ hx::RegisterResources( hx::GetResources() );
 ::openfl::_legacy::display::OptimizedPerlin_obj::__register();
 ::openfl::_legacy::display::Bitmap_obj::__register();
 ::openfl::_legacy::Assets_obj::__register();
+::lib::hxudp::UdpSocket_obj::__register();
 ::hscript::Parser_obj::__register();
 ::haxe::xml::Parser_obj::__register();
 ::haxe::crypto::Base64_obj::__register();
@@ -2389,6 +2399,7 @@ hx::RegisterResources( hx::GetResources() );
 ::util::mechanica::ShellBullet_obj::__register();
 ::util::mechanica::MechBullet_obj::__register();
 ::util::interfaces::ICollider_obj::__register();
+::util::control::TestNetworkController_obj::__register();
 ::util::control::PlayerController_obj::__register();
 ::util::control::Controller_obj::__register();
 ::util::PartFactory_obj::__register();
@@ -2721,6 +2732,7 @@ hx::RegisterResources( hx::GetResources() );
 ::List_obj::__register();
 ::Lambda_obj::__register();
 ::IntIterator_obj::__register();
+::General_obj::__register();
 ::EReg_obj::__register();
 ::openfl::_legacy::utils::IDataInput_obj::__register();
 ::openfl::_legacy::utils::IMemoryRange_obj::__register();
@@ -3008,6 +3020,7 @@ hx::RegisterResources( hx::GetResources() );
 ::haxe::crypto::Base64_obj::__boot();
 ::haxe::xml::Parser_obj::__boot();
 ::hscript::Parser_obj::__boot();
+::lib::hxudp::UdpSocket_obj::__boot();
 ::openfl::_legacy::Assets_obj::__boot();
 ::openfl::_legacy::display::Bitmap_obj::__boot();
 ::openfl::_legacy::display::OptimizedPerlin_obj::__boot();

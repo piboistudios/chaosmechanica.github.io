@@ -4,14 +4,22 @@ import dat.Data;
 import util.mechanica.Part;
 import util.mechanica.Mechanica;
 import flixel.FlxG;
-import flixel.FlxSprite;
-import flixel.util.FlxColor;
 //static class used for building parts from the castle database
 
 class PartFactory {
+	static public function partExists(part:String):Bool
+	{
+		var partObj = Data.part.resolve(part);
+		var partsList = Data.part.all.toArrayCopy();
+		if(General.findInList(partObj, partsList) > -1)
+		{
+			return true;
+		}
+		return false;
+	}
     static public function buildPart(part:String):Part
     {
-        if(!Global.partExists(part))
+        if(!PartFactory.partExists(part))
 		{
 			FlxG.log.advanced(part + " doesn't exist!", Global.logStyle);
 

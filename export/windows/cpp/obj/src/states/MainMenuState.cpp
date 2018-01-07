@@ -55,8 +55,14 @@
 #ifndef INCLUDED_flixel_system_frontEnds_DebuggerFrontEnd
 #include <flixel/system/frontEnds/DebuggerFrontEnd.h>
 #endif
+#ifndef INCLUDED_flixel_system_frontEnds_LogFrontEnd
+#include <flixel/system/frontEnds/LogFrontEnd.h>
+#endif
 #ifndef INCLUDED_flixel_util_IFlxDestroyable
 #include <flixel/util/IFlxDestroyable.h>
+#endif
+#ifndef INCLUDED_lib_hxudp_UdpSocket
+#include <lib/hxudp/UdpSocket.h>
 #endif
 #ifndef INCLUDED_openfl__legacy_Assets
 #include <openfl/_legacy/Assets.h>
@@ -91,8 +97,8 @@
 
 HX_DEFINE_STACK_FRAME(_hx_pos_89e648ab22b7047a_11_new,"states.MainMenuState","new",0x55e2079f,"states.MainMenuState.new","states/MainMenuState.hx",11,0x1c04e2b2)
 HX_LOCAL_STACK_FRAME(_hx_pos_89e648ab22b7047a_15_create,"states.MainMenuState","create",0x17a2011d,"states.MainMenuState.create","states/MainMenuState.hx",15,0x1c04e2b2)
-HX_LOCAL_STACK_FRAME(_hx_pos_89e648ab22b7047a_35_setupDebugger,"states.MainMenuState","setupDebugger",0xd3e02fbd,"states.MainMenuState.setupDebugger","states/MainMenuState.hx",35,0x1c04e2b2)
-HX_LOCAL_STACK_FRAME(_hx_pos_89e648ab22b7047a_44_getEvent,"states.MainMenuState","getEvent",0x6ea1fc05,"states.MainMenuState.getEvent","states/MainMenuState.hx",44,0x1c04e2b2)
+HX_LOCAL_STACK_FRAME(_hx_pos_89e648ab22b7047a_49_setupDebugger,"states.MainMenuState","setupDebugger",0xd3e02fbd,"states.MainMenuState.setupDebugger","states/MainMenuState.hx",49,0x1c04e2b2)
+HX_LOCAL_STACK_FRAME(_hx_pos_89e648ab22b7047a_58_getEvent,"states.MainMenuState","getEvent",0x6ea1fc05,"states.MainMenuState.getEvent","states/MainMenuState.hx",58,0x1c04e2b2)
 HX_LOCAL_STACK_FRAME(_hx_pos_89e648ab22b7047a_13_boot,"states.MainMenuState","boot",0xc7fda413,"states.MainMenuState.boot","states/MainMenuState.hx",13,0x1c04e2b2)
 namespace states{
 
@@ -136,26 +142,45 @@ void MainMenuState_obj::create(){
             	HX_GC_STACKFRAME(&_hx_pos_89e648ab22b7047a_15_create)
 HXLINE(  16)		this->_xml_id = HX_("main_menu",a5,ba,e0,81);
 HXLINE(  17)		this->super::create();
-HXLINE(  19)		if (!(::states::MainMenuState_obj::dataLoaded)) {
-HXLINE(  21)			::String content = ::openfl::_legacy::Assets_obj::getText(HX_("source/dat/parts.cdb",e7,bb,7f,81));
-HXLINE(  23)			::dat::Data_obj::load(content);
-HXLINE(  24)			::Global_obj::player =  ::Player_obj::__alloc( HX_CTX );
-HXLINE(  25)			::Global_obj::logStyle =  ::flixel::_hx_system::debug::log::LogStyle_obj::__alloc( HX_CTX ,HX_("[NOTICE]",4a,a2,c6,24),HX_("00FF40",bc,64,d7,02),null(),null(),null(),null(),null(),null(),null());
-HXLINE(  27)			::states::MainMenuState_obj::dataLoaded = true;
-HXLINE(  28)			this->setupDebugger();
+HXLINE(  19)		::flixel::FlxG_obj::autoPause = false;
+HXLINE(  21)		if (!(::states::MainMenuState_obj::dataLoaded)) {
+HXLINE(  23)			::String content = ::openfl::_legacy::Assets_obj::getText(HX_("source/dat/parts.cdb",e7,bb,7f,81));
+HXLINE(  25)			::dat::Data_obj::load(content);
+HXLINE(  26)			::Global_obj::player =  ::Player_obj::__alloc( HX_CTX );
+HXLINE(  27)			::Global_obj::logStyle =  ::flixel::_hx_system::debug::log::LogStyle_obj::__alloc( HX_CTX ,HX_("[NOTICE]",4a,a2,c6,24),HX_("00FF40",bc,64,d7,02),null(),null(),null(),null(),null(),null(),null());
+HXLINE(  29)			::states::MainMenuState_obj::dataLoaded = true;
+HXLINE(  30)			this->setupDebugger();
+HXLINE(  32)			::flixel::FlxG_obj::log->advanced(HX_("Attempting to create UDP socket",7c,21,35,c6),::Global_obj::logStyle,null());
+HXLINE(  34)			try {
+            				HX_STACK_CATCHABLE( ::Dynamic, 0);
+HXLINE(  36)				::Global_obj::socket =  ::lib::hxudp::UdpSocket_obj::__alloc( HX_CTX );
+HXLINE(  37)				::Global_obj::socket->create();
+            			}
+            			catch( ::Dynamic _hx_e){
+            				if (_hx_e.IsClass<  ::Dynamic >() ){
+            					HX_STACK_BEGIN_CATCH
+            					 ::Dynamic E = _hx_e;
+HXLINE(  40)					::flixel::FlxG_obj::log->advanced(HX_("Socket creation failed! Unknown exception!",58,66,fb,f4),null(),null());
+HXLINE(  41)					return;
+            				}
+            				else {
+            					HX_STACK_DO_THROW(_hx_e);
+            				}
+            			}
+HXLINE(  43)			::flixel::FlxG_obj::log->advanced(HX_("Socket created successfully!",95,18,57,6c),null(),null());
             		}
             	}
 
 
 void MainMenuState_obj::setupDebugger(){
-            	HX_STACKFRAME(&_hx_pos_89e648ab22b7047a_35_setupDebugger)
-HXLINE(  38)		::flixel::FlxG_obj::debugger->set_visible(true);
-HXLINE(  39)		{
-HXLINE(  39)			 ::flixel::_hx_system::frontEnds::DebuggerFrontEnd _this = ::flixel::FlxG_obj::debugger;
-HXDLIN(  39)			{
-HXLINE(  39)				 ::flixel::_hx_system::debug::FlxDebugger _this1 = ::flixel::FlxG_obj::game->debugger;
-HXDLIN(  39)				_this1->_layout = ::flixel::_hx_system::debug::FlxDebuggerLayout_obj::MICRO_dyn();
-HXDLIN(  39)				_this1->resetLayout();
+            	HX_STACKFRAME(&_hx_pos_89e648ab22b7047a_49_setupDebugger)
+HXLINE(  52)		::flixel::FlxG_obj::debugger->set_visible(true);
+HXLINE(  53)		{
+HXLINE(  53)			 ::flixel::_hx_system::frontEnds::DebuggerFrontEnd _this = ::flixel::FlxG_obj::debugger;
+HXDLIN(  53)			{
+HXLINE(  53)				 ::flixel::_hx_system::debug::FlxDebugger _this1 = ::flixel::FlxG_obj::game->debugger;
+HXDLIN(  53)				_this1->_layout = ::flixel::_hx_system::debug::FlxDebuggerLayout_obj::MICRO_dyn();
+HXDLIN(  53)				_this1->resetLayout();
             			}
             		}
             	}
@@ -164,16 +189,30 @@ HXDLIN(  39)				_this1->resetLayout();
 HX_DEFINE_DYNAMIC_FUNC0(MainMenuState_obj,setupDebugger,(void))
 
 void MainMenuState_obj::getEvent(::String id, ::Dynamic target, ::Dynamic data,::cpp::VirtualArray params){
-            	HX_GC_STACKFRAME(&_hx_pos_89e648ab22b7047a_44_getEvent)
-HXDLIN(  44)		if (hx::IsNotNull( params )) {
-HXLINE(  46)			if ((id == HX_("click_button",49,90,30,6d))) {
-HXLINE(  49)				::String _g = ::Std_obj::string(params->__get((int)0));
-HXDLIN(  49)				if ((_g == HX_("build_schematic",3c,a8,9f,37))) {
-HXLINE(  52)					 ::flixel::FlxState nextState =  ::states::BuildSchematicState_obj::__alloc( HX_CTX ,null(),null());
-HXDLIN(  52)					if (::flixel::FlxG_obj::game->_state->switchTo(nextState)) {
-HXLINE(  52)						::flixel::FlxG_obj::game->_requestedState = nextState;
+            	HX_GC_STACKFRAME(&_hx_pos_89e648ab22b7047a_58_getEvent)
+HXDLIN(  58)		if (hx::IsNotNull( params )) {
+HXLINE(  60)			if ((id == HX_("click_button",49,90,30,6d))) {
+HXLINE(  63)				::String _g = ::Std_obj::string(params->__get((int)0));
+HXDLIN(  63)				::String _hx_switch_0 = _g;
+            				if (  (_hx_switch_0==HX_("build_schematic",3c,a8,9f,37)) ){
+HXLINE(  66)					 ::flixel::FlxState nextState =  ::states::BuildSchematicState_obj::__alloc( HX_CTX ,null(),null());
+HXDLIN(  66)					if (::flixel::FlxG_obj::game->_state->switchTo(nextState)) {
+HXLINE(  66)						::flixel::FlxG_obj::game->_requestedState = nextState;
             					}
+HXDLIN(  66)					goto _hx_goto_3;
             				}
+            				if (  (_hx_switch_0==HX_("client",4b,ca,4f,0a)) ){
+HXLINE(  72)					::Global_obj::socket->bindMcast(HX_("127.0.0.1",fd,bc,5e,a1),(int)1026);
+HXLINE(  73)					::Global_obj::socket->connectMcast(HX_("127.0.0.1",fd,bc,5e,a1),(int)1026);
+HXLINE(  71)					goto _hx_goto_3;
+            				}
+            				if (  (_hx_switch_0==HX_("server",c3,4a,37,6e)) ){
+HXLINE(  68)					::Global_obj::socket->bindMcast(HX_("127.0.0.1",fd,bc,5e,a1),(int)1026);
+HXLINE(  69)					::Global_obj::socket->connectMcast(HX_("127.0.0.1",fd,bc,5e,a1),(int)1026);
+HXLINE(  70)					::Global_obj::server = true;
+HXLINE(  67)					goto _hx_goto_3;
+            				}
+            				_hx_goto_3:;
             			}
             		}
             	}

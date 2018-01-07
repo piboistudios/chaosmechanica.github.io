@@ -6,15 +6,10 @@ pseudocode below:*/
 package util.mechanica;
 
 import flixel.addons.display.FlxNestedSprite;
-import flixel.group.FlxSpriteGroup;
-import util.mechanica.Part;
 import util.PartFactory;
 import util.control.Controller;
-import flixel.FlxSprite;
 import util.mechanica.MechanicaH;
-import flixel.math.FlxMath;
 import flixel.FlxG;
-import flixel.math.FlxPoint;
 import math.MoreMath;
 import util.mechanica.MechGroup;
 import util.mechanica.MechBullet;

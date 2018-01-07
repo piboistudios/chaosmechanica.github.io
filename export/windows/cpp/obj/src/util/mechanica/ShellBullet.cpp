@@ -50,15 +50,15 @@
 #include <util/mechanica/ShellBullet.h>
 #endif
 
-HX_DEFINE_STACK_FRAME(_hx_pos_c3415798b4c28aac_63_new,"util.mechanica.ShellBullet","new",0x5e7fea67,"util.mechanica.ShellBullet.new","util/mechanica/MechBullet.hx",63,0x3f6d8c20)
+HX_DEFINE_STACK_FRAME(_hx_pos_c3415798b4c28aac_62_new,"util.mechanica.ShellBullet","new",0x5e7fea67,"util.mechanica.ShellBullet.new","util/mechanica/MechBullet.hx",62,0x3f6d8c20)
 namespace util{
 namespace mechanica{
 
 void ShellBullet_obj::__construct(Float lifespan, ::util::mechanica::Mechanica parent){
-            	HX_STACKFRAME(&_hx_pos_c3415798b4c28aac_63_new)
-HXLINE(  64)		super::__construct(lifespan,parent);
-HXLINE(  65)		::flixel::FlxG_obj::log->advanced(HX_("Create a new bullet",e5,6a,1a,2b),::Global_obj::logStyle,null());
-HXLINE(  66)		this->loadGraphic(HX_("assets/images/bullets/shell.png",02,b7,31,76),false,(int)4,(int)4,null(),null());
+            	HX_STACKFRAME(&_hx_pos_c3415798b4c28aac_62_new)
+HXLINE(  63)		super::__construct(lifespan,parent);
+HXLINE(  64)		::flixel::FlxG_obj::log->advanced(HX_("Create a new bullet",e5,6a,1a,2b),::Global_obj::logStyle,null());
+HXLINE(  65)		this->loadGraphic(HX_("assets/images/bullets/shell.png",02,b7,31,76),false,(int)4,(int)4,null(),null());
             	}
 
 Dynamic ShellBullet_obj::__CreateEmpty() { return new ShellBullet_obj; }

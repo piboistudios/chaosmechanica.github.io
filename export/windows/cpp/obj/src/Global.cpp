@@ -7,15 +7,6 @@
 #ifndef INCLUDED_Player
 #include <Player.h>
 #endif
-#ifndef INCLUDED_cdb_Index
-#include <cdb/Index.h>
-#endif
-#ifndef INCLUDED_cdb_IndexId
-#include <cdb/IndexId.h>
-#endif
-#ifndef INCLUDED_dat_Data
-#include <dat/Data.h>
-#endif
 #ifndef INCLUDED_flixel_FlxBasic
 #include <flixel/FlxBasic.h>
 #endif
@@ -70,11 +61,11 @@
 #ifndef INCLUDED_flixel_tile_FlxTilemap
 #include <flixel/tile/FlxTilemap.h>
 #endif
-#ifndef INCLUDED_flixel_util_FlxAxes
-#include <flixel/util/FlxAxes.h>
-#endif
 #ifndef INCLUDED_flixel_util_IFlxDestroyable
 #include <flixel/util/IFlxDestroyable.h>
+#endif
+#ifndef INCLUDED_lib_hxudp_UdpSocket
+#include <lib/hxudp/UdpSocket.h>
 #endif
 #ifndef INCLUDED_openfl__legacy_display_DisplayObject
 #include <openfl/_legacy/display/DisplayObject.h>
@@ -101,13 +92,10 @@
 #include <util/mechanica/MechGroup.h>
 #endif
 
-HX_LOCAL_STACK_FRAME(_hx_pos_babd1827f55eb107_45_findInList_dat_Part,"Global","findInList_dat_Part",0x4e042fb3,"Global.findInList_dat_Part","Global.hx",45,0xfa68b11b)
-HX_LOCAL_STACK_FRAME(_hx_pos_babd1827f55eb107_20_add,"Global","add",0x212ce5b6,"Global.add","Global.hx",20,0xfa68b11b)
-HX_LOCAL_STACK_FRAME(_hx_pos_babd1827f55eb107_26_log,"Global","log",0x21354819,"Global.log","Global.hx",26,0xfa68b11b)
+HX_LOCAL_STACK_FRAME(_hx_pos_babd1827f55eb107_24_add,"Global","add",0x212ce5b6,"Global.add","Global.hx",24,0xfa68b11b)
 HX_LOCAL_STACK_FRAME(_hx_pos_babd1827f55eb107_29_setup,"Global","setup",0xd0667152,"Global.setup","Global.hx",29,0xfa68b11b)
-HX_LOCAL_STACK_FRAME(_hx_pos_babd1827f55eb107_35_setupDebugLogText,"Global","setupDebugLogText",0xb74565b0,"Global.setupDebugLogText","Global.hx",35,0xfa68b11b)
-HX_LOCAL_STACK_FRAME(_hx_pos_babd1827f55eb107_54_partExists,"Global","partExists",0x1ec0473a,"Global.partExists","Global.hx",54,0xfa68b11b)
-HX_LOCAL_STACK_FRAME(_hx_pos_babd1827f55eb107_14_boot,"Global","boot",0xe6cdb2fd,"Global.boot","Global.hx",14,0xfa68b11b)
+HX_LOCAL_STACK_FRAME(_hx_pos_babd1827f55eb107_16_boot,"Global","boot",0xe6cdb2fd,"Global.boot","Global.hx",16,0xfa68b11b)
+HX_LOCAL_STACK_FRAME(_hx_pos_babd1827f55eb107_17_boot,"Global","boot",0xe6cdb2fd,"Global.boot","Global.hx",17,0xfa68b11b)
 
 void Global_obj::__construct() { }
 
@@ -126,30 +114,13 @@ bool Global_obj::_hx_isInstanceOf(int inClassId) {
 	return inClassId==(int)0x00000001 || inClassId==(int)0x1aa908e7;
 }
 
-int Global_obj::findInList_dat_Part( ::Dynamic item,::Array< ::Dynamic> list){
-            	HX_STACKFRAME(&_hx_pos_babd1827f55eb107_45_findInList_dat_Part)
-HXLINE(  46)		{
-HXLINE(  46)			int _g1 = (int)0;
-HXDLIN(  46)			int _g = list->length;
-HXDLIN(  46)			while((_g1 < _g)){
-HXLINE(  46)				_g1 = (_g1 + (int)1);
-HXDLIN(  46)				int i = (_g1 - (int)1);
-HXLINE(  48)				if (hx::IsEq( list->__get(i),item )) {
-HXLINE(  49)					return i;
-            				}
-            			}
-            		}
-HXLINE(  51)		return (int)-1;
-            	}
-
-
-STATIC_HX_DEFINE_DYNAMIC_FUNC2(Global_obj,findInList_dat_Part,return )
-
  ::flixel::addons::ui::FlxUIText Global_obj::text;
 
  ::Player Global_obj::player;
 
  ::flixel::_hx_system::debug::log::LogStyle Global_obj::logStyle;
+
+bool Global_obj::server;
 
 Float Global_obj::speedScale;
 
@@ -157,26 +128,20 @@ Float Global_obj::speedScale;
 
  ::flixel::tile::FlxTilemap Global_obj::map;
 
+ ::lib::hxudp::UdpSocket Global_obj::socket;
+
  ::util::mechanica::MechGroup Global_obj::mechGroupA;
 
  ::util::mechanica::MechGroup Global_obj::mechGroupB;
 
 void Global_obj::add( ::flixel::FlxSprite v){
-            	HX_STACKFRAME(&_hx_pos_babd1827f55eb107_20_add)
-HXLINE(  21)		::flixel::FlxG_obj::game->_state->add(v).StaticCast<  ::flixel::FlxBasic >();
-HXLINE(  22)		::Global_obj::colliders->add(v).StaticCast<  ::flixel::FlxSprite >();
+            	HX_STACKFRAME(&_hx_pos_babd1827f55eb107_24_add)
+HXLINE(  25)		::flixel::FlxG_obj::game->_state->add(v).StaticCast<  ::flixel::FlxBasic >();
+HXLINE(  26)		::Global_obj::colliders->add(v).StaticCast<  ::flixel::FlxSprite >();
             	}
 
 
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(Global_obj,add,(void))
-
-void Global_obj::log(::String _text){
-            	HX_STACKFRAME(&_hx_pos_babd1827f55eb107_26_log)
-HXDLIN(  26)		::Global_obj::text->set_text(_text);
-            	}
-
-
-STATIC_HX_DEFINE_DYNAMIC_FUNC1(Global_obj,log,(void))
 
 void Global_obj::setup(){
             	HX_GC_STACKFRAME(&_hx_pos_babd1827f55eb107_29_setup)
@@ -187,41 +152,6 @@ HXLINE(  32)		::Global_obj::mechGroupB =  ::util::mechanica::MechGroup_obj::__al
 
 
 STATIC_HX_DEFINE_DYNAMIC_FUNC0(Global_obj,setup,(void))
-
-void Global_obj::setupDebugLogText( ::Dynamic __o_initMessage){
- ::Dynamic initMessage = __o_initMessage.Default(true);
-            	HX_GC_STACKFRAME(&_hx_pos_babd1827f55eb107_35_setupDebugLogText)
-HXLINE(  36)		::Global_obj::text =  ::flixel::addons::ui::FlxUIText_obj::__alloc( HX_CTX ,null(),null(),null(),null(),null(),null());
-HXLINE(  37)		::Global_obj::text->screenCenter(null());
-HXLINE(  38)		::Global_obj::text->set_color((int)-16744448);
-HXLINE(  39)		{
-HXLINE(  39)			 ::flixel::addons::ui::FlxUIText _g = ::Global_obj::text;
-HXDLIN(  39)			_g->set_y((_g->y + (int)64));
-            		}
-HXLINE(  40)		{
-HXLINE(  40)			 ::flixel::addons::ui::FlxUIText _g1 = ::Global_obj::text;
-HXDLIN(  40)			_g1->set_x((_g1->x - (int)64));
-            		}
-HXLINE(  41)		if (initMessage) {
-HXLINE(  41)			::Global_obj::log(HX_("Initialized",f4,8c,42,1b));
-            		}
-            	}
-
-
-STATIC_HX_DEFINE_DYNAMIC_FUNC1(Global_obj,setupDebugLogText,(void))
-
-bool Global_obj::partExists(::String part){
-            	HX_STACKFRAME(&_hx_pos_babd1827f55eb107_54_partExists)
-HXLINE(  55)		 ::Dynamic partObj = ::dat::Data_obj::part->resolve(part,null());
-HXLINE(  56)		::Array< ::Dynamic> partsList = ::dat::Data_obj::part->all->copy();
-HXLINE(  57)		if ((::Global_obj::findInList_dat_Part(partObj,partsList) > (int)-1)) {
-HXLINE(  59)			return true;
-            		}
-HXLINE(  61)		return false;
-            	}
-
-
-STATIC_HX_DEFINE_DYNAMIC_FUNC1(Global_obj,partExists,return )
 
 
 Global_obj::Global_obj()
@@ -234,7 +164,6 @@ bool Global_obj::__GetStatic(const ::String &inName, Dynamic &outValue, hx::Prop
 	case 3:
 		if (HX_FIELD_EQ(inName,"map") ) { outValue = ( map ); return true; }
 		if (HX_FIELD_EQ(inName,"add") ) { outValue = add_dyn(); return true; }
-		if (HX_FIELD_EQ(inName,"log") ) { outValue = log_dyn(); return true; }
 		break;
 	case 4:
 		if (HX_FIELD_EQ(inName,"text") ) { outValue = ( text ); return true; }
@@ -244,6 +173,8 @@ bool Global_obj::__GetStatic(const ::String &inName, Dynamic &outValue, hx::Prop
 		break;
 	case 6:
 		if (HX_FIELD_EQ(inName,"player") ) { outValue = ( player ); return true; }
+		if (HX_FIELD_EQ(inName,"server") ) { outValue = ( server ); return true; }
+		if (HX_FIELD_EQ(inName,"socket") ) { outValue = ( socket ); return true; }
 		break;
 	case 8:
 		if (HX_FIELD_EQ(inName,"logStyle") ) { outValue = ( logStyle ); return true; }
@@ -255,13 +186,6 @@ bool Global_obj::__GetStatic(const ::String &inName, Dynamic &outValue, hx::Prop
 		if (HX_FIELD_EQ(inName,"speedScale") ) { outValue = ( speedScale ); return true; }
 		if (HX_FIELD_EQ(inName,"mechGroupA") ) { outValue = ( mechGroupA ); return true; }
 		if (HX_FIELD_EQ(inName,"mechGroupB") ) { outValue = ( mechGroupB ); return true; }
-		if (HX_FIELD_EQ(inName,"partExists") ) { outValue = partExists_dyn(); return true; }
-		break;
-	case 17:
-		if (HX_FIELD_EQ(inName,"setupDebugLogText") ) { outValue = setupDebugLogText_dyn(); return true; }
-		break;
-	case 19:
-		if (HX_FIELD_EQ(inName,"findInList_dat_Part") ) { outValue = findInList_dat_Part_dyn(); return true; }
 	}
 	return false;
 }
@@ -277,6 +201,8 @@ bool Global_obj::__SetStatic(const ::String &inName,Dynamic &ioValue,hx::Propert
 		break;
 	case 6:
 		if (HX_FIELD_EQ(inName,"player") ) { player=ioValue.Cast<  ::Player >(); return true; }
+		if (HX_FIELD_EQ(inName,"server") ) { server=ioValue.Cast< bool >(); return true; }
+		if (HX_FIELD_EQ(inName,"socket") ) { socket=ioValue.Cast<  ::lib::hxudp::UdpSocket >(); return true; }
 		break;
 	case 8:
 		if (HX_FIELD_EQ(inName,"logStyle") ) { logStyle=ioValue.Cast<  ::flixel::_hx_system::debug::log::LogStyle >(); return true; }
@@ -298,9 +224,11 @@ static hx::StaticInfo Global_obj_sStaticStorageInfo[] = {
 	{hx::fsObject /*::flixel::addons::ui::FlxUIText*/ ,(void *) &Global_obj::text,HX_HCSTRING("text","\xad","\xcc","\xf9","\x4c")},
 	{hx::fsObject /*::Player*/ ,(void *) &Global_obj::player,HX_HCSTRING("player","\x61","\xeb","\xb8","\x37")},
 	{hx::fsObject /*::flixel::_hx_system::debug::log::LogStyle*/ ,(void *) &Global_obj::logStyle,HX_HCSTRING("logStyle","\x0d","\xe2","\x23","\x6f")},
+	{hx::fsBool,(void *) &Global_obj::server,HX_HCSTRING("server","\xc3","\x4a","\x37","\x6e")},
 	{hx::fsFloat,(void *) &Global_obj::speedScale,HX_HCSTRING("speedScale","\x83","\xfd","\x9c","\xab")},
 	{hx::fsObject /*::flixel::group::FlxTypedSpriteGroup*/ ,(void *) &Global_obj::colliders,HX_HCSTRING("colliders","\xbf","\x6e","\x4d","\xd1")},
 	{hx::fsObject /*::flixel::tile::FlxTilemap*/ ,(void *) &Global_obj::map,HX_HCSTRING("map","\x9c","\x0a","\x53","\x00")},
+	{hx::fsObject /*::lib::hxudp::UdpSocket*/ ,(void *) &Global_obj::socket,HX_HCSTRING("socket","\xb3","\x8b","\x46","\x26")},
 	{hx::fsObject /*::util::mechanica::MechGroup*/ ,(void *) &Global_obj::mechGroupA,HX_HCSTRING("mechGroupA","\xff","\x6f","\xea","\x6c")},
 	{hx::fsObject /*::util::mechanica::MechGroup*/ ,(void *) &Global_obj::mechGroupB,HX_HCSTRING("mechGroupB","\x00","\x70","\xea","\x6c")},
 	{ hx::fsUnknown, 0, null()}
@@ -312,9 +240,11 @@ static void Global_obj_sMarkStatics(HX_MARK_PARAMS) {
 	HX_MARK_MEMBER_NAME(Global_obj::text,"text");
 	HX_MARK_MEMBER_NAME(Global_obj::player,"player");
 	HX_MARK_MEMBER_NAME(Global_obj::logStyle,"logStyle");
+	HX_MARK_MEMBER_NAME(Global_obj::server,"server");
 	HX_MARK_MEMBER_NAME(Global_obj::speedScale,"speedScale");
 	HX_MARK_MEMBER_NAME(Global_obj::colliders,"colliders");
 	HX_MARK_MEMBER_NAME(Global_obj::map,"map");
+	HX_MARK_MEMBER_NAME(Global_obj::socket,"socket");
 	HX_MARK_MEMBER_NAME(Global_obj::mechGroupA,"mechGroupA");
 	HX_MARK_MEMBER_NAME(Global_obj::mechGroupB,"mechGroupB");
 };
@@ -325,9 +255,11 @@ static void Global_obj_sVisitStatics(HX_VISIT_PARAMS) {
 	HX_VISIT_MEMBER_NAME(Global_obj::text,"text");
 	HX_VISIT_MEMBER_NAME(Global_obj::player,"player");
 	HX_VISIT_MEMBER_NAME(Global_obj::logStyle,"logStyle");
+	HX_VISIT_MEMBER_NAME(Global_obj::server,"server");
 	HX_VISIT_MEMBER_NAME(Global_obj::speedScale,"speedScale");
 	HX_VISIT_MEMBER_NAME(Global_obj::colliders,"colliders");
 	HX_VISIT_MEMBER_NAME(Global_obj::map,"map");
+	HX_VISIT_MEMBER_NAME(Global_obj::socket,"socket");
 	HX_VISIT_MEMBER_NAME(Global_obj::mechGroupA,"mechGroupA");
 	HX_VISIT_MEMBER_NAME(Global_obj::mechGroupB,"mechGroupB");
 };
@@ -337,20 +269,18 @@ static void Global_obj_sVisitStatics(HX_VISIT_PARAMS) {
 hx::Class Global_obj::__mClass;
 
 static ::String Global_obj_sStaticFields[] = {
-	HX_HCSTRING("findInList_dat_Part","\x1e","\x02","\xe2","\x20"),
 	HX_HCSTRING("text","\xad","\xcc","\xf9","\x4c"),
 	HX_HCSTRING("player","\x61","\xeb","\xb8","\x37"),
 	HX_HCSTRING("logStyle","\x0d","\xe2","\x23","\x6f"),
+	HX_HCSTRING("server","\xc3","\x4a","\x37","\x6e"),
 	HX_HCSTRING("speedScale","\x83","\xfd","\x9c","\xab"),
 	HX_HCSTRING("colliders","\xbf","\x6e","\x4d","\xd1"),
 	HX_HCSTRING("map","\x9c","\x0a","\x53","\x00"),
+	HX_HCSTRING("socket","\xb3","\x8b","\x46","\x26"),
 	HX_HCSTRING("mechGroupA","\xff","\x6f","\xea","\x6c"),
 	HX_HCSTRING("mechGroupB","\x00","\x70","\xea","\x6c"),
 	HX_HCSTRING("add","\x21","\xf2","\x49","\x00"),
-	HX_HCSTRING("log","\x84","\x54","\x52","\x00"),
 	HX_HCSTRING("setup","\x7d","\xae","\x2f","\x7a"),
-	HX_HCSTRING("setupDebugLogText","\x5b","\x37","\xcb","\xff"),
-	HX_HCSTRING("partExists","\x2f","\x6e","\xb2","\x52"),
 	::String(null())
 };
 
@@ -384,8 +314,12 @@ void Global_obj::__register()
 void Global_obj::__boot()
 {
 {
-            	HX_STACKFRAME(&_hx_pos_babd1827f55eb107_14_boot)
-HXDLIN(  14)		speedScale = ((Float)1);
+            	HX_STACKFRAME(&_hx_pos_babd1827f55eb107_16_boot)
+HXDLIN(  16)		server = false;
+            	}
+{
+            	HX_STACKFRAME(&_hx_pos_babd1827f55eb107_17_boot)
+HXDLIN(  17)		speedScale = ((Float)1);
             	}
 }
 

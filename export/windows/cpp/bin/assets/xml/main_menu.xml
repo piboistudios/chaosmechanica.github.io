@@ -8,4 +8,10 @@
         <param type = "string" value = "hangar"/>
     </button>
     <button x = "background.center-32" y = "background.top+80" label = "Quit"/>
+    <button x = "background.center-32" y = "background.top+112" label = "Client">
+        <param type = "string" value = "client"/>
+    </button>
+    <button x = "background.center-32" y = "background.top+144" label = "Server">
+        <param type = "string" value = "server"/>
+    </button>
 </data>

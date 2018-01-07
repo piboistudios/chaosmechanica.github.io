@@ -9,6 +9,7 @@ import util.control.PlayerController;
 
 class Player
 {
+	
 	public var controller:PlayerController;
 	public var partList:Array<StrNameLabel>;
 	private var mechanica:Array<Mechanica>;
@@ -50,7 +51,7 @@ class Player
 	{
 
 		
-		if(Global.partExists(_part))
+		if(util.PartFactory.partExists(_part))
 		{
 			
 			partList.push(new StrNameLabel(_part, Data.part.resolve(_part).desc));//partObj.id.toString()));

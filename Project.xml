@@ -47,6 +47,7 @@
 	<!--<haxelib name="nape" />-->
 	<haxelib name="castle"/>
 	
+	<ndll name="hxudp" haxelib="hxudp"/>
 	<!-- ______________________________ Haxedefines _____________________________ -->
 
 	<!--Enable the Flixel core recording system-->

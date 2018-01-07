@@ -23,6 +23,7 @@ class Controller
         if(value3 != null && value2 != null) xml.set(value2, value3);
         //Debug.log(xml.toString());
         buffer.push(xml);
+        //if(!Global.server) Global.socket.send(haxe.io.Bytes.ofString(xml.toString()));
          return xml;
     }
 

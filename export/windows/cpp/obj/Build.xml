@@ -244,6 +244,16 @@
    <depend name="include/flixel/IFlxSprite.h"/>
    <depend name="include/util/interfaces/ICollider.h"/>
   </file>
+  <file name="src/util/control/TestNetworkController.cpp" >
+   <depend name="include/Global.h"/>
+   <depend name="include/Xml.h"/>
+   <depend name="include/haxe/io/Bytes.h"/>
+   <depend name="include/haxe/io/BytesInput.h"/>
+   <depend name="include/haxe/io/Input.h"/>
+   <depend name="include/lib/hxudp/UdpSocket.h"/>
+   <depend name="include/util/control/Controller.h"/>
+   <depend name="include/util/control/TestNetworkController.h"/>
+  </file>
   <file name="src/util/control/PlayerController.cpp" >
    <depend name="include/Xml.h"/>
    <depend name="include/flixel/FlxBasic.h"/>
@@ -264,6 +274,7 @@
    <depend name="include/util/control/Controller.h"/>
   </file>
   <file name="src/util/PartFactory.cpp" >
+   <depend name="include/General.h"/>
    <depend name="include/Global.h"/>
    <depend name="include/cdb/Index.h"/>
    <depend name="include/cdb/IndexId.h"/>
@@ -335,7 +346,9 @@
    <depend name="include/flixel/system/debug/FlxDebuggerLayout.h"/>
    <depend name="include/flixel/system/debug/log/LogStyle.h"/>
    <depend name="include/flixel/system/frontEnds/DebuggerFrontEnd.h"/>
+   <depend name="include/flixel/system/frontEnds/LogFrontEnd.h"/>
    <depend name="include/flixel/util/IFlxDestroyable.h"/>
+   <depend name="include/lib/hxudp/UdpSocket.h"/>
    <depend name="include/openfl/_legacy/Assets.h"/>
    <depend name="include/openfl/_legacy/display/DisplayObject.h"/>
    <depend name="include/openfl/_legacy/display/DisplayObjectContainer.h"/>
@@ -367,6 +380,7 @@
    <depend name="include/flixel/addons/editors/ogmo/FlxOgmoLoader.h"/>
    <depend name="include/flixel/group/FlxTypedGroup.h"/>
    <depend name="include/flixel/group/FlxTypedSpriteGroup.h"/>
+   <depend name="include/flixel/math/FlxMath.h"/>
    <depend name="include/flixel/math/FlxRect.h"/>
    <depend name="include/flixel/system/debug/FlxDebugger.h"/>
    <depend name="include/flixel/system/debug/Window.h"/>
@@ -387,6 +401,10 @@
    <depend name="include/flixel/util/IFlxPooled.h"/>
    <depend name="include/haxe/IMap.h"/>
    <depend name="include/haxe/ds/StringMap.h"/>
+   <depend name="include/haxe/io/Bytes.h"/>
+   <depend name="include/haxe/io/BytesInput.h"/>
+   <depend name="include/haxe/io/Input.h"/>
+   <depend name="include/lib/hxudp/UdpSocket.h"/>
    <depend name="include/math/MoreMath.h"/>
    <depend name="include/openfl/_legacy/display/DisplayObject.h"/>
    <depend name="include/openfl/_legacy/display/DisplayObjectContainer.h"/>
@@ -470,6 +488,7 @@
    <depend name="include/states/MainMenuState.h"/>
    <depend name="include/util/control/Controller.h"/>
    <depend name="include/util/control/PlayerController.h"/>
+   <depend name="include/util/control/TestNetworkController.h"/>
    <depend name="include/util/mechanica/Mechanica.h"/>
   </file>
   <file name="src/haxe/lang/Iterable.cpp" >
@@ -1450,6 +1469,11 @@
    <depend name="include/flixel/util/IFlxPool.h"/>
    <depend name="include/flixel/util/IFlxPooled.h"/>
    <depend name="include/math/MoreMath.h"/>
+  </file>
+  <file name="src/lib/hxudp/UdpSocket.cpp" >
+   <depend name="include/cpp/Lib.h"/>
+   <depend name="include/haxe/io/Bytes.h"/>
+   <depend name="include/lib/hxudp/UdpSocket.h"/>
   </file>
   <file name="src/hscript/Parser.cpp" >
    <depend name="include/Std.h"/>
@@ -7542,7 +7566,6 @@
    <depend name="include/Reflect.h"/>
   </file>
   <file name="src/Player.cpp" >
-   <depend name="include/Global.h"/>
    <depend name="include/Player.h"/>
    <depend name="include/cdb/Index.h"/>
    <depend name="include/cdb/IndexId.h"/>
@@ -7554,6 +7577,7 @@
    <depend name="include/flixel/addons/display/FlxNestedSprite.h"/>
    <depend name="include/flixel/addons/ui/StrNameLabel.h"/>
    <depend name="include/flixel/util/IFlxDestroyable.h"/>
+   <depend name="include/util/PartFactory.h"/>
    <depend name="include/util/control/Controller.h"/>
    <depend name="include/util/control/PlayerController.h"/>
    <depend name="include/util/mechanica/Mechanica.h"/>
@@ -7582,9 +7606,6 @@
   <file name="src/Global.cpp" >
    <depend name="include/Global.h"/>
    <depend name="include/Player.h"/>
-   <depend name="include/cdb/Index.h"/>
-   <depend name="include/cdb/IndexId.h"/>
-   <depend name="include/dat/Data.h"/>
    <depend name="include/flixel/FlxBasic.h"/>
    <depend name="include/flixel/FlxG.h"/>
    <depend name="include/flixel/FlxGame.h"/>
@@ -7603,8 +7624,8 @@
    <depend name="include/flixel/text/FlxText.h"/>
    <depend name="include/flixel/tile/FlxBaseTilemap.h"/>
    <depend name="include/flixel/tile/FlxTilemap.h"/>
-   <depend name="include/flixel/util/FlxAxes.h"/>
    <depend name="include/flixel/util/IFlxDestroyable.h"/>
+   <depend name="include/lib/hxudp/UdpSocket.h"/>
    <depend name="include/openfl/_legacy/display/DisplayObject.h"/>
    <depend name="include/openfl/_legacy/display/DisplayObjectContainer.h"/>
    <depend name="include/openfl/_legacy/display/IBitmapDrawable.h"/>
@@ -7613,6 +7634,9 @@
    <depend name="include/openfl/_legacy/events/EventDispatcher.h"/>
    <depend name="include/openfl/_legacy/events/IEventDispatcher.h"/>
    <depend name="include/util/mechanica/MechGroup.h"/>
+  </file>
+  <file name="src/General.cpp" >
+   <depend name="include/General.h"/>
   </file>
   <file name="src/EReg.cpp" >
    <depend name="include/EReg.h"/>
@@ -8556,6 +8580,7 @@
    <depend name="include/openfl/_legacy/display/OptimizedPerlin.h"/>
    <depend name="include/openfl/_legacy/display/Bitmap.h"/>
    <depend name="include/openfl/_legacy/Assets.h"/>
+   <depend name="include/lib/hxudp/UdpSocket.h"/>
    <depend name="include/hscript/Parser.h"/>
    <depend name="include/haxe/xml/Parser.h"/>
    <depend name="include/haxe/crypto/Base64.h"/>

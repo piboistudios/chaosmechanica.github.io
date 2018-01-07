@@ -79,6 +79,18 @@ class HXCPP_CLASS_ATTRIBUTES DemoState_obj : public  ::flixel::FlxState_obj
 
 		void update(Float elapsed);
 
+		void serverTest();
+		::Dynamic serverTest_dyn();
+
+		void getAndDoData();
+		::Dynamic getAndDoData_dyn();
+
+		void clientTest();
+		::Dynamic clientTest_dyn();
+
+		void sendOff();
+		::Dynamic sendOff_dyn();
+
 		void collision( ::Dynamic col1, ::Dynamic col2);
 		::Dynamic collision_dyn();
 

@@ -56,20 +56,20 @@
 #include <util/mechanica/Mechanica.h>
 #endif
 
-HX_DEFINE_STACK_FRAME(_hx_pos_0ae93507672be849_11_new,"util.mechanica.MechBullet","new",0xa26eb28e,"util.mechanica.MechBullet.new","util/mechanica/MechBullet.hx",11,0x3f6d8c20)
-HX_LOCAL_STACK_FRAME(_hx_pos_0ae93507672be849_21_update,"util.mechanica.MechBullet","update",0x31cbb49b,"util.mechanica.MechBullet.update","util/mechanica/MechBullet.hx",21,0x3f6d8c20)
-HX_LOCAL_STACK_FRAME(_hx_pos_0ae93507672be849_27_collided,"util.mechanica.MechBullet","collided",0x55725638,"util.mechanica.MechBullet.collided","util/mechanica/MechBullet.hx",27,0x3f6d8c20)
-HX_LOCAL_STACK_FRAME(_hx_pos_0ae93507672be849_51_collideWith,"util.mechanica.MechBullet","collideWith",0x12e3a8d2,"util.mechanica.MechBullet.collideWith","util/mechanica/MechBullet.hx",51,0x3f6d8c20)
-HX_LOCAL_STACK_FRAME(_hx_pos_0ae93507672be849_56_postCollision,"util.mechanica.MechBullet","postCollision",0x122e1fa0,"util.mechanica.MechBullet.postCollision","util/mechanica/MechBullet.hx",56,0x3f6d8c20)
+HX_DEFINE_STACK_FRAME(_hx_pos_0ae93507672be849_10_new,"util.mechanica.MechBullet","new",0xa26eb28e,"util.mechanica.MechBullet.new","util/mechanica/MechBullet.hx",10,0x3f6d8c20)
+HX_LOCAL_STACK_FRAME(_hx_pos_0ae93507672be849_20_update,"util.mechanica.MechBullet","update",0x31cbb49b,"util.mechanica.MechBullet.update","util/mechanica/MechBullet.hx",20,0x3f6d8c20)
+HX_LOCAL_STACK_FRAME(_hx_pos_0ae93507672be849_26_collided,"util.mechanica.MechBullet","collided",0x55725638,"util.mechanica.MechBullet.collided","util/mechanica/MechBullet.hx",26,0x3f6d8c20)
+HX_LOCAL_STACK_FRAME(_hx_pos_0ae93507672be849_50_collideWith,"util.mechanica.MechBullet","collideWith",0x12e3a8d2,"util.mechanica.MechBullet.collideWith","util/mechanica/MechBullet.hx",50,0x3f6d8c20)
+HX_LOCAL_STACK_FRAME(_hx_pos_0ae93507672be849_55_postCollision,"util.mechanica.MechBullet","postCollision",0x122e1fa0,"util.mechanica.MechBullet.postCollision","util/mechanica/MechBullet.hx",55,0x3f6d8c20)
 namespace util{
 namespace mechanica{
 
 void MechBullet_obj::__construct(Float lifespan, ::util::mechanica::Mechanica parent){
-            	HX_STACKFRAME(&_hx_pos_0ae93507672be849_11_new)
-HXLINE(  12)		this->parent = parent;
-HXLINE(  13)		super::__construct();
-HXLINE(  15)		::Global_obj::add(hx::ObjectPtr<OBJ_>(this));
-HXLINE(  17)		this->lifespan = lifespan;
+            	HX_STACKFRAME(&_hx_pos_0ae93507672be849_10_new)
+HXLINE(  11)		this->parent = parent;
+HXLINE(  12)		super::__construct();
+HXLINE(  14)		::Global_obj::add(hx::ObjectPtr<OBJ_>(this));
+HXLINE(  16)		this->lifespan = lifespan;
             	}
 
 Dynamic MechBullet_obj::__CreateEmpty() { return new MechBullet_obj; }
@@ -168,43 +168,43 @@ void *MechBullet_obj::_hx_getInterface(int inHash) {
 }
 
 void MechBullet_obj::update(Float elapsed){
-            	HX_STACKFRAME(&_hx_pos_0ae93507672be849_21_update)
-HXLINE(  22)		this->super::update(elapsed);
-HXLINE(  23)		::flixel::FlxG_obj::overlap(hx::ObjectPtr<OBJ_>(this),( ( ::flixel::FlxBasic)(::Global_obj::map) ),this->collided_dyn(),::flixel::FlxObject_obj::separate_dyn());
-HXLINE(  24)		::flixel::FlxG_obj::overlap(hx::ObjectPtr<OBJ_>(this),::Global_obj::colliders,null(),this->collided_dyn());
+            	HX_STACKFRAME(&_hx_pos_0ae93507672be849_20_update)
+HXLINE(  21)		this->super::update(elapsed);
+HXLINE(  22)		::flixel::FlxG_obj::overlap(hx::ObjectPtr<OBJ_>(this),( ( ::flixel::FlxBasic)(::Global_obj::map) ),this->collided_dyn(),::flixel::FlxObject_obj::separate_dyn());
+HXLINE(  23)		::flixel::FlxG_obj::overlap(hx::ObjectPtr<OBJ_>(this),::Global_obj::colliders,null(),this->collided_dyn());
             	}
 
 
 bool MechBullet_obj::collided( ::Dynamic c1, ::Dynamic c2){
-            	HX_STACKFRAME(&_hx_pos_0ae93507672be849_27_collided)
-HXLINE(  28)		if (::Std_obj::is(c2,hx::ClassOf< ::util::mechanica::Mechanica >())) {
-HXLINE(  30)			if (hx::IsEq( hx::TCast<  ::util::mechanica::Mechanica >::cast(c2)->team,this->parent->team )) {
-HXLINE(  33)				return false;
+            	HX_STACKFRAME(&_hx_pos_0ae93507672be849_26_collided)
+HXLINE(  27)		if (::Std_obj::is(c2,hx::ClassOf< ::util::mechanica::Mechanica >())) {
+HXLINE(  29)			if (hx::IsEq( hx::TCast<  ::util::mechanica::Mechanica >::cast(c2)->team,this->parent->team )) {
+HXLINE(  32)				return false;
             			}
             			else {
-HXLINE(  38)				hx::TCast<  ::util::mechanica::Mechanica >::cast(c2)->struckBy(hx::ObjectPtr<OBJ_>(this));
+HXLINE(  37)				hx::TCast<  ::util::mechanica::Mechanica >::cast(c2)->struckBy(hx::ObjectPtr<OBJ_>(this));
             			}
             		}
-HXLINE(  42)		if (::Std_obj::is(c2,hx::ClassOf< ::util::mechanica::MechBullet >())) {
-HXLINE(  44)			return false;
+HXLINE(  41)		if (::Std_obj::is(c2,hx::ClassOf< ::util::mechanica::MechBullet >())) {
+HXLINE(  43)			return false;
             		}
-HXLINE(  46)		this->kill();
-HXLINE(  47)		return true;
+HXLINE(  45)		this->kill();
+HXLINE(  46)		return true;
             	}
 
 
 HX_DEFINE_DYNAMIC_FUNC2(MechBullet_obj,collided,return )
 
 void MechBullet_obj::collideWith( ::Dynamic col){
-            	HX_STACKFRAME(&_hx_pos_0ae93507672be849_51_collideWith)
+            	HX_STACKFRAME(&_hx_pos_0ae93507672be849_50_collideWith)
             	}
 
 
 HX_DEFINE_DYNAMIC_FUNC1(MechBullet_obj,collideWith,(void))
 
 void MechBullet_obj::postCollision(){
-            	HX_STACKFRAME(&_hx_pos_0ae93507672be849_56_postCollision)
-HXDLIN(  56)		this->kill();
+            	HX_STACKFRAME(&_hx_pos_0ae93507672be849_55_postCollision)
+HXDLIN(  55)		this->kill();
             	}
 
 

@@ -57,6 +57,9 @@ class HXCPP_CLASS_ATTRIBUTES PartFactory_obj : public hx::Object
 		bool _hx_isInstanceOf(int inClassId);
 		::String __ToString() const { return HX_HCSTRING("PartFactory","\xf7","\xac","\x3e","\x71"); }
 
+		static bool partExists(::String part);
+		static ::Dynamic partExists_dyn();
+
 		static  ::util::mechanica::Part buildPart(::String part);
 		static ::Dynamic buildPart_dyn();
 

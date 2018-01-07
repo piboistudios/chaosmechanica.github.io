@@ -181,6 +181,9 @@
 #ifndef INCLUDED_util_control_PlayerController
 #include <util/control/PlayerController.h>
 #endif
+#ifndef INCLUDED_util_control_TestNetworkController
+#include <util/control/TestNetworkController.h>
+#endif
 #ifndef INCLUDED_util_mechanica_Mechanica
 #include <util/mechanica/Mechanica.h>
 #endif
@@ -407,7 +410,14 @@ HXLINE( 140)					if (playerMech->buildFromParts(_hx_tmp1,_hx_tmp2,_hx_tmp3,_hx_t
 HXLINE( 145)						::flixel::FlxG_obj::log->advanced(HX_("Build succeeded",cf,3a,26,16),::Global_obj::logStyle,null());
 HXLINE( 146)						playerMech->name = this->input->text;
 HXLINE( 147)						playerMech->enable();
-HXLINE( 148)						playerMech->controller = ::Global_obj::player->controller;
+HXLINE( 148)						 ::util::control::Controller _hx_tmp7;
+HXDLIN( 148)						if (!(::Global_obj::server)) {
+HXLINE( 148)							_hx_tmp7 = ::Global_obj::player->controller;
+            						}
+            						else {
+HXLINE( 148)							_hx_tmp7 =  ::util::control::TestNetworkController_obj::__alloc( HX_CTX );
+            						}
+HXDLIN( 148)						playerMech->controller = _hx_tmp7;
 HXLINE( 149)						::haxe::Timer_obj::delay(this->startDemo_dyn(),(int)10);
             					}
             					else {

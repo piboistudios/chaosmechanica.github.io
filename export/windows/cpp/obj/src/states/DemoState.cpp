@@ -58,6 +58,9 @@
 #ifndef INCLUDED_flixel_group_FlxTypedSpriteGroup
 #include <flixel/group/FlxTypedSpriteGroup.h>
 #endif
+#ifndef INCLUDED_flixel_math_FlxMath
+#include <flixel/math/FlxMath.h>
+#endif
 #ifndef INCLUDED_flixel_math_FlxRect
 #include <flixel/math/FlxRect.h>
 #endif
@@ -117,6 +120,18 @@
 #endif
 #ifndef INCLUDED_haxe_ds_StringMap
 #include <haxe/ds/StringMap.h>
+#endif
+#ifndef INCLUDED_haxe_io_Bytes
+#include <haxe/io/Bytes.h>
+#endif
+#ifndef INCLUDED_haxe_io_BytesInput
+#include <haxe/io/BytesInput.h>
+#endif
+#ifndef INCLUDED_haxe_io_Input
+#include <haxe/io/Input.h>
+#endif
+#ifndef INCLUDED_lib_hxudp_UdpSocket
+#include <lib/hxudp/UdpSocket.h>
 #endif
 #ifndef INCLUDED_math_MoreMath
 #include <math/MoreMath.h>
@@ -182,24 +197,28 @@
 #include <util/mechanica/ThrusterUnit.h>
 #endif
 
-HX_DEFINE_STACK_FRAME(_hx_pos_6ea8e8e6294606fe_20_new,"states.DemoState","new",0x84abd194,"states.DemoState.new","states/DemoState.hx",20,0x61e5f9dd)
-HX_LOCAL_STACK_FRAME(_hx_pos_6ea8e8e6294606fe_29_create,"states.DemoState","create",0x0a4d1e48,"states.DemoState.create","states/DemoState.hx",29,0x61e5f9dd)
-HX_LOCAL_STACK_FRAME(_hx_pos_6ea8e8e6294606fe_37_setupEnvironment,"states.DemoState","setupEnvironment",0x8bde8aa2,"states.DemoState.setupEnvironment","states/DemoState.hx",37,0x61e5f9dd)
-HX_LOCAL_STACK_FRAME(_hx_pos_6ea8e8e6294606fe_67_buildTestMech,"states.DemoState","buildTestMech",0xb44d40f1,"states.DemoState.buildTestMech","states/DemoState.hx",67,0x61e5f9dd)
-HX_LOCAL_STACK_FRAME(_hx_pos_6ea8e8e6294606fe_75_setupDebugger,"states.DemoState","setupDebugger",0xaefbddf2,"states.DemoState.setupDebugger","states/DemoState.hx",75,0x61e5f9dd)
+HX_DEFINE_STACK_FRAME(_hx_pos_6ea8e8e6294606fe_22_new,"states.DemoState","new",0x84abd194,"states.DemoState.new","states/DemoState.hx",22,0x61e5f9dd)
+HX_LOCAL_STACK_FRAME(_hx_pos_6ea8e8e6294606fe_31_create,"states.DemoState","create",0x0a4d1e48,"states.DemoState.create","states/DemoState.hx",31,0x61e5f9dd)
+HX_LOCAL_STACK_FRAME(_hx_pos_6ea8e8e6294606fe_39_setupEnvironment,"states.DemoState","setupEnvironment",0x8bde8aa2,"states.DemoState.setupEnvironment","states/DemoState.hx",39,0x61e5f9dd)
+HX_LOCAL_STACK_FRAME(_hx_pos_6ea8e8e6294606fe_69_buildTestMech,"states.DemoState","buildTestMech",0xb44d40f1,"states.DemoState.buildTestMech","states/DemoState.hx",69,0x61e5f9dd)
+HX_LOCAL_STACK_FRAME(_hx_pos_6ea8e8e6294606fe_77_setupDebugger,"states.DemoState","setupDebugger",0xaefbddf2,"states.DemoState.setupDebugger","states/DemoState.hx",77,0x61e5f9dd)
 static const ::String _hx_array_data_83deb7a2_5[] = {
 	HX_("speed",87,97,69,81),HX_("velocity",1d,02,fe,1e),HX_("drag",f4,2b,70,42),HX_("locomotionStatus",77,b4,46,94),
 };
-HX_LOCAL_STACK_FRAME(_hx_pos_6ea8e8e6294606fe_85_registerMechanicaParts,"states.DemoState","registerMechanicaParts",0x918ad192,"states.DemoState.registerMechanicaParts","states/DemoState.hx",85,0x61e5f9dd)
-HX_LOCAL_STACK_FRAME(_hx_pos_6ea8e8e6294606fe_94_update,"states.DemoState","update",0x15433d55,"states.DemoState.update","states/DemoState.hx",94,0x61e5f9dd)
-HX_LOCAL_STACK_FRAME(_hx_pos_6ea8e8e6294606fe_108_collision,"states.DemoState","collision",0x396588a6,"states.DemoState.collision","states/DemoState.hx",108,0x61e5f9dd)
-HX_LOCAL_STACK_FRAME(_hx_pos_6ea8e8e6294606fe_129_fixJitter,"states.DemoState","fixJitter",0xb69bea15,"states.DemoState.fixJitter","states/DemoState.hx",129,0x61e5f9dd)
-HX_LOCAL_STACK_FRAME(_hx_pos_6ea8e8e6294606fe_132_placeEntities,"states.DemoState","placeEntities",0x8582f05c,"states.DemoState.placeEntities","states/DemoState.hx",132,0x61e5f9dd)
+HX_LOCAL_STACK_FRAME(_hx_pos_6ea8e8e6294606fe_88_registerMechanicaParts,"states.DemoState","registerMechanicaParts",0x918ad192,"states.DemoState.registerMechanicaParts","states/DemoState.hx",88,0x61e5f9dd)
+HX_LOCAL_STACK_FRAME(_hx_pos_6ea8e8e6294606fe_97_update,"states.DemoState","update",0x15433d55,"states.DemoState.update","states/DemoState.hx",97,0x61e5f9dd)
+HX_LOCAL_STACK_FRAME(_hx_pos_6ea8e8e6294606fe_115_serverTest,"states.DemoState","serverTest",0x82f3aa01,"states.DemoState.serverTest","states/DemoState.hx",115,0x61e5f9dd)
+HX_LOCAL_STACK_FRAME(_hx_pos_6ea8e8e6294606fe_121_getAndDoData,"states.DemoState","getAndDoData",0xa01a7a62,"states.DemoState.getAndDoData","states/DemoState.hx",121,0x61e5f9dd)
+HX_LOCAL_STACK_FRAME(_hx_pos_6ea8e8e6294606fe_133_clientTest,"states.DemoState","clientTest",0x3d368d89,"states.DemoState.clientTest","states/DemoState.hx",133,0x61e5f9dd)
+HX_LOCAL_STACK_FRAME(_hx_pos_6ea8e8e6294606fe_139_sendOff,"states.DemoState","sendOff",0x905be63b,"states.DemoState.sendOff","states/DemoState.hx",139,0x61e5f9dd)
+HX_LOCAL_STACK_FRAME(_hx_pos_6ea8e8e6294606fe_148_collision,"states.DemoState","collision",0x396588a6,"states.DemoState.collision","states/DemoState.hx",148,0x61e5f9dd)
+HX_LOCAL_STACK_FRAME(_hx_pos_6ea8e8e6294606fe_169_fixJitter,"states.DemoState","fixJitter",0xb69bea15,"states.DemoState.fixJitter","states/DemoState.hx",169,0x61e5f9dd)
+HX_LOCAL_STACK_FRAME(_hx_pos_6ea8e8e6294606fe_172_placeEntities,"states.DemoState","placeEntities",0x8582f05c,"states.DemoState.placeEntities","states/DemoState.hx",172,0x61e5f9dd)
 namespace states{
 
 void DemoState_obj::__construct( ::Dynamic MaxSize){
-            	HX_STACKFRAME(&_hx_pos_6ea8e8e6294606fe_20_new)
-HXDLIN(  20)		super::__construct(MaxSize);
+            	HX_STACKFRAME(&_hx_pos_6ea8e8e6294606fe_22_new)
+HXDLIN(  22)		super::__construct(MaxSize);
             	}
 
 Dynamic DemoState_obj::__CreateEmpty() { return new DemoState_obj; }
@@ -226,129 +245,137 @@ bool DemoState_obj::_hx_isInstanceOf(int inClassId) {
 }
 
 void DemoState_obj::create(){
-            	HX_STACKFRAME(&_hx_pos_6ea8e8e6294606fe_29_create)
-HXLINE(  30)		this->super::create();
-HXLINE(  31)		this->playerMech = ::Global_obj::player->getMechanica();
-HXLINE(  32)		this->setupEnvironment();
-HXLINE(  33)		this->setupDebugger();
+            	HX_STACKFRAME(&_hx_pos_6ea8e8e6294606fe_31_create)
+HXLINE(  32)		this->super::create();
+HXLINE(  33)		this->playerMech = ::Global_obj::player->getMechanica();
+HXLINE(  34)		this->setupEnvironment();
+HXLINE(  35)		this->setupDebugger();
             	}
 
 
 void DemoState_obj::setupEnvironment(){
-            	HX_GC_STACKFRAME(&_hx_pos_6ea8e8e6294606fe_37_setupEnvironment)
-HXLINE(  38)		::Global_obj::setup();
-HXLINE(  40)		{
-HXLINE(  40)			 ::flixel::math::FlxRect _this = ::flixel::FlxG_obj::worldBounds;
-HXDLIN(  40)			_this->x = (int)720;
-HXDLIN(  40)			_this->y = (int)720;
-HXDLIN(  40)			_this->width = (int)0;
-HXDLIN(  40)			_this->height = (int)0;
+            	HX_GC_STACKFRAME(&_hx_pos_6ea8e8e6294606fe_39_setupEnvironment)
+HXLINE(  40)		::Global_obj::setup();
+HXLINE(  42)		{
+HXLINE(  42)			 ::flixel::math::FlxRect _this = ::flixel::FlxG_obj::worldBounds;
+HXDLIN(  42)			_this->x = (int)720;
+HXDLIN(  42)			_this->y = (int)720;
+HXDLIN(  42)			_this->width = (int)0;
+HXDLIN(  42)			_this->height = (int)0;
             		}
-HXLINE(  41)		this->mapData =  ::flixel::addons::editors::ogmo::FlxOgmoLoader_obj::__alloc( HX_CTX ,HX_("assets/data/TestZone.oel",5f,20,6e,a7));
-HXLINE(  42)		this->map = this->mapData->loadTilemap(HX_("assets/images/environment/demozone.png",31,91,ad,d0),(int)32,(int)32,HX_("environment",d3,0b,50,ad));
-HXLINE(  44)		this->map->setTileProperties((int)1,(int)0,null(),null(),null());
-HXLINE(  45)		this->map->setTileProperties((int)2,(int)4369,null(),null(),null());
-HXLINE(  46)		::Global_obj::map = this->map;
-HXLINE(  47)		this->add(this->map);
-HXLINE(  49)		::Global_obj::add(this->playerMech);
-HXLINE(  50)		this->testMech = this->buildTestMech();
-HXLINE(  51)		this->testMech2 = this->buildTestMech();
-HXLINE(  52)		this->testMech->enable();
-HXLINE(  53)		this->testMech2->enable();
-HXLINE(  54)		::Global_obj::add(this->testMech);
-HXLINE(  55)		::Global_obj::add(this->testMech2);
-HXLINE(  56)		this->mapData->loadEntities(this->placeEntities_dyn(),HX_("entities",41,96,95,92));
-HXLINE(  58)		::flixel::FlxG_obj::cameras->remove(::flixel::FlxG_obj::camera,null());
-HXLINE(  59)		 ::flixel::_hx_system::frontEnds::CameraFrontEnd _hx_tmp = ::flixel::FlxG_obj::cameras;
-HXDLIN(  59)		::flixel::FlxG_obj::camera = _hx_tmp->add( ::flixel::addons::display::FlxZoomCamera_obj::__alloc( HX_CTX ,(int)0,(int)0,(int)640,(int)480,((Float)1.4))).StaticCast<  ::flixel::addons::display::FlxZoomCamera >();
-HXLINE(  61)		::flixel::FlxG_obj::camera->follow(this->playerMech->core,null(),null());
-HXLINE(  62)		::Global_obj::mechGroupA->add(this->playerMech).StaticCast<  ::flixel::FlxSprite >();
-HXLINE(  63)		::Global_obj::mechGroupA->add(this->testMech2).StaticCast<  ::flixel::FlxSprite >();
-HXLINE(  64)		::Global_obj::mechGroupB->add(this->testMech).StaticCast<  ::flixel::FlxSprite >();
+HXLINE(  43)		this->mapData =  ::flixel::addons::editors::ogmo::FlxOgmoLoader_obj::__alloc( HX_CTX ,HX_("assets/data/TestZone.oel",5f,20,6e,a7));
+HXLINE(  44)		this->map = this->mapData->loadTilemap(HX_("assets/images/environment/demozone.png",31,91,ad,d0),(int)32,(int)32,HX_("environment",d3,0b,50,ad));
+HXLINE(  46)		this->map->setTileProperties((int)1,(int)0,null(),null(),null());
+HXLINE(  47)		this->map->setTileProperties((int)2,(int)4369,null(),null(),null());
+HXLINE(  48)		::Global_obj::map = this->map;
+HXLINE(  49)		this->add(this->map);
+HXLINE(  51)		::Global_obj::add(this->playerMech);
+HXLINE(  52)		this->testMech = this->buildTestMech();
+HXLINE(  53)		this->testMech2 = this->buildTestMech();
+HXLINE(  54)		this->testMech->enable();
+HXLINE(  55)		this->testMech2->enable();
+HXLINE(  56)		::Global_obj::add(this->testMech);
+HXLINE(  57)		::Global_obj::add(this->testMech2);
+HXLINE(  58)		this->mapData->loadEntities(this->placeEntities_dyn(),HX_("entities",41,96,95,92));
+HXLINE(  60)		::flixel::FlxG_obj::cameras->remove(::flixel::FlxG_obj::camera,null());
+HXLINE(  61)		 ::flixel::_hx_system::frontEnds::CameraFrontEnd _hx_tmp = ::flixel::FlxG_obj::cameras;
+HXDLIN(  61)		::flixel::FlxG_obj::camera = _hx_tmp->add( ::flixel::addons::display::FlxZoomCamera_obj::__alloc( HX_CTX ,(int)0,(int)0,(int)640,(int)480,((Float)1.4))).StaticCast<  ::flixel::addons::display::FlxZoomCamera >();
+HXLINE(  63)		::flixel::FlxG_obj::camera->follow(this->playerMech->core,null(),null());
+HXLINE(  64)		::Global_obj::mechGroupA->add(this->playerMech).StaticCast<  ::flixel::FlxSprite >();
+HXLINE(  65)		::Global_obj::mechGroupA->add(this->testMech2).StaticCast<  ::flixel::FlxSprite >();
+HXLINE(  66)		::Global_obj::mechGroupB->add(this->testMech).StaticCast<  ::flixel::FlxSprite >();
             	}
 
 
 HX_DEFINE_DYNAMIC_FUNC0(DemoState_obj,setupEnvironment,(void))
 
  ::util::mechanica::Mechanica DemoState_obj::buildTestMech(){
-            	HX_GC_STACKFRAME(&_hx_pos_6ea8e8e6294606fe_67_buildTestMech)
-HXLINE(  68)		 ::util::mechanica::Mechanica mech =  ::util::mechanica::Mechanica_obj::__alloc( HX_CTX ,null(),null());
-HXLINE(  69)		mech->buildFromParts(HX_("standardBrainCase",89,59,7d,f2),HX_("standardKernel",da,8c,83,89),HX_("standardCarrier",3b,68,26,e6),HX_("standardLocomote",1f,99,85,0d),HX_("standardThruster",62,d5,bf,2b),HX_("standardPistol",94,79,94,d7),HX_("standardPistol",94,79,94,d7));
-HXLINE(  70)		return mech;
+            	HX_GC_STACKFRAME(&_hx_pos_6ea8e8e6294606fe_69_buildTestMech)
+HXLINE(  70)		 ::util::mechanica::Mechanica mech =  ::util::mechanica::Mechanica_obj::__alloc( HX_CTX ,null(),null());
+HXLINE(  71)		mech->buildFromParts(HX_("standardBrainCase",89,59,7d,f2),HX_("standardKernel",da,8c,83,89),HX_("standardCarrier",3b,68,26,e6),HX_("standardLocomote",1f,99,85,0d),HX_("standardThruster",62,d5,bf,2b),HX_("standardPistol",94,79,94,d7),HX_("standardPistol",94,79,94,d7));
+HXLINE(  72)		return mech;
             	}
 
 
 HX_DEFINE_DYNAMIC_FUNC0(DemoState_obj,buildTestMech,return )
 
 void DemoState_obj::setupDebugger(){
-            	HX_GC_STACKFRAME(&_hx_pos_6ea8e8e6294606fe_75_setupDebugger)
-HXLINE(  76)		{
-HXLINE(  76)			 ::flixel::_hx_system::frontEnds::DebuggerFrontEnd _this = ::flixel::FlxG_obj::debugger;
-HXDLIN(  76)			 ::flixel::_hx_system::debug::watch::TrackerProfile Profile =  ::flixel::_hx_system::debug::watch::TrackerProfile_obj::__alloc( HX_CTX ,hx::ClassOf< ::util::mechanica::Mechanica >(),::Array_obj< ::String >::fromData( _hx_array_data_83deb7a2_5,4),null());
-HXDLIN(  76)			if (hx::IsNotNull( Profile )) {
-HXLINE(  76)				::flixel::_hx_system::debug::watch::Tracker_obj::initProfiles();
-HXDLIN(  76)				::flixel::_hx_system::debug::watch::Tracker_obj::profiles->push(Profile);
+            	HX_GC_STACKFRAME(&_hx_pos_6ea8e8e6294606fe_77_setupDebugger)
+HXLINE(  78)		{
+HXLINE(  78)			 ::flixel::_hx_system::frontEnds::DebuggerFrontEnd _this = ::flixel::FlxG_obj::debugger;
+HXDLIN(  78)			 ::flixel::_hx_system::debug::watch::TrackerProfile Profile =  ::flixel::_hx_system::debug::watch::TrackerProfile_obj::__alloc( HX_CTX ,hx::ClassOf< ::util::mechanica::Mechanica >(),::Array_obj< ::String >::fromData( _hx_array_data_83deb7a2_5,4),null());
+HXDLIN(  78)			if (hx::IsNotNull( Profile )) {
+HXLINE(  78)				::flixel::_hx_system::debug::watch::Tracker_obj::initProfiles();
+HXDLIN(  78)				::flixel::_hx_system::debug::watch::Tracker_obj::profiles->push(Profile);
             			}
             		}
-HXLINE(  78)		::flixel::FlxG_obj::debugger->track(this->playerMech,null());
-HXLINE(  80)		{
-HXLINE(  80)			 ::flixel::_hx_system::frontEnds::ConsoleFrontEnd _this1 = ::flixel::FlxG_obj::console;
-HXDLIN(  80)			hx::Class cl = hx::ClassOf< ::Global >();
-HXDLIN(  80)			{
-HXLINE(  80)				 ::flixel::_hx_system::debug::console::Console _this2 = ::flixel::FlxG_obj::game->debugger->console;
-HXDLIN(  80)				{
-HXLINE(  80)					::String objectAlias = ::flixel::util::FlxStringUtil_obj::getClassName(cl,true);
-HXDLIN(  80)					::haxe::IMap_obj::set(_this2->registeredObjects,objectAlias,( ( ::Dynamic)(cl) ));
-HXDLIN(  80)					::flixel::_hx_system::debug::console::ConsoleUtil_obj::registerObject(objectAlias,cl);
+HXLINE(  80)		::flixel::FlxG_obj::debugger->track(this->playerMech,null());
+HXLINE(  82)		{
+HXLINE(  82)			 ::flixel::_hx_system::frontEnds::ConsoleFrontEnd _this1 = ::flixel::FlxG_obj::console;
+HXDLIN(  82)			hx::Class cl = hx::ClassOf< ::Global >();
+HXDLIN(  82)			{
+HXLINE(  82)				 ::flixel::_hx_system::debug::console::Console _this2 = ::flixel::FlxG_obj::game->debugger->console;
+HXDLIN(  82)				{
+HXLINE(  82)					::String objectAlias = ::flixel::util::FlxStringUtil_obj::getClassName(cl,true);
+HXDLIN(  82)					::haxe::IMap_obj::set(_this2->registeredObjects,objectAlias,( ( ::Dynamic)(cl) ));
+HXDLIN(  82)					::flixel::_hx_system::debug::console::ConsoleUtil_obj::registerObject(objectAlias,cl);
             				}
             			}
             		}
-HXLINE(  81)		this->registerMechanicaParts();
+HXLINE(  83)		{
+HXLINE(  83)			 ::flixel::_hx_system::frontEnds::ConsoleFrontEnd _this3 = ::flixel::FlxG_obj::console;
+HXDLIN(  83)			 ::Dynamic AnyObject = ::Global_obj::socket;
+HXDLIN(  83)			{
+HXLINE(  83)				::haxe::IMap_obj::set(::flixel::FlxG_obj::game->debugger->console->registeredObjects,HX_("socket",b3,8b,46,26),AnyObject);
+HXDLIN(  83)				::flixel::_hx_system::debug::console::ConsoleUtil_obj::registerObject(HX_("socket",b3,8b,46,26),AnyObject);
+            			}
+            		}
+HXLINE(  84)		this->registerMechanicaParts();
             	}
 
 
 HX_DEFINE_DYNAMIC_FUNC0(DemoState_obj,setupDebugger,(void))
 
 void DemoState_obj::registerMechanicaParts(){
-            	HX_STACKFRAME(&_hx_pos_6ea8e8e6294606fe_85_registerMechanicaParts)
-HXLINE(  86)		{
-HXLINE(  86)			 ::flixel::_hx_system::frontEnds::ConsoleFrontEnd _this = ::flixel::FlxG_obj::console;
-HXDLIN(  86)			 ::Dynamic AnyObject = this->playerMech->head;
-HXDLIN(  86)			{
-HXLINE(  86)				::haxe::IMap_obj::set(::flixel::FlxG_obj::game->debugger->console->registeredObjects,HX_("head",20,29,0b,45),AnyObject);
-HXDLIN(  86)				::flixel::_hx_system::debug::console::ConsoleUtil_obj::registerObject(HX_("head",20,29,0b,45),AnyObject);
-            			}
-            		}
-HXLINE(  87)		{
-HXLINE(  87)			 ::flixel::_hx_system::frontEnds::ConsoleFrontEnd _this1 = ::flixel::FlxG_obj::console;
-HXDLIN(  87)			 ::Dynamic AnyObject1 = this->playerMech->core;
-HXDLIN(  87)			{
-HXLINE(  87)				::haxe::IMap_obj::set(::flixel::FlxG_obj::game->debugger->console->registeredObjects,HX_("core",5f,bd,c4,41),AnyObject1);
-HXDLIN(  87)				::flixel::_hx_system::debug::console::ConsoleUtil_obj::registerObject(HX_("core",5f,bd,c4,41),AnyObject1);
-            			}
-            		}
-HXLINE(  88)		{
-HXLINE(  88)			 ::flixel::_hx_system::frontEnds::ConsoleFrontEnd _this2 = ::flixel::FlxG_obj::console;
-HXDLIN(  88)			 ::Dynamic AnyObject2 = this->playerMech->arms;
-HXDLIN(  88)			{
-HXLINE(  88)				::haxe::IMap_obj::set(::flixel::FlxG_obj::game->debugger->console->registeredObjects,HX_("arms",97,92,74,40),AnyObject2);
-HXDLIN(  88)				::flixel::_hx_system::debug::console::ConsoleUtil_obj::registerObject(HX_("arms",97,92,74,40),AnyObject2);
-            			}
-            		}
+            	HX_STACKFRAME(&_hx_pos_6ea8e8e6294606fe_88_registerMechanicaParts)
 HXLINE(  89)		{
-HXLINE(  89)			 ::flixel::_hx_system::frontEnds::ConsoleFrontEnd _this3 = ::flixel::FlxG_obj::console;
-HXDLIN(  89)			 ::Dynamic AnyObject3 = this->playerMech->legs;
+HXLINE(  89)			 ::flixel::_hx_system::frontEnds::ConsoleFrontEnd _this = ::flixel::FlxG_obj::console;
+HXDLIN(  89)			 ::Dynamic AnyObject = this->playerMech->head;
 HXDLIN(  89)			{
-HXLINE(  89)				::haxe::IMap_obj::set(::flixel::FlxG_obj::game->debugger->console->registeredObjects,HX_("legs",e5,08,b0,47),AnyObject3);
-HXDLIN(  89)				::flixel::_hx_system::debug::console::ConsoleUtil_obj::registerObject(HX_("legs",e5,08,b0,47),AnyObject3);
+HXLINE(  89)				::haxe::IMap_obj::set(::flixel::FlxG_obj::game->debugger->console->registeredObjects,HX_("head",20,29,0b,45),AnyObject);
+HXDLIN(  89)				::flixel::_hx_system::debug::console::ConsoleUtil_obj::registerObject(HX_("head",20,29,0b,45),AnyObject);
             			}
             		}
 HXLINE(  90)		{
-HXLINE(  90)			 ::flixel::_hx_system::frontEnds::ConsoleFrontEnd _this4 = ::flixel::FlxG_obj::console;
-HXDLIN(  90)			 ::Dynamic AnyObject4 = this->playerMech->thruster;
+HXLINE(  90)			 ::flixel::_hx_system::frontEnds::ConsoleFrontEnd _this1 = ::flixel::FlxG_obj::console;
+HXDLIN(  90)			 ::Dynamic AnyObject1 = this->playerMech->core;
 HXDLIN(  90)			{
-HXLINE(  90)				::haxe::IMap_obj::set(::flixel::FlxG_obj::game->debugger->console->registeredObjects,HX_("thruster",05,dd,80,0e),AnyObject4);
-HXDLIN(  90)				::flixel::_hx_system::debug::console::ConsoleUtil_obj::registerObject(HX_("thruster",05,dd,80,0e),AnyObject4);
+HXLINE(  90)				::haxe::IMap_obj::set(::flixel::FlxG_obj::game->debugger->console->registeredObjects,HX_("core",5f,bd,c4,41),AnyObject1);
+HXDLIN(  90)				::flixel::_hx_system::debug::console::ConsoleUtil_obj::registerObject(HX_("core",5f,bd,c4,41),AnyObject1);
+            			}
+            		}
+HXLINE(  91)		{
+HXLINE(  91)			 ::flixel::_hx_system::frontEnds::ConsoleFrontEnd _this2 = ::flixel::FlxG_obj::console;
+HXDLIN(  91)			 ::Dynamic AnyObject2 = this->playerMech->arms;
+HXDLIN(  91)			{
+HXLINE(  91)				::haxe::IMap_obj::set(::flixel::FlxG_obj::game->debugger->console->registeredObjects,HX_("arms",97,92,74,40),AnyObject2);
+HXDLIN(  91)				::flixel::_hx_system::debug::console::ConsoleUtil_obj::registerObject(HX_("arms",97,92,74,40),AnyObject2);
+            			}
+            		}
+HXLINE(  92)		{
+HXLINE(  92)			 ::flixel::_hx_system::frontEnds::ConsoleFrontEnd _this3 = ::flixel::FlxG_obj::console;
+HXDLIN(  92)			 ::Dynamic AnyObject3 = this->playerMech->legs;
+HXDLIN(  92)			{
+HXLINE(  92)				::haxe::IMap_obj::set(::flixel::FlxG_obj::game->debugger->console->registeredObjects,HX_("legs",e5,08,b0,47),AnyObject3);
+HXDLIN(  92)				::flixel::_hx_system::debug::console::ConsoleUtil_obj::registerObject(HX_("legs",e5,08,b0,47),AnyObject3);
+            			}
+            		}
+HXLINE(  93)		{
+HXLINE(  93)			 ::flixel::_hx_system::frontEnds::ConsoleFrontEnd _this4 = ::flixel::FlxG_obj::console;
+HXDLIN(  93)			 ::Dynamic AnyObject4 = this->playerMech->thruster;
+HXDLIN(  93)			{
+HXLINE(  93)				::haxe::IMap_obj::set(::flixel::FlxG_obj::game->debugger->console->registeredObjects,HX_("thruster",05,dd,80,0e),AnyObject4);
+HXDLIN(  93)				::flixel::_hx_system::debug::console::ConsoleUtil_obj::registerObject(HX_("thruster",05,dd,80,0e),AnyObject4);
             			}
             		}
             	}
@@ -357,41 +384,97 @@ HXDLIN(  90)				::flixel::_hx_system::debug::console::ConsoleUtil_obj::registerO
 HX_DEFINE_DYNAMIC_FUNC0(DemoState_obj,registerMechanicaParts,(void))
 
 void DemoState_obj::update(Float elapsed){
-            	HX_STACKFRAME(&_hx_pos_6ea8e8e6294606fe_94_update)
-HXLINE(  96)		this->super::update(elapsed);
-HXLINE(  97)		 ::util::mechanica::Mechanica mechanica = this->playerMech;
-HXLINE(  98)		 ::flixel::FlxCamera _hx_tmp = ::flixel::FlxG_obj::camera;
-HXDLIN(  98)		Float _hx_tmp1 = ::flixel::FlxG_obj::camera->angle;
-HXDLIN(  98)		Float _hx_tmp2 = (mechanica->angle * (int)-1);
-HXDLIN(  98)		_hx_tmp->set_angle(::math::MoreMath_obj::lerpAngle(_hx_tmp1,_hx_tmp2,(elapsed * (int)5)));
-HXLINE( 101)		::flixel::FlxG_obj::overlap(( ( ::flixel::FlxBasic)(::Global_obj::colliders) ),( ( ::flixel::FlxBasic)(this->map) ),null(),::flixel::FlxObject_obj::separate_dyn());
+            	HX_STACKFRAME(&_hx_pos_6ea8e8e6294606fe_97_update)
+HXLINE(  99)		this->super::update(elapsed);
+HXLINE( 100)		 ::util::mechanica::Mechanica mechanica = this->playerMech;
+HXLINE( 101)		 ::flixel::FlxCamera _hx_tmp = ::flixel::FlxG_obj::camera;
+HXDLIN( 101)		Float _hx_tmp1 = ::flixel::FlxG_obj::camera->angle;
+HXDLIN( 101)		Float _hx_tmp2 = (mechanica->angle * (int)-1);
+HXDLIN( 101)		_hx_tmp->set_angle(::math::MoreMath_obj::lerpAngle(_hx_tmp1,_hx_tmp2,(elapsed * (int)5)));
+HXLINE( 104)		::flixel::FlxG_obj::overlap(( ( ::flixel::FlxBasic)(::Global_obj::colliders) ),( ( ::flixel::FlxBasic)(this->map) ),null(),::flixel::FlxObject_obj::separate_dyn());
+HXLINE( 105)		this->clientTest();
+HXLINE( 106)		this->serverTest();
             	}
 
 
+void DemoState_obj::serverTest(){
+            	HX_STACKFRAME(&_hx_pos_6ea8e8e6294606fe_115_serverTest)
+HXLINE( 116)		if (!(::Global_obj::server)) {
+HXLINE( 116)			return;
+            		}
+HXLINE( 117)		this->getAndDoData();
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(DemoState_obj,serverTest,(void))
+
+void DemoState_obj::getAndDoData(){
+            	HX_GC_STACKFRAME(&_hx_pos_6ea8e8e6294606fe_121_getAndDoData)
+HXLINE( 122)		 ::haxe::io::Bytes bytes = ::haxe::io::Bytes_obj::alloc((int)80);
+HXLINE( 123)		int dataLen = ::Global_obj::socket->receive(bytes);
+HXLINE( 124)		if ((dataLen <= (int)4)) {
+HXLINE( 124)			return;
+            		}
+HXLINE( 125)		 ::haxe::io::BytesInput iStream =  ::haxe::io::BytesInput_obj::__alloc( HX_CTX ,bytes,null(),null());
+HXLINE( 126)		 ::Xml _data = ::Xml_obj::parse(iStream->readString(dataLen))->firstElement();
+HXLINE( 128)		 ::util::mechanica::Mechanica _hx_tmp = this->playerMech;
+HXDLIN( 128)		_hx_tmp->set_x(::Std_obj::parseFloat(_data->get(HX_("x",78,00,00,00))));
+HXLINE( 129)		 ::util::mechanica::Mechanica _hx_tmp1 = this->playerMech;
+HXDLIN( 129)		_hx_tmp1->set_y(::Std_obj::parseFloat(_data->get(HX_("y",79,00,00,00))));
+HXLINE( 130)		 ::util::mechanica::Mechanica _hx_tmp2 = this->playerMech;
+HXDLIN( 130)		_hx_tmp2->set_angle(::Std_obj::parseFloat(_data->get(HX_("angle",d3,43,e2,22))));
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(DemoState_obj,getAndDoData,(void))
+
+void DemoState_obj::clientTest(){
+            	HX_STACKFRAME(&_hx_pos_6ea8e8e6294606fe_133_clientTest)
+HXLINE( 134)		if (::Global_obj::server) {
+HXLINE( 134)			return;
+            		}
+HXLINE( 135)		this->sendOff();
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(DemoState_obj,clientTest,(void))
+
+void DemoState_obj::sendOff(){
+            	HX_STACKFRAME(&_hx_pos_6ea8e8e6294606fe_139_sendOff)
+HXLINE( 140)		::String message = ((HX_("<netpos x=\"",b0,97,d2,d7) + ::Std_obj::string(::flixel::math::FlxMath_obj::roundDecimal(this->playerMech->x,(int)2))) + HX_("\" y=\"",00,93,22,a9));
+HXDLIN( 140)		::String message1 = ((message + ::Std_obj::string(::flixel::math::FlxMath_obj::roundDecimal(this->playerMech->y,(int)2))) + HX_("\" angle=\"",da,89,37,7d));
+HXDLIN( 140)		::String message2 = ((message1 + ::Std_obj::string(::flixel::math::FlxMath_obj::roundDecimal(this->playerMech->angle,(int)2))) + HX_("\" />",6d,b2,91,16));
+HXLINE( 145)		 ::lib::hxudp::UdpSocket _hx_tmp = ::Global_obj::socket;
+HXDLIN( 145)		_hx_tmp->sendAll(::haxe::io::Bytes_obj::ofString(message2));
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(DemoState_obj,sendOff,(void))
+
 void DemoState_obj::collision( ::Dynamic col1, ::Dynamic col2){
-            	HX_STACKFRAME(&_hx_pos_6ea8e8e6294606fe_108_collision)
-HXLINE( 109)		::Dynamic collider1 = null();
-HXLINE( 110)		::Dynamic collider2 = null();
-HXLINE( 111)		{
-HXLINE( 111)			 ::flixel::_hx_system::frontEnds::WatchFrontEnd _this = ::flixel::FlxG_obj::watch;
-HXDLIN( 111)			::String value = (::Std_obj::string(col1->toString()) + HX_(", ",74,26,00,00));
-HXDLIN( 111)			 ::Dynamic value1 = (value + ::Std_obj::string(col2->toString()));
-HXDLIN( 111)			 ::flixel::_hx_system::debug::watch::Watch _hx_tmp = ::flixel::FlxG_obj::game->debugger->watch;
-HXDLIN( 111)			_hx_tmp->add(HX_("Collision",52,88,0d,7d),::flixel::_hx_system::debug::watch::WatchEntryData_obj::QUICK(::Std_obj::string(value1)));
+            	HX_STACKFRAME(&_hx_pos_6ea8e8e6294606fe_148_collision)
+HXLINE( 149)		::Dynamic collider1 = null();
+HXLINE( 150)		::Dynamic collider2 = null();
+HXLINE( 151)		{
+HXLINE( 151)			 ::flixel::_hx_system::frontEnds::WatchFrontEnd _this = ::flixel::FlxG_obj::watch;
+HXDLIN( 151)			::String value = (::Std_obj::string(col1->toString()) + HX_(", ",74,26,00,00));
+HXDLIN( 151)			 ::Dynamic value1 = (value + ::Std_obj::string(col2->toString()));
+HXDLIN( 151)			 ::flixel::_hx_system::debug::watch::Watch _hx_tmp = ::flixel::FlxG_obj::game->debugger->watch;
+HXDLIN( 151)			_hx_tmp->add(HX_("Collision",52,88,0d,7d),::flixel::_hx_system::debug::watch::WatchEntryData_obj::QUICK(::Std_obj::string(value1)));
             		}
-HXLINE( 112)		if (::Std_obj::is(col1,hx::ClassOf< ::util::interfaces::ICollider >())) {
-HXLINE( 114)			collider1 = col1;
-HXLINE( 115)			::util::interfaces::ICollider_obj::collideWith(collider1,col2);
+HXLINE( 152)		if (::Std_obj::is(col1,hx::ClassOf< ::util::interfaces::ICollider >())) {
+HXLINE( 154)			collider1 = col1;
+HXLINE( 155)			::util::interfaces::ICollider_obj::collideWith(collider1,col2);
             		}
-HXLINE( 118)		if (::Std_obj::is(col1,hx::ClassOf< ::util::interfaces::ICollider >())) {
-HXLINE( 120)			collider2 = col1;
-HXLINE( 121)			::util::interfaces::ICollider_obj::collideWith(collider2,col1);
+HXLINE( 158)		if (::Std_obj::is(col1,hx::ClassOf< ::util::interfaces::ICollider >())) {
+HXLINE( 160)			collider2 = col1;
+HXLINE( 161)			::util::interfaces::ICollider_obj::collideWith(collider2,col1);
             		}
-HXLINE( 124)		if (hx::IsNotNull( collider1 )) {
-HXLINE( 124)			::util::interfaces::ICollider_obj::postCollision(collider1);
+HXLINE( 164)		if (hx::IsNotNull( collider1 )) {
+HXLINE( 164)			::util::interfaces::ICollider_obj::postCollision(collider1);
             		}
-HXLINE( 125)		if (hx::IsNotNull( collider2 )) {
-HXLINE( 125)			::util::interfaces::ICollider_obj::postCollision(collider2);
+HXLINE( 165)		if (hx::IsNotNull( collider2 )) {
+HXLINE( 165)			::util::interfaces::ICollider_obj::postCollision(collider2);
             		}
             	}
 
@@ -399,30 +482,30 @@ HXLINE( 125)			::util::interfaces::ICollider_obj::postCollision(collider2);
 HX_DEFINE_DYNAMIC_FUNC2(DemoState_obj,collision,(void))
 
 void DemoState_obj::fixJitter(){
-            	HX_STACKFRAME(&_hx_pos_6ea8e8e6294606fe_129_fixJitter)
-HXDLIN( 129)		::flixel::FlxG_obj::set_updateFramerate(::flixel::FlxG_obj::drawFramerate);
+            	HX_STACKFRAME(&_hx_pos_6ea8e8e6294606fe_169_fixJitter)
+HXDLIN( 169)		::flixel::FlxG_obj::set_updateFramerate(::flixel::FlxG_obj::drawFramerate);
             	}
 
 
 HX_DEFINE_DYNAMIC_FUNC0(DemoState_obj,fixJitter,(void))
 
 void DemoState_obj::placeEntities(::String entName, ::Xml entDat){
-            	HX_GC_STACKFRAME(&_hx_pos_6ea8e8e6294606fe_132_placeEntities)
-HXLINE( 133)		int x = ::Std_obj::parseInt(entDat->get(HX_("x",78,00,00,00)));
-HXLINE( 134)		int y = ::Std_obj::parseInt(entDat->get(HX_("x",78,00,00,00)));
-HXLINE( 135)		if ((entName == HX_("player",61,eb,b8,37))) {
-HXLINE( 137)			this->playerMech->set_x(x);
-HXLINE( 138)			this->playerMech->set_y(y);
+            	HX_GC_STACKFRAME(&_hx_pos_6ea8e8e6294606fe_172_placeEntities)
+HXLINE( 173)		int x = ::Std_obj::parseInt(entDat->get(HX_("x",78,00,00,00)));
+HXLINE( 174)		int y = ::Std_obj::parseInt(entDat->get(HX_("x",78,00,00,00)));
+HXLINE( 175)		if ((entName == HX_("player",61,eb,b8,37))) {
+HXLINE( 177)			this->playerMech->set_x(x);
+HXLINE( 178)			this->playerMech->set_y(y);
             		}
-HXLINE( 140)		if ((entName == HX_("testMech",6f,c1,8b,4b))) {
-HXLINE( 142)			this->testMech->set_x(x);
-HXLINE( 143)			this->testMech->set_y(y);
-HXLINE( 144)			this->testMech->controller =  ::util::control::Controller_obj::__alloc( HX_CTX );
+HXLINE( 180)		if ((entName == HX_("testMech",6f,c1,8b,4b))) {
+HXLINE( 182)			this->testMech->set_x(x);
+HXLINE( 183)			this->testMech->set_y(y);
+HXLINE( 184)			this->testMech->controller =  ::util::control::Controller_obj::__alloc( HX_CTX );
             		}
-HXLINE( 146)		if ((entName == HX_("testMech2",e3,7f,bd,ce))) {
-HXLINE( 149)			this->testMech2->set_x(x);
-HXLINE( 150)			this->testMech2->set_y(y);
-HXLINE( 151)			this->testMech2->controller =  ::util::control::Controller_obj::__alloc( HX_CTX );
+HXLINE( 186)		if ((entName == HX_("testMech2",e3,7f,bd,ce))) {
+HXLINE( 189)			this->testMech2->set_x(x);
+HXLINE( 190)			this->testMech2->set_y(y);
+HXLINE( 191)			this->testMech2->controller =  ::util::control::Controller_obj::__alloc( HX_CTX );
             		}
             	}
 
@@ -481,6 +564,7 @@ hx::Val DemoState_obj::__Field(const ::String &inName,hx::PropertyAccess inCallP
 		break;
 	case 7:
 		if (HX_FIELD_EQ(inName,"mapData") ) { return hx::Val( mapData ); }
+		if (HX_FIELD_EQ(inName,"sendOff") ) { return hx::Val( sendOff_dyn() ); }
 		break;
 	case 8:
 		if (HX_FIELD_EQ(inName,"testMech") ) { return hx::Val( testMech ); }
@@ -492,6 +576,11 @@ hx::Val DemoState_obj::__Field(const ::String &inName,hx::PropertyAccess inCallP
 		break;
 	case 10:
 		if (HX_FIELD_EQ(inName,"playerMech") ) { return hx::Val( playerMech ); }
+		if (HX_FIELD_EQ(inName,"serverTest") ) { return hx::Val( serverTest_dyn() ); }
+		if (HX_FIELD_EQ(inName,"clientTest") ) { return hx::Val( clientTest_dyn() ); }
+		break;
+	case 12:
+		if (HX_FIELD_EQ(inName,"getAndDoData") ) { return hx::Val( getAndDoData_dyn() ); }
 		break;
 	case 13:
 		if (HX_FIELD_EQ(inName,"buildTestMech") ) { return hx::Val( buildTestMech_dyn() ); }
@@ -562,6 +651,10 @@ static ::String DemoState_obj_sMemberFields[] = {
 	HX_HCSTRING("setupDebugger","\xbe","\xd3","\x0a","\x41"),
 	HX_HCSTRING("registerMechanicaParts","\x46","\xc2","\xcc","\xcd"),
 	HX_HCSTRING("update","\x09","\x86","\x05","\x87"),
+	HX_HCSTRING("serverTest","\xb5","\x5c","\x9a","\x7b"),
+	HX_HCSTRING("getAndDoData","\x16","\x42","\xda","\x15"),
+	HX_HCSTRING("clientTest","\x3d","\x40","\xdd","\x35"),
+	HX_HCSTRING("sendOff","\x07","\x3b","\x99","\xa8"),
 	HX_HCSTRING("collision","\x72","\xa8","\x3a","\xdb"),
 	HX_HCSTRING("fixJitter","\xe1","\x09","\x71","\x58"),
 	HX_HCSTRING("placeEntities","\x28","\xe6","\x91","\x17"),

@@ -171,35 +171,35 @@
 #include <util/mechanica/ThrusterUnit.h>
 #endif
 
-HX_DEFINE_STACK_FRAME(_hx_pos_701213084e7812bf_25_new,"util.mechanica.Mechanica","new",0x39b89972,"util.mechanica.Mechanica.new","util/mechanica/Mechanica.hx",25,0x5dbe2080)
-HX_LOCAL_STACK_FRAME(_hx_pos_701213084e7812bf_53_add,"util.mechanica.Mechanica","add",0x39aebb33,"util.mechanica.Mechanica.add","util/mechanica/Mechanica.hx",53,0x5dbe2080)
-HX_LOCAL_STACK_FRAME(_hx_pos_701213084e7812bf_59_getWeight,"util.mechanica.Mechanica","getWeight",0x2120dd40,"util.mechanica.Mechanica.getWeight","util/mechanica/Mechanica.hx",59,0x5dbe2080)
-HX_LOCAL_STACK_FRAME(_hx_pos_701213084e7812bf_63_getLoad,"util.mechanica.Mechanica","getLoad",0xbd6e03ee,"util.mechanica.Mechanica.getLoad","util/mechanica/Mechanica.hx",63,0x5dbe2080)
-HX_LOCAL_STACK_FRAME(_hx_pos_701213084e7812bf_67_valid,"util.mechanica.Mechanica","valid",0x24af268e,"util.mechanica.Mechanica.valid","util/mechanica/Mechanica.hx",67,0x5dbe2080)
-HX_LOCAL_STACK_FRAME(_hx_pos_701213084e7812bf_70_bump,"util.mechanica.Mechanica","bump",0x3feb36a4,"util.mechanica.Mechanica.bump","util/mechanica/Mechanica.hx",70,0x5dbe2080)
-HX_LOCAL_STACK_FRAME(_hx_pos_701213084e7812bf_90_struckBy,"util.mechanica.Mechanica","struckBy",0xe7c4b4f1,"util.mechanica.Mechanica.struckBy","util/mechanica/Mechanica.hx",90,0x5dbe2080)
-HX_LOCAL_STACK_FRAME(_hx_pos_701213084e7812bf_93_postCollision,"util.mechanica.Mechanica","postCollision",0x992b0b84,"util.mechanica.Mechanica.postCollision","util/mechanica/Mechanica.hx",93,0x5dbe2080)
-HX_LOCAL_STACK_FRAME(_hx_pos_701213084e7812bf_97_runInput,"util.mechanica.Mechanica","runInput",0xf062126d,"util.mechanica.Mechanica.runInput","util/mechanica/Mechanica.hx",97,0x5dbe2080)
-HX_LOCAL_STACK_FRAME(_hx_pos_701213084e7812bf_236_update,"util.mechanica.Mechanica","update",0x2bea3437,"util.mechanica.Mechanica.update","util/mechanica/Mechanica.hx",236,0x5dbe2080)
-HX_LOCAL_STACK_FRAME(_hx_pos_701213084e7812bf_244_processInput,"util.mechanica.Mechanica","processInput",0x1d48e3c9,"util.mechanica.Mechanica.processInput","util/mechanica/Mechanica.hx",244,0x5dbe2080)
-HX_LOCAL_STACK_FRAME(_hx_pos_701213084e7812bf_255_concludeInput,"util.mechanica.Mechanica","concludeInput",0x5bac92f1,"util.mechanica.Mechanica.concludeInput","util/mechanica/Mechanica.hx",255,0x5dbe2080)
-HX_LOCAL_STACK_FRAME(_hx_pos_701213084e7812bf_260_buildFromParts,"util.mechanica.Mechanica","buildFromParts",0x13183676,"util.mechanica.Mechanica.buildFromParts","util/mechanica/Mechanica.hx",260,0x5dbe2080)
-HX_LOCAL_STACK_FRAME(_hx_pos_701213084e7812bf_288_rearrangeChildren,"util.mechanica.Mechanica","rearrangeChildren",0xafc12aca,"util.mechanica.Mechanica.rearrangeChildren","util/mechanica/Mechanica.hx",288,0x5dbe2080)
-HX_LOCAL_STACK_FRAME(_hx_pos_701213084e7812bf_307_buildPart,"util.mechanica.Mechanica","buildPart",0x8db1fcd3,"util.mechanica.Mechanica.buildPart","util/mechanica/Mechanica.hx",307,0x5dbe2080)
-HX_LOCAL_STACK_FRAME(_hx_pos_701213084e7812bf_315_enable,"util.mechanica.Mechanica","enable",0x9d6c5cb1,"util.mechanica.Mechanica.enable","util/mechanica/Mechanica.hx",315,0x5dbe2080)
-HX_LOCAL_STACK_FRAME(_hx_pos_701213084e7812bf_322_disable,"util.mechanica.Mechanica","disable",0x548c23fa,"util.mechanica.Mechanica.disable","util/mechanica/Mechanica.hx",322,0x5dbe2080)
-HX_LOCAL_STACK_FRAME(_hx_pos_701213084e7812bf_326_isEnabled,"util.mechanica.Mechanica","isEnabled",0x25536449,"util.mechanica.Mechanica.isEnabled","util/mechanica/Mechanica.hx",326,0x5dbe2080)
-HX_LOCAL_STACK_FRAME(_hx_pos_701213084e7812bf_339_equip,"util.mechanica.Mechanica","equip",0x65798842,"util.mechanica.Mechanica.equip","util/mechanica/Mechanica.hx",339,0x5dbe2080)
-HX_LOCAL_STACK_FRAME(_hx_pos_701213084e7812bf_330_makeToString,"util.mechanica.Mechanica","makeToString",0xf4bde968,"util.mechanica.Mechanica.makeToString","util/mechanica/Mechanica.hx",330,0x5dbe2080)
+HX_DEFINE_STACK_FRAME(_hx_pos_701213084e7812bf_20_new,"util.mechanica.Mechanica","new",0x39b89972,"util.mechanica.Mechanica.new","util/mechanica/Mechanica.hx",20,0x5dbe2080)
+HX_LOCAL_STACK_FRAME(_hx_pos_701213084e7812bf_48_add,"util.mechanica.Mechanica","add",0x39aebb33,"util.mechanica.Mechanica.add","util/mechanica/Mechanica.hx",48,0x5dbe2080)
+HX_LOCAL_STACK_FRAME(_hx_pos_701213084e7812bf_54_getWeight,"util.mechanica.Mechanica","getWeight",0x2120dd40,"util.mechanica.Mechanica.getWeight","util/mechanica/Mechanica.hx",54,0x5dbe2080)
+HX_LOCAL_STACK_FRAME(_hx_pos_701213084e7812bf_58_getLoad,"util.mechanica.Mechanica","getLoad",0xbd6e03ee,"util.mechanica.Mechanica.getLoad","util/mechanica/Mechanica.hx",58,0x5dbe2080)
+HX_LOCAL_STACK_FRAME(_hx_pos_701213084e7812bf_62_valid,"util.mechanica.Mechanica","valid",0x24af268e,"util.mechanica.Mechanica.valid","util/mechanica/Mechanica.hx",62,0x5dbe2080)
+HX_LOCAL_STACK_FRAME(_hx_pos_701213084e7812bf_65_bump,"util.mechanica.Mechanica","bump",0x3feb36a4,"util.mechanica.Mechanica.bump","util/mechanica/Mechanica.hx",65,0x5dbe2080)
+HX_LOCAL_STACK_FRAME(_hx_pos_701213084e7812bf_85_struckBy,"util.mechanica.Mechanica","struckBy",0xe7c4b4f1,"util.mechanica.Mechanica.struckBy","util/mechanica/Mechanica.hx",85,0x5dbe2080)
+HX_LOCAL_STACK_FRAME(_hx_pos_701213084e7812bf_88_postCollision,"util.mechanica.Mechanica","postCollision",0x992b0b84,"util.mechanica.Mechanica.postCollision","util/mechanica/Mechanica.hx",88,0x5dbe2080)
+HX_LOCAL_STACK_FRAME(_hx_pos_701213084e7812bf_92_runInput,"util.mechanica.Mechanica","runInput",0xf062126d,"util.mechanica.Mechanica.runInput","util/mechanica/Mechanica.hx",92,0x5dbe2080)
+HX_LOCAL_STACK_FRAME(_hx_pos_701213084e7812bf_231_update,"util.mechanica.Mechanica","update",0x2bea3437,"util.mechanica.Mechanica.update","util/mechanica/Mechanica.hx",231,0x5dbe2080)
+HX_LOCAL_STACK_FRAME(_hx_pos_701213084e7812bf_239_processInput,"util.mechanica.Mechanica","processInput",0x1d48e3c9,"util.mechanica.Mechanica.processInput","util/mechanica/Mechanica.hx",239,0x5dbe2080)
+HX_LOCAL_STACK_FRAME(_hx_pos_701213084e7812bf_250_concludeInput,"util.mechanica.Mechanica","concludeInput",0x5bac92f1,"util.mechanica.Mechanica.concludeInput","util/mechanica/Mechanica.hx",250,0x5dbe2080)
+HX_LOCAL_STACK_FRAME(_hx_pos_701213084e7812bf_255_buildFromParts,"util.mechanica.Mechanica","buildFromParts",0x13183676,"util.mechanica.Mechanica.buildFromParts","util/mechanica/Mechanica.hx",255,0x5dbe2080)
+HX_LOCAL_STACK_FRAME(_hx_pos_701213084e7812bf_283_rearrangeChildren,"util.mechanica.Mechanica","rearrangeChildren",0xafc12aca,"util.mechanica.Mechanica.rearrangeChildren","util/mechanica/Mechanica.hx",283,0x5dbe2080)
+HX_LOCAL_STACK_FRAME(_hx_pos_701213084e7812bf_302_buildPart,"util.mechanica.Mechanica","buildPart",0x8db1fcd3,"util.mechanica.Mechanica.buildPart","util/mechanica/Mechanica.hx",302,0x5dbe2080)
+HX_LOCAL_STACK_FRAME(_hx_pos_701213084e7812bf_310_enable,"util.mechanica.Mechanica","enable",0x9d6c5cb1,"util.mechanica.Mechanica.enable","util/mechanica/Mechanica.hx",310,0x5dbe2080)
+HX_LOCAL_STACK_FRAME(_hx_pos_701213084e7812bf_317_disable,"util.mechanica.Mechanica","disable",0x548c23fa,"util.mechanica.Mechanica.disable","util/mechanica/Mechanica.hx",317,0x5dbe2080)
+HX_LOCAL_STACK_FRAME(_hx_pos_701213084e7812bf_321_isEnabled,"util.mechanica.Mechanica","isEnabled",0x25536449,"util.mechanica.Mechanica.isEnabled","util/mechanica/Mechanica.hx",321,0x5dbe2080)
+HX_LOCAL_STACK_FRAME(_hx_pos_701213084e7812bf_334_equip,"util.mechanica.Mechanica","equip",0x65798842,"util.mechanica.Mechanica.equip","util/mechanica/Mechanica.hx",334,0x5dbe2080)
+HX_LOCAL_STACK_FRAME(_hx_pos_701213084e7812bf_325_makeToString,"util.mechanica.Mechanica","makeToString",0xf4bde968,"util.mechanica.Mechanica.makeToString","util/mechanica/Mechanica.hx",325,0x5dbe2080)
 namespace util{
 namespace mechanica{
 
 void Mechanica_obj::__construct( ::Dynamic X, ::Dynamic Y){
-            	HX_STACKFRAME(&_hx_pos_701213084e7812bf_25_new)
-HXLINE(  43)		this->animatedThisFrame = false;
-HXLINE(  40)		this->enabled = false;
-HXLINE(  27)		this->name = HX_("Blank Schematic",c1,ff,22,eb);
-HXLINE(  48)		super::__construct(X,Y,null());
+            	HX_STACKFRAME(&_hx_pos_701213084e7812bf_20_new)
+HXLINE(  38)		this->animatedThisFrame = false;
+HXLINE(  35)		this->enabled = false;
+HXLINE(  22)		this->name = HX_("Blank Schematic",c1,ff,22,eb);
+HXLINE(  43)		super::__construct(X,Y,null());
             	}
 
 Dynamic Mechanica_obj::__CreateEmpty() { return new Mechanica_obj; }
@@ -230,305 +230,305 @@ bool Mechanica_obj::_hx_isInstanceOf(int inClassId) {
 }
 
  ::flixel::addons::display::FlxNestedSprite Mechanica_obj::add( ::flixel::addons::display::FlxNestedSprite v){
-            	HX_STACKFRAME(&_hx_pos_701213084e7812bf_53_add)
-HXLINE(  54)		this->super::add(v);
-HXLINE(  55)		if (::Std_obj::is(v,hx::ClassOf< ::util::mechanica::Part >())) {
-HXLINE(  55)			hx::TCast<  ::util::mechanica::Part >::cast(v)->parent = hx::ObjectPtr<OBJ_>(this);
+            	HX_STACKFRAME(&_hx_pos_701213084e7812bf_48_add)
+HXLINE(  49)		this->super::add(v);
+HXLINE(  50)		if (::Std_obj::is(v,hx::ClassOf< ::util::mechanica::Part >())) {
+HXLINE(  50)			hx::TCast<  ::util::mechanica::Part >::cast(v)->parent = hx::ObjectPtr<OBJ_>(this);
             		}
-HXLINE(  56)		return v;
+HXLINE(  51)		return v;
             	}
 
 
 Float Mechanica_obj::getWeight(){
-            	HX_STACKFRAME(&_hx_pos_701213084e7812bf_59_getWeight)
-HXDLIN(  59)		Float _hx_tmp;
-HXDLIN(  59)		if (hx::IsNotNull( this->equip1 )) {
-HXDLIN(  59)			_hx_tmp = this->equip1->weight;
+            	HX_STACKFRAME(&_hx_pos_701213084e7812bf_54_getWeight)
+HXDLIN(  54)		Float _hx_tmp;
+HXDLIN(  54)		if (hx::IsNotNull( this->equip1 )) {
+HXDLIN(  54)			_hx_tmp = this->equip1->weight;
             		}
             		else {
-HXDLIN(  59)			_hx_tmp = (int)0;
+HXDLIN(  54)			_hx_tmp = (int)0;
             		}
-HXDLIN(  59)		Float _hx_tmp1;
-HXDLIN(  59)		if (hx::IsNotNull( this->equip2 )) {
-HXDLIN(  59)			_hx_tmp1 = this->equip2->weight;
+HXDLIN(  54)		Float _hx_tmp1;
+HXDLIN(  54)		if (hx::IsNotNull( this->equip2 )) {
+HXDLIN(  54)			_hx_tmp1 = this->equip2->weight;
             		}
             		else {
-HXDLIN(  59)			_hx_tmp1 = (int)0;
+HXDLIN(  54)			_hx_tmp1 = (int)0;
             		}
-HXDLIN(  59)		return ((((((this->head->weight + this->core->weight) + this->arms->weight) + this->legs->weight) + this->thruster->weight) + _hx_tmp) + _hx_tmp1);
+HXDLIN(  54)		return ((((((this->head->weight + this->core->weight) + this->arms->weight) + this->legs->weight) + this->thruster->weight) + _hx_tmp) + _hx_tmp1);
             	}
 
 
 HX_DEFINE_DYNAMIC_FUNC0(Mechanica_obj,getWeight,return )
 
 Float Mechanica_obj::getLoad(){
-            	HX_STACKFRAME(&_hx_pos_701213084e7812bf_63_getLoad)
-HXDLIN(  63)		Float _hx_tmp = this->getWeight();
-HXDLIN(  63)		return (_hx_tmp - this->legs->weight);
+            	HX_STACKFRAME(&_hx_pos_701213084e7812bf_58_getLoad)
+HXDLIN(  58)		Float _hx_tmp = this->getWeight();
+HXDLIN(  58)		return (_hx_tmp - this->legs->weight);
             	}
 
 
 HX_DEFINE_DYNAMIC_FUNC0(Mechanica_obj,getLoad,return )
 
 bool Mechanica_obj::valid(){
-            	HX_STACKFRAME(&_hx_pos_701213084e7812bf_67_valid)
-HXDLIN(  67)		bool _hx_tmp;
-HXDLIN(  67)		bool _hx_tmp1;
-HXDLIN(  67)		bool _hx_tmp2;
-HXDLIN(  67)		if (hx::IsNotNull( this->head )) {
-HXDLIN(  67)			_hx_tmp2 = hx::IsNotNull( this->core );
+            	HX_STACKFRAME(&_hx_pos_701213084e7812bf_62_valid)
+HXDLIN(  62)		bool _hx_tmp;
+HXDLIN(  62)		bool _hx_tmp1;
+HXDLIN(  62)		bool _hx_tmp2;
+HXDLIN(  62)		if (hx::IsNotNull( this->head )) {
+HXDLIN(  62)			_hx_tmp2 = hx::IsNotNull( this->core );
             		}
             		else {
-HXDLIN(  67)			_hx_tmp2 = false;
+HXDLIN(  62)			_hx_tmp2 = false;
             		}
-HXDLIN(  67)		if (_hx_tmp2) {
-HXDLIN(  67)			_hx_tmp1 = hx::IsNotNull( this->arms );
-            		}
-            		else {
-HXDLIN(  67)			_hx_tmp1 = false;
-            		}
-HXDLIN(  67)		if (_hx_tmp1) {
-HXDLIN(  67)			_hx_tmp = hx::IsNotNull( this->legs );
+HXDLIN(  62)		if (_hx_tmp2) {
+HXDLIN(  62)			_hx_tmp1 = hx::IsNotNull( this->arms );
             		}
             		else {
-HXDLIN(  67)			_hx_tmp = false;
+HXDLIN(  62)			_hx_tmp1 = false;
             		}
-HXDLIN(  67)		if (_hx_tmp) {
-HXDLIN(  67)			return hx::IsNotNull( this->thruster );
+HXDLIN(  62)		if (_hx_tmp1) {
+HXDLIN(  62)			_hx_tmp = hx::IsNotNull( this->legs );
             		}
             		else {
-HXDLIN(  67)			return false;
+HXDLIN(  62)			_hx_tmp = false;
             		}
-HXDLIN(  67)		return false;
+HXDLIN(  62)		if (_hx_tmp) {
+HXDLIN(  62)			return hx::IsNotNull( this->thruster );
+            		}
+            		else {
+HXDLIN(  62)			return false;
+            		}
+HXDLIN(  62)		return false;
             	}
 
 
 HX_DEFINE_DYNAMIC_FUNC0(Mechanica_obj,valid,return )
 
 bool Mechanica_obj::bump( ::Dynamic col1, ::Dynamic col2){
-            	HX_STACKFRAME(&_hx_pos_701213084e7812bf_70_bump)
-HXLINE(  72)		if (::Std_obj::is(col2,hx::ClassOf< ::flixel::FlxObject >())) {
-HXLINE(  74)			if (::Std_obj::is(col2,hx::ClassOf< ::util::mechanica::MechBullet >())) {
-HXLINE(  76)				 ::util::mechanica::MechBullet bullet = hx::TCast<  ::util::mechanica::MechBullet >::cast(col2);
-HXLINE(  77)				if (hx::IsNotEq( bullet->parent->team,this->team )) {
-HXLINE(  79)					this->struckBy(bullet);
-HXLINE(  80)					return true;
+            	HX_STACKFRAME(&_hx_pos_701213084e7812bf_65_bump)
+HXLINE(  67)		if (::Std_obj::is(col2,hx::ClassOf< ::flixel::FlxObject >())) {
+HXLINE(  69)			if (::Std_obj::is(col2,hx::ClassOf< ::util::mechanica::MechBullet >())) {
+HXLINE(  71)				 ::util::mechanica::MechBullet bullet = hx::TCast<  ::util::mechanica::MechBullet >::cast(col2);
+HXLINE(  72)				if (hx::IsNotEq( bullet->parent->team,this->team )) {
+HXLINE(  74)					this->struckBy(bullet);
+HXLINE(  75)					return true;
             				}
             				else {
-HXLINE(  82)					return false;
+HXLINE(  77)					return false;
             				}
             			}
-HXLINE(  84)			::flixel::FlxObject_obj::separate(hx::ObjectPtr<OBJ_>(this),hx::TCast<  ::flixel::FlxObject >::cast(col2));
+HXLINE(  79)			::flixel::FlxObject_obj::separate(hx::ObjectPtr<OBJ_>(this),hx::TCast<  ::flixel::FlxObject >::cast(col2));
             		}
-HXLINE(  86)		return true;
+HXLINE(  81)		return true;
             	}
 
 
 HX_DEFINE_DYNAMIC_FUNC2(Mechanica_obj,bump,return )
 
 void Mechanica_obj::struckBy( ::util::mechanica::MechBullet bullet){
-            	HX_STACKFRAME(&_hx_pos_701213084e7812bf_90_struckBy)
-HXDLIN(  90)		 ::flixel::_hx_system::frontEnds::LogFrontEnd _hx_tmp = ::flixel::FlxG_obj::log;
-HXDLIN(  90)		_hx_tmp->advanced(((this->name + HX_(" was shot by ",3a,b6,de,b3)) + bullet->parent->name),null(),null());
+            	HX_STACKFRAME(&_hx_pos_701213084e7812bf_85_struckBy)
+HXDLIN(  85)		 ::flixel::_hx_system::frontEnds::LogFrontEnd _hx_tmp = ::flixel::FlxG_obj::log;
+HXDLIN(  85)		_hx_tmp->advanced(((this->name + HX_(" was shot by ",3a,b6,de,b3)) + bullet->parent->name),null(),null());
             	}
 
 
 HX_DEFINE_DYNAMIC_FUNC1(Mechanica_obj,struckBy,(void))
 
 void Mechanica_obj::postCollision(){
-            	HX_STACKFRAME(&_hx_pos_701213084e7812bf_93_postCollision)
+            	HX_STACKFRAME(&_hx_pos_701213084e7812bf_88_postCollision)
             	}
 
 
 HX_DEFINE_DYNAMIC_FUNC0(Mechanica_obj,postCollision,(void))
 
 void Mechanica_obj::runInput( ::Xml paramsXml){
-            	HX_STACKFRAME(&_hx_pos_701213084e7812bf_97_runInput)
-HXLINE(  98)		if (!(this->enabled)) {
-HXLINE(  98)			return;
+            	HX_STACKFRAME(&_hx_pos_701213084e7812bf_92_runInput)
+HXLINE(  93)		if (!(this->enabled)) {
+HXLINE(  93)			return;
             		}
-HXLINE( 100)		{
-HXLINE( 100)			::String _g = paramsXml->get(HX_("action",b6,3b,46,16));
-HXDLIN( 100)			::String _hx_switch_0 = _g;
+HXLINE(  95)		{
+HXLINE(  95)			::String _g = paramsXml->get(HX_("action",b6,3b,46,16));
+HXDLIN(  95)			::String _hx_switch_0 = _g;
             			if (  (_hx_switch_0==HX_("aux1",ad,e2,76,40)) ){
-HXLINE( 226)				goto _hx_goto_8;
+HXLINE( 221)				goto _hx_goto_8;
             			}
             			if (  (_hx_switch_0==HX_("aux2",ae,e2,76,40)) ){
-HXLINE( 230)				goto _hx_goto_8;
+HXLINE( 225)				goto _hx_goto_8;
             			}
             			if (  (_hx_switch_0==HX_("boost",23,27,f8,b6)) ){
-HXLINE( 190)				::String mode = paramsXml->get(HX_("mode",63,d3,60,48));
-HXLINE( 192)				bool mobile;
-HXDLIN( 192)				if (hx::IsNotEq( this->locomotionStatus,::util::mechanica::LocomotionStatus_obj::Walking_dyn() )) {
-HXLINE( 192)					mobile = hx::IsEq( this->locomotionStatus,::util::mechanica::LocomotionStatus_obj::ThrusterEngaged_dyn() );
+HXLINE( 185)				::String mode = paramsXml->get(HX_("mode",63,d3,60,48));
+HXLINE( 187)				bool mobile;
+HXDLIN( 187)				if (hx::IsNotEq( this->locomotionStatus,::util::mechanica::LocomotionStatus_obj::Walking_dyn() )) {
+HXLINE( 187)					mobile = hx::IsEq( this->locomotionStatus,::util::mechanica::LocomotionStatus_obj::ThrusterEngaged_dyn() );
             				}
             				else {
-HXLINE( 192)					mobile = true;
+HXLINE( 187)					mobile = true;
             				}
-HXLINE( 193)				::String _hx_switch_1 = mode;
+HXLINE( 188)				::String _hx_switch_1 = mode;
             				if (  (_hx_switch_1==HX_("fire",b6,d3,bb,43)) ){
-HXLINE( 197)					if (mobile) {
-HXLINE( 199)						this->locomotionStatus = ::util::mechanica::LocomotionStatus_obj::ThrusterEngaged_dyn();
-HXLINE( 200)						this->thruster->flareSprite->set_visible(true);
-HXLINE( 202)						this->thruster->flareSprite->animation->play(HX_("engage",a1,2f,7e,fc),null(),null(),null());
+HXLINE( 192)					if (mobile) {
+HXLINE( 194)						this->locomotionStatus = ::util::mechanica::LocomotionStatus_obj::ThrusterEngaged_dyn();
+HXLINE( 195)						this->thruster->flareSprite->set_visible(true);
+HXLINE( 197)						this->thruster->flareSprite->animation->play(HX_("engage",a1,2f,7e,fc),null(),null(),null());
             					}
-HXLINE( 197)					goto _hx_goto_9;
+HXLINE( 192)					goto _hx_goto_9;
             				}
             				if (  (_hx_switch_1==HX_("shutoff",bb,11,25,ee)) ){
-HXLINE( 210)					this->locomotionStatus = ::util::mechanica::LocomotionStatus_obj::Standing_dyn();
-HXLINE( 211)					this->thruster->flareSprite->set_visible(false);
-HXLINE( 212)					this->thruster->flareSprite->animation->finish();
-HXLINE( 208)					goto _hx_goto_9;
+HXLINE( 205)					this->locomotionStatus = ::util::mechanica::LocomotionStatus_obj::Standing_dyn();
+HXLINE( 206)					this->thruster->flareSprite->set_visible(false);
+HXLINE( 207)					this->thruster->flareSprite->animation->finish();
+HXLINE( 203)					goto _hx_goto_9;
             				}
             				_hx_goto_9:;
-HXLINE( 189)				goto _hx_goto_8;
+HXLINE( 184)				goto _hx_goto_8;
             			}
             			if (  (_hx_switch_0==HX_("fire1",bb,6b,9d,00)) ){
-HXLINE( 219)				 ::util::mechanica::FirearmUnit _hx_tmp = this->equip1;
-HXDLIN( 219)				_hx_tmp->fire((this->angle - (int)90));
-HXDLIN( 219)				goto _hx_goto_8;
+HXLINE( 214)				 ::util::mechanica::FirearmUnit _hx_tmp = this->equip1;
+HXDLIN( 214)				_hx_tmp->fire((this->angle - (int)90));
+HXDLIN( 214)				goto _hx_goto_8;
             			}
             			if (  (_hx_switch_0==HX_("fire2",bc,6b,9d,00)) ){
-HXLINE( 223)				 ::util::mechanica::FirearmUnit _hx_tmp1 = this->equip2;
-HXDLIN( 223)				_hx_tmp1->fire((this->angle - (int)90));
-HXDLIN( 223)				goto _hx_goto_8;
+HXLINE( 218)				 ::util::mechanica::FirearmUnit _hx_tmp1 = this->equip2;
+HXDLIN( 218)				_hx_tmp1->fire((this->angle - (int)90));
+HXDLIN( 218)				goto _hx_goto_8;
             			}
             			if (  (_hx_switch_0==HX_("locomote",c2,a0,46,f0)) ){
-HXLINE( 106)				 ::Dynamic direction = ::Std_obj::parseInt(paramsXml->get(HX_("direction",3f,62,40,10)));
-HXLINE( 107)				int angleOffset;
-HXDLIN( 107)				if ((paramsXml->get(HX_("axis",a1,1c,79,40)) == HX_("x",78,00,00,00))) {
-HXLINE( 107)					angleOffset = (int)-90;
+HXLINE( 101)				 ::Dynamic direction = ::Std_obj::parseInt(paramsXml->get(HX_("direction",3f,62,40,10)));
+HXLINE( 102)				int angleOffset;
+HXDLIN( 102)				if ((paramsXml->get(HX_("axis",a1,1c,79,40)) == HX_("x",78,00,00,00))) {
+HXLINE( 102)					angleOffset = (int)-90;
             				}
             				else {
-HXLINE( 107)					angleOffset = (int)0;
+HXLINE( 102)					angleOffset = (int)0;
             				}
-HXLINE( 109)				Float performanceRedux = this->getLoad();
-HXDLIN( 109)				Float performanceRedux1 = (performanceRedux - (this->legs->performanceWeightCapacity * this->legs->weightCapacity));
-HXLINE( 111)				Float performanceRedux2 = this->legs->weightCapacity;
-HXLINE( 108)				Float performanceRedux3 = ((Float)performanceRedux1 / (Float)(performanceRedux2 - (this->legs->weightCapacity * this->legs->performanceWeightCapacity)));
-HXLINE( 113)				Float baseSpeed;
-HXDLIN( 113)				if (hx::IsNotEq( this->locomotionStatus,::util::mechanica::LocomotionStatus_obj::ThrusterEngaged_dyn() )) {
-HXLINE( 113)					baseSpeed = (this->legs->topSpeed * this->legs->_acceleration);
-            				}
-            				else {
-HXLINE( 113)					baseSpeed = (this->thruster->topSpeed * this->thruster->_acceleration);
-            				}
-HXLINE( 114)				baseSpeed = (baseSpeed * ::Global_obj::speedScale);
-HXLINE( 115)				Float limit;
-HXDLIN( 115)				if ((performanceRedux3 > (int)0)) {
-HXLINE( 115)					limit = (((int)1 - performanceRedux3) * baseSpeed);
+HXLINE( 104)				Float performanceRedux = this->getLoad();
+HXDLIN( 104)				Float performanceRedux1 = (performanceRedux - (this->legs->performanceWeightCapacity * this->legs->weightCapacity));
+HXLINE( 106)				Float performanceRedux2 = this->legs->weightCapacity;
+HXLINE( 103)				Float performanceRedux3 = ((Float)performanceRedux1 / (Float)(performanceRedux2 - (this->legs->weightCapacity * this->legs->performanceWeightCapacity)));
+HXLINE( 108)				Float baseSpeed;
+HXDLIN( 108)				if (hx::IsNotEq( this->locomotionStatus,::util::mechanica::LocomotionStatus_obj::ThrusterEngaged_dyn() )) {
+HXLINE( 108)					baseSpeed = (this->legs->topSpeed * this->legs->_acceleration);
             				}
             				else {
-HXLINE( 115)					limit = baseSpeed;
+HXLINE( 108)					baseSpeed = (this->thruster->topSpeed * this->thruster->_acceleration);
             				}
-HXLINE( 117)				bool animate = !(this->animatedThisFrame);
-HXLINE( 118)				if (animate) {
-HXLINE( 120)					this->animatedThisFrame = true;
-HXLINE( 121)					bool _hx_tmp2;
-HXDLIN( 121)					bool _hx_tmp3;
-HXDLIN( 121)					if (this->legs->animated) {
-HXLINE( 121)						_hx_tmp3 = hx::IsNotEq( this->locomotionStatus,::util::mechanica::LocomotionStatus_obj::ThrusterEngaged_dyn() );
+HXLINE( 109)				baseSpeed = (baseSpeed * ::Global_obj::speedScale);
+HXLINE( 110)				Float limit;
+HXDLIN( 110)				if ((performanceRedux3 > (int)0)) {
+HXLINE( 110)					limit = (((int)1 - performanceRedux3) * baseSpeed);
+            				}
+            				else {
+HXLINE( 110)					limit = baseSpeed;
+            				}
+HXLINE( 112)				bool animate = !(this->animatedThisFrame);
+HXLINE( 113)				if (animate) {
+HXLINE( 115)					this->animatedThisFrame = true;
+HXLINE( 116)					bool _hx_tmp2;
+HXDLIN( 116)					bool _hx_tmp3;
+HXDLIN( 116)					if (this->legs->animated) {
+HXLINE( 116)						_hx_tmp3 = hx::IsNotEq( this->locomotionStatus,::util::mechanica::LocomotionStatus_obj::ThrusterEngaged_dyn() );
             					}
             					else {
-HXLINE( 121)						_hx_tmp3 = false;
+HXLINE( 116)						_hx_tmp3 = false;
             					}
-HXDLIN( 121)					if (_hx_tmp3) {
-HXLINE( 121)						_hx_tmp2 = (::math::MoreMath_obj::magnitude(this->velocity) >= (int)10);
-            					}
-            					else {
-HXLINE( 121)						_hx_tmp2 = false;
-            					}
-HXDLIN( 121)					if (_hx_tmp2) {
-HXLINE( 123)						 ::flixel::animation::FlxAnimation _hx_tmp4 = ( ( ::flixel::animation::FlxAnimation)(::haxe::IMap_obj::get(this->legs->animation->_animations,HX_("locomote",c2,a0,46,f0))) );
-HXDLIN( 123)						_hx_tmp4->set_frameRate(::Std_obj::_hx_int(::Math_obj::max((((Float)this->speed / (Float)limit) * this->legs->frameRate),(int)2)));
-HXLINE( 124)						this->legs->animation->play(HX_("locomote",c2,a0,46,f0),null(),null(),null());
+HXDLIN( 116)					if (_hx_tmp3) {
+HXLINE( 116)						_hx_tmp2 = (::math::MoreMath_obj::magnitude(this->velocity) >= (int)10);
             					}
             					else {
-HXLINE( 128)						if (hx::IsNotEq( this->locomotionStatus,::util::mechanica::LocomotionStatus_obj::ThrusterEngaged_dyn() )) {
-HXLINE( 128)							this->locomotionStatus = ::util::mechanica::LocomotionStatus_obj::Standing_dyn();
+HXLINE( 116)						_hx_tmp2 = false;
+            					}
+HXDLIN( 116)					if (_hx_tmp2) {
+HXLINE( 118)						 ::flixel::animation::FlxAnimation _hx_tmp4 = ( ( ::flixel::animation::FlxAnimation)(::haxe::IMap_obj::get(this->legs->animation->_animations,HX_("locomote",c2,a0,46,f0))) );
+HXDLIN( 118)						_hx_tmp4->set_frameRate(::Std_obj::_hx_int(::Math_obj::max((((Float)this->speed / (Float)limit) * this->legs->frameRate),(int)2)));
+HXLINE( 119)						this->legs->animation->play(HX_("locomote",c2,a0,46,f0),null(),null(),null());
+            					}
+            					else {
+HXLINE( 123)						if (hx::IsNotEq( this->locomotionStatus,::util::mechanica::LocomotionStatus_obj::ThrusterEngaged_dyn() )) {
+HXLINE( 123)							this->locomotionStatus = ::util::mechanica::LocomotionStatus_obj::Standing_dyn();
             						}
-HXLINE( 129)						bool _hx_tmp5;
-HXDLIN( 129)						if (this->legs->animated) {
-HXLINE( 129)							_hx_tmp5 = hx::IsNotNull( this->legs->animation->_curAnim );
+HXLINE( 124)						bool _hx_tmp5;
+HXDLIN( 124)						if (this->legs->animated) {
+HXLINE( 124)							_hx_tmp5 = hx::IsNotNull( this->legs->animation->_curAnim );
             						}
             						else {
-HXLINE( 129)							_hx_tmp5 = false;
+HXLINE( 124)							_hx_tmp5 = false;
             						}
-HXDLIN( 129)						if (_hx_tmp5) {
-HXLINE( 131)							 ::flixel::animation::FlxAnimationController _this = this->legs->animation;
-HXDLIN( 131)							if (hx::IsNotNull( _this->_curAnim )) {
-HXLINE( 131)								_this->_curAnim->pause();
+HXDLIN( 124)						if (_hx_tmp5) {
+HXLINE( 126)							 ::flixel::animation::FlxAnimationController _this = this->legs->animation;
+HXDLIN( 126)							if (hx::IsNotNull( _this->_curAnim )) {
+HXLINE( 126)								_this->_curAnim->pause();
             							}
             						}
             					}
             				}
-HXLINE( 137)				if (hx::IsNotEq( direction,(int)0 )) {
-HXLINE( 140)					Float a = ::Math_obj::cos(::math::MoreMath_obj::degToRad(((this->angle + (int)90) + angleOffset)));
-HXLINE( 141)					Float b = ::Math_obj::sin(::math::MoreMath_obj::degToRad(((this->angle + (int)90) + angleOffset)));
-HXLINE( 143)					if (animate) {
-HXLINE( 145)						 ::util::mechanica::Mechanica _hx_tmp6 = hx::ObjectPtr<OBJ_>(this);
-HXDLIN( 145)						_hx_tmp6->speed = (_hx_tmp6->speed + baseSpeed);
-HXLINE( 146)						 ::flixel::math::FlxPoint _hx_tmp7 = this->velocity;
-HXDLIN( 146)						Float _hx_tmp8 = ((a * this->speed) * direction);
-HXDLIN( 146)						_hx_tmp7->set(_hx_tmp8,((b * this->speed) * direction));
+HXLINE( 132)				if (hx::IsNotEq( direction,(int)0 )) {
+HXLINE( 135)					Float a = ::Math_obj::cos(::math::MoreMath_obj::degToRad(((this->angle + (int)90) + angleOffset)));
+HXLINE( 136)					Float b = ::Math_obj::sin(::math::MoreMath_obj::degToRad(((this->angle + (int)90) + angleOffset)));
+HXLINE( 138)					if (animate) {
+HXLINE( 140)						 ::util::mechanica::Mechanica _hx_tmp6 = hx::ObjectPtr<OBJ_>(this);
+HXDLIN( 140)						_hx_tmp6->speed = (_hx_tmp6->speed + baseSpeed);
+HXLINE( 141)						 ::flixel::math::FlxPoint _hx_tmp7 = this->velocity;
+HXDLIN( 141)						Float _hx_tmp8 = ((a * this->speed) * direction);
+HXDLIN( 141)						_hx_tmp7->set(_hx_tmp8,((b * this->speed) * direction));
             					}
             					else {
-HXLINE( 151)						 ::flixel::math::FlxPoint _this1 = this->velocity;
-HXDLIN( 151)						Float Y = ((b * this->speed) * direction);
-HXDLIN( 151)						{
-HXLINE( 151)							 ::flixel::math::FlxPoint _g1 = _this1;
-HXDLIN( 151)							_g1->set_x((_g1->x + ((a * this->speed) * direction)));
+HXLINE( 146)						 ::flixel::math::FlxPoint _this1 = this->velocity;
+HXDLIN( 146)						Float Y = ((b * this->speed) * direction);
+HXDLIN( 146)						{
+HXLINE( 146)							 ::flixel::math::FlxPoint _g1 = _this1;
+HXDLIN( 146)							_g1->set_x((_g1->x + ((a * this->speed) * direction)));
             						}
-HXDLIN( 151)						{
-HXLINE( 151)							 ::flixel::math::FlxPoint _g2 = _this1;
-HXDLIN( 151)							_g2->set_y((_g2->y + Y));
+HXDLIN( 146)						{
+HXLINE( 146)							 ::flixel::math::FlxPoint _g2 = _this1;
+HXDLIN( 146)							_g2->set_y((_g2->y + Y));
             						}
             					}
-HXLINE( 153)					this->speed = ::Math_obj::min(this->speed,limit);
-HXLINE( 156)					if (hx::IsNotEq( this->locomotionStatus,::util::mechanica::LocomotionStatus_obj::ThrusterEngaged_dyn() )) {
-HXLINE( 156)						this->locomotionStatus = ::util::mechanica::LocomotionStatus_obj::Walking_dyn();
+HXLINE( 148)					this->speed = ::Math_obj::min(this->speed,limit);
+HXLINE( 151)					if (hx::IsNotEq( this->locomotionStatus,::util::mechanica::LocomotionStatus_obj::ThrusterEngaged_dyn() )) {
+HXLINE( 151)						this->locomotionStatus = ::util::mechanica::LocomotionStatus_obj::Walking_dyn();
             					}
             				}
             				else {
-HXLINE( 160)					bool _hx_tmp9;
-HXDLIN( 160)					if (hx::IsNotEq( this->locomotionStatus,::util::mechanica::LocomotionStatus_obj::Walking_dyn() )) {
-HXLINE( 160)						_hx_tmp9 = hx::IsEq( this->locomotionStatus,::util::mechanica::LocomotionStatus_obj::Standing_dyn() );
+HXLINE( 155)					bool _hx_tmp9;
+HXDLIN( 155)					if (hx::IsNotEq( this->locomotionStatus,::util::mechanica::LocomotionStatus_obj::Walking_dyn() )) {
+HXLINE( 155)						_hx_tmp9 = hx::IsEq( this->locomotionStatus,::util::mechanica::LocomotionStatus_obj::Standing_dyn() );
             					}
             					else {
-HXLINE( 160)						_hx_tmp9 = true;
+HXLINE( 155)						_hx_tmp9 = true;
             					}
-HXDLIN( 160)					if (_hx_tmp9) {
-HXLINE( 160)						this->speed = ::Math_obj::max((this->speed - (int)2),(int)0);
+HXDLIN( 155)					if (_hx_tmp9) {
+HXLINE( 155)						this->speed = ::Math_obj::max((this->speed - (int)2),(int)0);
             					}
-HXLINE( 161)					this->locomotionStatus = ::util::mechanica::LocomotionStatus_obj::Braking_dyn();
+HXLINE( 156)					this->locomotionStatus = ::util::mechanica::LocomotionStatus_obj::Braking_dyn();
             				}
-HXLINE( 165)				{
-HXLINE( 165)					 ::flixel::_hx_system::frontEnds::WatchFrontEnd _this2 = ::flixel::FlxG_obj::watch;
-HXDLIN( 165)					 ::Dynamic value = ::math::MoreMath_obj::magnitude(this->velocity);
-HXDLIN( 165)					 ::flixel::_hx_system::debug::watch::Watch _hx_tmp10 = ::flixel::FlxG_obj::game->debugger->watch;
-HXDLIN( 165)					_hx_tmp10->add(HX_("magnitude:",6a,22,49,c2),::flixel::_hx_system::debug::watch::WatchEntryData_obj::QUICK(::Std_obj::string(value)));
+HXLINE( 160)				{
+HXLINE( 160)					 ::flixel::_hx_system::frontEnds::WatchFrontEnd _this2 = ::flixel::FlxG_obj::watch;
+HXDLIN( 160)					 ::Dynamic value = ::math::MoreMath_obj::magnitude(this->velocity);
+HXDLIN( 160)					 ::flixel::_hx_system::debug::watch::Watch _hx_tmp10 = ::flixel::FlxG_obj::game->debugger->watch;
+HXDLIN( 160)					_hx_tmp10->add(HX_("magnitude:",6a,22,49,c2),::flixel::_hx_system::debug::watch::WatchEntryData_obj::QUICK(::Std_obj::string(value)));
             				}
-HXLINE( 103)				goto _hx_goto_8;
+HXLINE(  98)				goto _hx_goto_8;
             			}
             			if (  (_hx_switch_0==HX_("steer",11,72,0e,84)) ){
-HXLINE( 171)				 ::Dynamic direction1 = ::Std_obj::parseInt(paramsXml->get(HX_("direction",3f,62,40,10)));
-HXLINE( 172)				if (hx::IsNotEq( direction1,(int)0 )) {
-HXLINE( 176)					{
-HXLINE( 176)						 ::util::mechanica::Mechanica _g3 = hx::ObjectPtr<OBJ_>(this);
-HXDLIN( 176)						Float _g4 = _g3->angle;
-HXDLIN( 176)						_g3->set_angle((_g4 + (this->legs->turningSpeed * direction1)));
+HXLINE( 166)				 ::Dynamic direction1 = ::Std_obj::parseInt(paramsXml->get(HX_("direction",3f,62,40,10)));
+HXLINE( 167)				if (hx::IsNotEq( direction1,(int)0 )) {
+HXLINE( 171)					{
+HXLINE( 171)						 ::util::mechanica::Mechanica _g3 = hx::ObjectPtr<OBJ_>(this);
+HXDLIN( 171)						Float _g4 = _g3->angle;
+HXDLIN( 171)						_g3->set_angle((_g4 + (this->legs->turningSpeed * direction1)));
             					}
-HXLINE( 177)					this->speed--;
-HXLINE( 178)					if ((this->angle < (int)0)) {
-HXLINE( 180)						 ::util::mechanica::Mechanica _g5 = hx::ObjectPtr<OBJ_>(this);
-HXDLIN( 180)						_g5->set_angle((_g5->angle + (int)360));
+HXLINE( 172)					this->speed--;
+HXLINE( 173)					if ((this->angle < (int)0)) {
+HXLINE( 175)						 ::util::mechanica::Mechanica _g5 = hx::ObjectPtr<OBJ_>(this);
+HXDLIN( 175)						_g5->set_angle((_g5->angle + (int)360));
             					}
-HXLINE( 182)					if ((this->angle > (int)360)) {
-HXLINE( 184)						 ::util::mechanica::Mechanica _g6 = hx::ObjectPtr<OBJ_>(this);
-HXDLIN( 184)						_g6->set_angle((_g6->angle - (int)360));
+HXLINE( 177)					if ((this->angle > (int)360)) {
+HXLINE( 179)						 ::util::mechanica::Mechanica _g6 = hx::ObjectPtr<OBJ_>(this);
+HXDLIN( 179)						_g6->set_angle((_g6->angle - (int)360));
             					}
             				}
-HXLINE( 169)				goto _hx_goto_8;
+HXLINE( 164)				goto _hx_goto_8;
             			}
             			_hx_goto_8:;
             		}
@@ -538,242 +538,242 @@ HXLINE( 169)				goto _hx_goto_8;
 HX_DEFINE_DYNAMIC_FUNC1(Mechanica_obj,runInput,(void))
 
 void Mechanica_obj::update(Float e){
-            	HX_STACKFRAME(&_hx_pos_701213084e7812bf_236_update)
-HXLINE( 238)		this->processInput();
-HXLINE( 240)		this->super::update(e);
-HXLINE( 241)		::flixel::FlxG_obj::overlap(hx::ObjectPtr<OBJ_>(this),::Global_obj::colliders,null(),this->bump_dyn());
+            	HX_STACKFRAME(&_hx_pos_701213084e7812bf_231_update)
+HXLINE( 233)		this->processInput();
+HXLINE( 235)		this->super::update(e);
+HXLINE( 236)		::flixel::FlxG_obj::overlap(hx::ObjectPtr<OBJ_>(this),::Global_obj::colliders,null(),this->bump_dyn());
             	}
 
 
 void Mechanica_obj::processInput(){
-            	HX_STACKFRAME(&_hx_pos_701213084e7812bf_244_processInput)
-HXLINE( 245)		if (hx::IsNull( this->controller )) {
-HXLINE( 245)			return;
+            	HX_STACKFRAME(&_hx_pos_701213084e7812bf_239_processInput)
+HXLINE( 240)		if (hx::IsNull( this->controller )) {
+HXLINE( 240)			return;
             		}
-HXLINE( 246)		::Array< ::Dynamic> inputBuffer = this->controller->getBuffer();
-HXLINE( 247)		{
-HXLINE( 247)			int _g1 = (int)0;
-HXDLIN( 247)			int _g = inputBuffer->length;
-HXDLIN( 247)			while((_g1 < _g)){
-HXLINE( 247)				_g1 = (_g1 + (int)1);
-HXDLIN( 247)				int i = (_g1 - (int)1);
-HXLINE( 249)				this->runInput(inputBuffer->__get(i).StaticCast<  ::Xml >());
+HXLINE( 241)		::Array< ::Dynamic> inputBuffer = this->controller->getBuffer();
+HXLINE( 242)		{
+HXLINE( 242)			int _g1 = (int)0;
+HXDLIN( 242)			int _g = inputBuffer->length;
+HXDLIN( 242)			while((_g1 < _g)){
+HXLINE( 242)				_g1 = (_g1 + (int)1);
+HXDLIN( 242)				int i = (_g1 - (int)1);
+HXLINE( 244)				this->runInput(inputBuffer->__get(i).StaticCast<  ::Xml >());
             			}
             		}
-HXLINE( 251)		this->concludeInput();
+HXLINE( 246)		this->concludeInput();
             	}
 
 
 HX_DEFINE_DYNAMIC_FUNC0(Mechanica_obj,processInput,(void))
 
 void Mechanica_obj::concludeInput(){
-            	HX_STACKFRAME(&_hx_pos_701213084e7812bf_255_concludeInput)
-HXDLIN( 255)		this->animatedThisFrame = false;
+            	HX_STACKFRAME(&_hx_pos_701213084e7812bf_250_concludeInput)
+HXDLIN( 250)		this->animatedThisFrame = false;
             	}
 
 
 HX_DEFINE_DYNAMIC_FUNC0(Mechanica_obj,concludeInput,(void))
 
 bool Mechanica_obj::buildFromParts(::String _head,::String _core,::String _arms,::String _legs,::String _thruster,::String _equip1,::String _equip2){
-            	HX_STACKFRAME(&_hx_pos_701213084e7812bf_260_buildFromParts)
-HXLINE( 261)		::flixel::FlxG_obj::log->advanced(HX_("Building from parts...",b8,55,3d,d6),::Global_obj::logStyle,null());
-HXLINE( 262)		bool returnBool = true;
-HXLINE( 263)		if (returnBool) {
-HXLINE( 263)			returnBool = this->buildPart(::util::mechanica::EquipType_obj::Head_dyn(),_head);
+            	HX_STACKFRAME(&_hx_pos_701213084e7812bf_255_buildFromParts)
+HXLINE( 256)		::flixel::FlxG_obj::log->advanced(HX_("Building from parts...",b8,55,3d,d6),::Global_obj::logStyle,null());
+HXLINE( 257)		bool returnBool = true;
+HXLINE( 258)		if (returnBool) {
+HXLINE( 258)			returnBool = this->buildPart(::util::mechanica::EquipType_obj::Head_dyn(),_head);
             		}
             		else {
-HXLINE( 263)			returnBool = false;
+HXLINE( 258)			returnBool = false;
             		}
-HXLINE( 264)		if (returnBool) {
-HXLINE( 264)			returnBool = this->buildPart(::util::mechanica::EquipType_obj::Core_dyn(),_core);
-            		}
-            		else {
-HXLINE( 264)			returnBool = false;
-            		}
-HXLINE( 265)		if (returnBool) {
-HXLINE( 265)			returnBool = this->buildPart(::util::mechanica::EquipType_obj::Arms_dyn(),_arms);
+HXLINE( 259)		if (returnBool) {
+HXLINE( 259)			returnBool = this->buildPart(::util::mechanica::EquipType_obj::Core_dyn(),_core);
             		}
             		else {
-HXLINE( 265)			returnBool = false;
+HXLINE( 259)			returnBool = false;
             		}
-HXLINE( 266)		if (returnBool) {
-HXLINE( 266)			returnBool = this->buildPart(::util::mechanica::EquipType_obj::Legs_dyn(),_legs);
-            		}
-            		else {
-HXLINE( 266)			returnBool = false;
-            		}
-HXLINE( 267)		if (returnBool) {
-HXLINE( 267)			returnBool = this->buildPart(::util::mechanica::EquipType_obj::Thruster_dyn(),_thruster);
+HXLINE( 260)		if (returnBool) {
+HXLINE( 260)			returnBool = this->buildPart(::util::mechanica::EquipType_obj::Arms_dyn(),_arms);
             		}
             		else {
-HXLINE( 267)			returnBool = false;
+HXLINE( 260)			returnBool = false;
             		}
-HXLINE( 268)		if (hx::IsNotNull( _equip1 )) {
-HXLINE( 270)			if (returnBool) {
-HXLINE( 270)				returnBool = this->buildPart(::util::mechanica::EquipType_obj::Equipment1_dyn(),_equip1);
+HXLINE( 261)		if (returnBool) {
+HXLINE( 261)			returnBool = this->buildPart(::util::mechanica::EquipType_obj::Legs_dyn(),_legs);
+            		}
+            		else {
+HXLINE( 261)			returnBool = false;
+            		}
+HXLINE( 262)		if (returnBool) {
+HXLINE( 262)			returnBool = this->buildPart(::util::mechanica::EquipType_obj::Thruster_dyn(),_thruster);
+            		}
+            		else {
+HXLINE( 262)			returnBool = false;
+            		}
+HXLINE( 263)		if (hx::IsNotNull( _equip1 )) {
+HXLINE( 265)			if (returnBool) {
+HXLINE( 265)				returnBool = this->buildPart(::util::mechanica::EquipType_obj::Equipment1_dyn(),_equip1);
             			}
             			else {
-HXLINE( 270)				returnBool = false;
+HXLINE( 265)				returnBool = false;
             			}
             		}
-HXLINE( 272)		if (hx::IsNotNull( _equip2 )) {
-HXLINE( 274)			if (returnBool) {
-HXLINE( 274)				returnBool = this->buildPart(::util::mechanica::EquipType_obj::Equipment2_dyn(),_equip2);
+HXLINE( 267)		if (hx::IsNotNull( _equip2 )) {
+HXLINE( 269)			if (returnBool) {
+HXLINE( 269)				returnBool = this->buildPart(::util::mechanica::EquipType_obj::Equipment2_dyn(),_equip2);
             			}
             			else {
-HXLINE( 274)				returnBool = false;
+HXLINE( 269)				returnBool = false;
             			}
             		}
-HXLINE( 276)		 ::flixel::math::FlxPoint _hx_tmp = this->drag;
-HXDLIN( 276)		 ::flixel::math::FlxPoint _hx_tmp1 = this->drag;
-HXDLIN( 276)		Float _hx_tmp2 = this->legs->brakingForce;
-HXDLIN( 276)		Float _hx_tmp3 = ::Math_obj::max((_hx_tmp2 - this->getLoad()),(int)25);
-HXDLIN( 276)		_hx_tmp->set_x(_hx_tmp1->set_y(::Math_obj::min(_hx_tmp3,((Float)this->legs->topSpeed / (Float)(int)2))));
-HXLINE( 277)		this->rearrangeChildren();
-HXLINE( 278)		return returnBool;
+HXLINE( 271)		 ::flixel::math::FlxPoint _hx_tmp = this->drag;
+HXDLIN( 271)		 ::flixel::math::FlxPoint _hx_tmp1 = this->drag;
+HXDLIN( 271)		Float _hx_tmp2 = this->legs->brakingForce;
+HXDLIN( 271)		Float _hx_tmp3 = ::Math_obj::max((_hx_tmp2 - this->getLoad()),(int)25);
+HXDLIN( 271)		_hx_tmp->set_x(_hx_tmp1->set_y(::Math_obj::min(_hx_tmp3,((Float)this->legs->topSpeed / (Float)(int)2))));
+HXLINE( 272)		this->rearrangeChildren();
+HXLINE( 273)		return returnBool;
             	}
 
 
 HX_DEFINE_DYNAMIC_FUNC7(Mechanica_obj,buildFromParts,return )
 
 void Mechanica_obj::rearrangeChildren(){
-            	HX_STACKFRAME(&_hx_pos_701213084e7812bf_288_rearrangeChildren)
-HXLINE( 289)		this->removeAll();
-HXLINE( 291)		this->add(this->legs);
-HXLINE( 292)		this->add(this->thruster);
-HXLINE( 294)		this->add(this->arms);
-HXLINE( 295)		this->add(this->core);
-HXLINE( 296)		if (hx::IsNotNull( this->equip1 )) {
-HXLINE( 298)			this->add(this->equip1);
+            	HX_STACKFRAME(&_hx_pos_701213084e7812bf_283_rearrangeChildren)
+HXLINE( 284)		this->removeAll();
+HXLINE( 286)		this->add(this->legs);
+HXLINE( 287)		this->add(this->thruster);
+HXLINE( 289)		this->add(this->arms);
+HXLINE( 290)		this->add(this->core);
+HXLINE( 291)		if (hx::IsNotNull( this->equip1 )) {
+HXLINE( 293)			this->add(this->equip1);
             		}
-HXLINE( 300)		if (hx::IsNotNull( this->equip2 )) {
-HXLINE( 302)			this->add(this->equip2);
+HXLINE( 295)		if (hx::IsNotNull( this->equip2 )) {
+HXLINE( 297)			this->add(this->equip2);
             		}
-HXLINE( 304)		this->add(this->head);
+HXLINE( 299)		this->add(this->head);
             	}
 
 
 HX_DEFINE_DYNAMIC_FUNC0(Mechanica_obj,rearrangeChildren,(void))
 
 bool Mechanica_obj::buildPart( ::util::mechanica::EquipType etype,::String part){
-            	HX_STACKFRAME(&_hx_pos_701213084e7812bf_307_buildPart)
-HXLINE( 310)		 ::util::mechanica::Part partObj = ::util::PartFactory_obj::buildPart(part);
-HXLINE( 312)		if (hx::IsNotNull( partObj )) {
-HXLINE( 312)			return this->equip(etype,partObj);
+            	HX_STACKFRAME(&_hx_pos_701213084e7812bf_302_buildPart)
+HXLINE( 305)		 ::util::mechanica::Part partObj = ::util::PartFactory_obj::buildPart(part);
+HXLINE( 307)		if (hx::IsNotNull( partObj )) {
+HXLINE( 307)			return this->equip(etype,partObj);
             		}
             		else {
-HXLINE( 312)			return false;
+HXLINE( 307)			return false;
             		}
-HXDLIN( 312)		return false;
+HXDLIN( 307)		return false;
             	}
 
 
 HX_DEFINE_DYNAMIC_FUNC2(Mechanica_obj,buildPart,return )
 
 void Mechanica_obj::enable(){
-            	HX_STACKFRAME(&_hx_pos_701213084e7812bf_315_enable)
-HXLINE( 316)		this->enabled = true;
-HXLINE( 317)		this->loadGraphic(HX_("assets/images/misc/blank.png",57,37,0e,60),false,(int)32,(int)32,null(),null());
+            	HX_STACKFRAME(&_hx_pos_701213084e7812bf_310_enable)
+HXLINE( 311)		this->enabled = true;
+HXLINE( 312)		this->loadGraphic(HX_("assets/images/misc/blank.png",57,37,0e,60),false,(int)32,(int)32,null(),null());
             	}
 
 
 HX_DEFINE_DYNAMIC_FUNC0(Mechanica_obj,enable,(void))
 
 void Mechanica_obj::disable(){
-            	HX_STACKFRAME(&_hx_pos_701213084e7812bf_322_disable)
-HXDLIN( 322)		this->enabled = false;
+            	HX_STACKFRAME(&_hx_pos_701213084e7812bf_317_disable)
+HXDLIN( 317)		this->enabled = false;
             	}
 
 
 HX_DEFINE_DYNAMIC_FUNC0(Mechanica_obj,disable,(void))
 
 bool Mechanica_obj::isEnabled(){
-            	HX_STACKFRAME(&_hx_pos_701213084e7812bf_326_isEnabled)
-HXDLIN( 326)		return this->enabled;
+            	HX_STACKFRAME(&_hx_pos_701213084e7812bf_321_isEnabled)
+HXDLIN( 321)		return this->enabled;
             	}
 
 
 HX_DEFINE_DYNAMIC_FUNC0(Mechanica_obj,isEnabled,return )
 
 bool Mechanica_obj::equip( ::util::mechanica::EquipType etype, ::Dynamic part){
-            	HX_STACKFRAME(&_hx_pos_701213084e7812bf_339_equip)
-HXLINE( 340)		if (hx::IsNull( part )) {
-HXLINE( 340)			return false;
+            	HX_STACKFRAME(&_hx_pos_701213084e7812bf_334_equip)
+HXLINE( 335)		if (hx::IsNull( part )) {
+HXLINE( 335)			return false;
             		}
-HXLINE( 341)		 ::flixel::_hx_system::frontEnds::LogFrontEnd _hx_tmp = ::flixel::FlxG_obj::log;
-HXDLIN( 341)		_hx_tmp->advanced((HX_("Equipping ",de,20,92,ad) + hx::TCast<  ::util::mechanica::Part >::cast(part)->desc),::Global_obj::logStyle,null());
-HXLINE( 342)		switch((int)(_hx_getEnumValueIndex(etype))){
+HXLINE( 336)		 ::flixel::_hx_system::frontEnds::LogFrontEnd _hx_tmp = ::flixel::FlxG_obj::log;
+HXDLIN( 336)		_hx_tmp->advanced((HX_("Equipping ",de,20,92,ad) + hx::TCast<  ::util::mechanica::Part >::cast(part)->desc),::Global_obj::logStyle,null());
+HXLINE( 337)		switch((int)(_hx_getEnumValueIndex(etype))){
             			case (int)0: {
-HXLINE( 346)				if (hx::IsNotNull( this->head )) {
-HXLINE( 346)					this->remove(this->head);
+HXLINE( 341)				if (hx::IsNotNull( this->head )) {
+HXLINE( 341)					this->remove(this->head);
             				}
-HXLINE( 347)				this->head = ( ( ::util::mechanica::HeadUnit)(part) );
+HXLINE( 342)				this->head = ( ( ::util::mechanica::HeadUnit)(part) );
             			}
             			break;
             			case (int)1: {
-HXLINE( 351)				if (hx::IsNotNull( this->core )) {
-HXLINE( 351)					this->remove(this->core);
+HXLINE( 346)				if (hx::IsNotNull( this->core )) {
+HXLINE( 346)					this->remove(this->core);
             				}
-HXLINE( 352)				this->core = ( ( ::util::mechanica::CoreUnit)(part) );
+HXLINE( 347)				this->core = ( ( ::util::mechanica::CoreUnit)(part) );
             			}
             			break;
             			case (int)2: {
-HXLINE( 356)				if (hx::IsNotNull( this->arms )) {
-HXLINE( 356)					this->remove(this->arms);
+HXLINE( 351)				if (hx::IsNotNull( this->arms )) {
+HXLINE( 351)					this->remove(this->arms);
             				}
-HXLINE( 357)				this->arms = ( ( ::util::mechanica::ArmUnits)(part) );
+HXLINE( 352)				this->arms = ( ( ::util::mechanica::ArmUnits)(part) );
             			}
             			break;
             			case (int)3: {
-HXLINE( 361)				if (hx::IsNotNull( this->legs )) {
-HXLINE( 361)					this->remove(this->legs);
+HXLINE( 356)				if (hx::IsNotNull( this->legs )) {
+HXLINE( 356)					this->remove(this->legs);
             				}
-HXLINE( 362)				this->legs = ( ( ::util::mechanica::LegUnits)(part) );
+HXLINE( 357)				this->legs = ( ( ::util::mechanica::LegUnits)(part) );
             			}
             			break;
             			case (int)4: {
-HXLINE( 366)				if (hx::IsNotNull( this->thruster )) {
-HXLINE( 366)					this->remove(this->thruster);
+HXLINE( 361)				if (hx::IsNotNull( this->thruster )) {
+HXLINE( 361)					this->remove(this->thruster);
             				}
-HXLINE( 367)				this->thruster = ( ( ::util::mechanica::ThrusterUnit)(part) );
+HXLINE( 362)				this->thruster = ( ( ::util::mechanica::ThrusterUnit)(part) );
             			}
             			break;
             			case (int)5: {
-HXLINE( 371)				if (hx::IsNotNull( this->equip1 )) {
-HXLINE( 371)					this->remove(this->equip1);
+HXLINE( 366)				if (hx::IsNotNull( this->equip1 )) {
+HXLINE( 366)					this->remove(this->equip1);
             				}
-HXLINE( 372)				this->equip1 = ( ( ::util::mechanica::FirearmUnit)(part) );
-HXLINE( 373)				this->equip1->setOffset((int)8,(int)0);
-HXLINE( 374)				this->equip1->setup(hx::ObjectPtr<OBJ_>(this));
+HXLINE( 367)				this->equip1 = ( ( ::util::mechanica::FirearmUnit)(part) );
+HXLINE( 368)				this->equip1->setOffset((int)8,(int)0);
+HXLINE( 369)				this->equip1->setup(hx::ObjectPtr<OBJ_>(this));
             			}
             			break;
             			case (int)6: {
-HXLINE( 378)				if (hx::IsNotNull( this->equip2 )) {
-HXLINE( 378)					this->remove(this->equip2);
+HXLINE( 373)				if (hx::IsNotNull( this->equip2 )) {
+HXLINE( 373)					this->remove(this->equip2);
             				}
-HXLINE( 379)				this->equip2 = ( ( ::util::mechanica::FirearmUnit)(part) );
-HXLINE( 380)				this->equip2->setOffset((int)24,(int)0);
-HXLINE( 381)				this->equip2->set_flipX(true);
-HXLINE( 382)				this->equip2->setup(hx::ObjectPtr<OBJ_>(this));
+HXLINE( 374)				this->equip2 = ( ( ::util::mechanica::FirearmUnit)(part) );
+HXLINE( 375)				this->equip2->setOffset((int)24,(int)0);
+HXLINE( 376)				this->equip2->set_flipX(true);
+HXLINE( 377)				this->equip2->setup(hx::ObjectPtr<OBJ_>(this));
             			}
             			break;
             		}
-HXLINE( 387)		this->add(( ( ::flixel::addons::display::FlxNestedSprite)(part) ));
-HXLINE( 388)		return true;
+HXLINE( 382)		this->add(( ( ::flixel::addons::display::FlxNestedSprite)(part) ));
+HXLINE( 383)		return true;
             	}
 
 
 HX_DEFINE_DYNAMIC_FUNC2(Mechanica_obj,equip,return )
 
 ::String Mechanica_obj::makeToString(int make){
-            	HX_STACKFRAME(&_hx_pos_701213084e7812bf_330_makeToString)
-HXDLIN( 330)		if ((make == (int)0)) {
-HXLINE( 333)			return HX_("HYSPD",96,02,ed,af);
+            	HX_STACKFRAME(&_hx_pos_701213084e7812bf_325_makeToString)
+HXDLIN( 325)		if ((make == (int)0)) {
+HXLINE( 328)			return HX_("HYSPD",96,02,ed,af);
             		}
             		else {
-HXLINE( 335)			return HX_("HYSPD",96,02,ed,af);
+HXLINE( 330)			return HX_("HYSPD",96,02,ed,af);
             		}
-HXLINE( 330)		return null();
+HXLINE( 325)		return null();
             	}
 
 

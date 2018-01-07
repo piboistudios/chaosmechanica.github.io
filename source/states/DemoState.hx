@@ -8,14 +8,16 @@ import flixel.FlxG;
 //import flixel.system.debug.FlxDebugger;
 import flixel.system.debug.watch.Tracker;
 import math.MoreMath;
+import flixel.math.FlxMath;
 import util.interfaces.ICollider;
 import util.mechanica.Mechanica;
 import flixel.tile.FlxTilemap;
+import haxe.io.Bytes;
+import haxe.io.BytesInput;
 import util.control.Controller;
 //import flixel.math.FlxPoint;
 import flixel.addons.display.FlxZoomCamera;
 //import flixel.math.FlxMath;
-import flixel.FlxSprite;
 
 class DemoState extends FlxState
 {
@@ -78,6 +80,7 @@ class DemoState extends FlxState
         FlxG.debugger.track(playerMech);
         //setup commands
         FlxG.console.registerClass(Global);
+        FlxG.console.registerObject("socket", Global.socket);
         registerMechanicaParts();
         
     }
@@ -99,10 +102,47 @@ class DemoState extends FlxState
       //  FlxG.camera.angle = MoreMath.wrapAngle(FlxG.camera.angle);
         //FlxG.camera.setPosition(mechanica.x,mechanica.y);//FlxPoint.weak(mechanica.x, mechanica.y));
         FlxG.collide(Global.colliders, map);
+        clientTest();
+        serverTest();
+
+
         
     
         
        // FlxG.camera.angle = -playerMech.angle;
+    }
+    private function serverTest():Void
+    {
+        if(!Global.server)return;
+        getAndDoData();
+     //   sendOff();
+    }
+    private function getAndDoData():Void
+    {
+        var bytes = Bytes.alloc(80);
+        var dataLen = Global.socket.receive(bytes);
+        if(dataLen <= 4) return;
+        var iStream = new BytesInput(bytes);
+        var _data = Xml.parse(iStream.readString(dataLen)).firstElement();
+        //FlxG.log.advanced(iStream.readString(dataLen), Global.logStyle);
+        playerMech.x = Std.parseFloat(_data.get("x"));
+        playerMech.y = Std.parseFloat(_data.get("y"));
+        playerMech.angle = Std.parseFloat(_data.get("angle"));
+    }
+    private function clientTest():Void
+        {
+            if(Global.server)return;
+            sendOff();
+           // getAndDoData();
+        }
+    private function sendOff():Void
+    {
+        var message = "<netpos x=\"" + 
+            Std.string(FlxMath.roundDecimal(playerMech.x,2)) + 
+            "\" y=\"" + Std.string(FlxMath.roundDecimal(playerMech.y, 2)) + 
+            "\" angle=\"" + Std.string(FlxMath.roundDecimal(playerMech.angle,2)) +
+             "\" />";
+            Global.socket.sendAll(Bytes.ofString(message));
     }
     private function collision(col1:Dynamic, col2:Dynamic):Void
     {

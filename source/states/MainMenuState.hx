@@ -15,6 +15,8 @@ class MainMenuState extends FlxUIState
 	{
 		_xml_id = "main_menu";
 		super.create();
+
+		FlxG.autoPause = false;
 		//code adapted from: https://translate.google.com/translate?hl=en&sl=ja&u=http://haxeflixel.2dgames.jp/index.php%3FCastleDB%252FHaxe&prev=search
 		if(!dataLoaded)
 		{
@@ -26,7 +28,19 @@ class MainMenuState extends FlxUIState
 
 			dataLoaded = true;
 			setupDebugger();
+	//		#if debug
+			FlxG.log.advanced("Attempting to create UDP socket", Global.logStyle);
 			
+			try
+			{
+				Global.socket = new lib.hxudp.UdpSocket();
+				Global.socket.create();
+			}
+			catch(E:Dynamic){
+				FlxG.log.advanced("Socket creation failed! Unknown exception!");
+				return;
+			}
+			FlxG.log.advanced("Socket created successfully!");
 		}
 		
 		
@@ -50,7 +64,14 @@ class MainMenuState extends FlxUIState
 					{
 						case "build_schematic":
 							FlxG.switchState(new BuildSchematicState());
-						
+						case "server":
+							Global.socket.bindMcast("127.0.0.1",1026);
+							Global.socket.connectMcast("127.0.0.1", 1026);
+							Global.server = true;
+						case "client":
+							Global.socket.bindMcast("127.0.0.1",1026);
+							Global.socket.connectMcast("127.0.0.1", 1026);
+
 					}
 					
 			}

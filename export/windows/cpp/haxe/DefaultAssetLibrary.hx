@@ -670,42 +670,42 @@ class DefaultAssetLibrary extends AssetLibrary {
 #if (windows || mac || linux)
 
 
-@:sound("C:/Users/Dell/flixel/4,3,0/assets/sounds/beep.ogg") @:keep #if display private #end class __ASSET__flixel_sounds_beep_ogg extends flash.media.Sound {}
-@:sound("C:/Users/Dell/flixel/4,3,0/assets/sounds/flixel.ogg") @:keep #if display private #end class __ASSET__flixel_sounds_flixel_ogg extends flash.media.Sound {}
-@:font("C:/Users/Dell/flixel/4,3,0/assets/fonts/nokiafc22.ttf") @:keep #if display private #end class __ASSET__flixel_fonts_nokiafc22_ttf extends flash.text.Font {}
-@:font("C:/Users/Dell/flixel/4,3,0/assets/fonts/monsterrat.ttf") @:keep #if display private #end class __ASSET__flixel_fonts_monsterrat_ttf extends flash.text.Font {}
-@:bitmap("C:/Users/Dell/flixel/4,3,0/assets/images/ui/button.png") @:keep #if display private #end class __ASSET__flixel_images_ui_button_png extends flash.display.BitmapData {}
-@:bitmap("C:/Users/Dell/flixel/4,3,0/assets/images/logo/default.png") @:keep #if display private #end class __ASSET__flixel_images_logo_default_png extends flash.display.BitmapData {}
-@:bitmap("C:/Users/Dell/flixel-ui/2,2,0/assets/images/box.png") @:keep #if display private #end class __ASSET__flixel_flixel_ui_img_box_png extends flash.display.BitmapData {}
-@:bitmap("C:/Users/Dell/flixel-ui/2,2,0/assets/images/button.png") @:keep #if display private #end class __ASSET__flixel_flixel_ui_img_button_png extends flash.display.BitmapData {}
-@:bitmap("C:/Users/Dell/flixel-ui/2,2,0/assets/images/button_arrow_down.png") @:keep #if display private #end class __ASSET__flixel_flixel_ui_img_button_arrow_down_png extends flash.display.BitmapData {}
-@:bitmap("C:/Users/Dell/flixel-ui/2,2,0/assets/images/button_arrow_left.png") @:keep #if display private #end class __ASSET__flixel_flixel_ui_img_button_arrow_left_png extends flash.display.BitmapData {}
-@:bitmap("C:/Users/Dell/flixel-ui/2,2,0/assets/images/button_arrow_right.png") @:keep #if display private #end class __ASSET__flixel_flixel_ui_img_button_arrow_right_png extends flash.display.BitmapData {}
-@:bitmap("C:/Users/Dell/flixel-ui/2,2,0/assets/images/button_arrow_up.png") @:keep #if display private #end class __ASSET__flixel_flixel_ui_img_button_arrow_up_png extends flash.display.BitmapData {}
-@:bitmap("C:/Users/Dell/flixel-ui/2,2,0/assets/images/button_thin.png") @:keep #if display private #end class __ASSET__flixel_flixel_ui_img_button_thin_png extends flash.display.BitmapData {}
-@:bitmap("C:/Users/Dell/flixel-ui/2,2,0/assets/images/button_toggle.png") @:keep #if display private #end class __ASSET__flixel_flixel_ui_img_button_toggle_png extends flash.display.BitmapData {}
-@:bitmap("C:/Users/Dell/flixel-ui/2,2,0/assets/images/check_box.png") @:keep #if display private #end class __ASSET__flixel_flixel_ui_img_check_box_png extends flash.display.BitmapData {}
-@:bitmap("C:/Users/Dell/flixel-ui/2,2,0/assets/images/check_mark.png") @:keep #if display private #end class __ASSET__flixel_flixel_ui_img_check_mark_png extends flash.display.BitmapData {}
-@:bitmap("C:/Users/Dell/flixel-ui/2,2,0/assets/images/chrome.png") @:keep #if display private #end class __ASSET__flixel_flixel_ui_img_chrome_png extends flash.display.BitmapData {}
-@:bitmap("C:/Users/Dell/flixel-ui/2,2,0/assets/images/chrome_flat.png") @:keep #if display private #end class __ASSET__flixel_flixel_ui_img_chrome_flat_png extends flash.display.BitmapData {}
-@:bitmap("C:/Users/Dell/flixel-ui/2,2,0/assets/images/chrome_inset.png") @:keep #if display private #end class __ASSET__flixel_flixel_ui_img_chrome_inset_png extends flash.display.BitmapData {}
-@:bitmap("C:/Users/Dell/flixel-ui/2,2,0/assets/images/chrome_light.png") @:keep #if display private #end class __ASSET__flixel_flixel_ui_img_chrome_light_png extends flash.display.BitmapData {}
-@:bitmap("C:/Users/Dell/flixel-ui/2,2,0/assets/images/dropdown_mark.png") @:keep #if display private #end class __ASSET__flixel_flixel_ui_img_dropdown_mark_png extends flash.display.BitmapData {}
-@:bitmap("C:/Users/Dell/flixel-ui/2,2,0/assets/images/finger_big.png") @:keep #if display private #end class __ASSET__flixel_flixel_ui_img_finger_big_png extends flash.display.BitmapData {}
-@:bitmap("C:/Users/Dell/flixel-ui/2,2,0/assets/images/finger_small.png") @:keep #if display private #end class __ASSET__flixel_flixel_ui_img_finger_small_png extends flash.display.BitmapData {}
-@:bitmap("C:/Users/Dell/flixel-ui/2,2,0/assets/images/hilight.png") @:keep #if display private #end class __ASSET__flixel_flixel_ui_img_hilight_png extends flash.display.BitmapData {}
-@:bitmap("C:/Users/Dell/flixel-ui/2,2,0/assets/images/invis.png") @:keep #if display private #end class __ASSET__flixel_flixel_ui_img_invis_png extends flash.display.BitmapData {}
-@:bitmap("C:/Users/Dell/flixel-ui/2,2,0/assets/images/minus_mark.png") @:keep #if display private #end class __ASSET__flixel_flixel_ui_img_minus_mark_png extends flash.display.BitmapData {}
-@:bitmap("C:/Users/Dell/flixel-ui/2,2,0/assets/images/plus_mark.png") @:keep #if display private #end class __ASSET__flixel_flixel_ui_img_plus_mark_png extends flash.display.BitmapData {}
-@:bitmap("C:/Users/Dell/flixel-ui/2,2,0/assets/images/radio.png") @:keep #if display private #end class __ASSET__flixel_flixel_ui_img_radio_png extends flash.display.BitmapData {}
-@:bitmap("C:/Users/Dell/flixel-ui/2,2,0/assets/images/radio_dot.png") @:keep #if display private #end class __ASSET__flixel_flixel_ui_img_radio_dot_png extends flash.display.BitmapData {}
-@:bitmap("C:/Users/Dell/flixel-ui/2,2,0/assets/images/swatch.png") @:keep #if display private #end class __ASSET__flixel_flixel_ui_img_swatch_png extends flash.display.BitmapData {}
-@:bitmap("C:/Users/Dell/flixel-ui/2,2,0/assets/images/tab.png") @:keep #if display private #end class __ASSET__flixel_flixel_ui_img_tab_png extends flash.display.BitmapData {}
-@:bitmap("C:/Users/Dell/flixel-ui/2,2,0/assets/images/tab_back.png") @:keep #if display private #end class __ASSET__flixel_flixel_ui_img_tab_back_png extends flash.display.BitmapData {}
-@:bitmap("C:/Users/Dell/flixel-ui/2,2,0/assets/images/tooltip_arrow.png") @:keep #if display private #end class __ASSET__flixel_flixel_ui_img_tooltip_arrow_png extends flash.display.BitmapData {}
-@:file("C:/Users/Dell/flixel-ui/2,2,0/assets/xml/defaults.xml") @:keep #if display private #end class __ASSET__flixel_flixel_ui_xml_defaults_xml extends flash.utils.ByteArray {}
-@:file("C:/Users/Dell/flixel-ui/2,2,0/assets/xml/default_loading_screen.xml") @:keep #if display private #end class __ASSET__flixel_flixel_ui_xml_default_loading_screen_xml extends flash.utils.ByteArray {}
-@:file("C:/Users/Dell/flixel-ui/2,2,0/assets/xml/default_popup.xml") @:keep #if display private #end class __ASSET__flixel_flixel_ui_xml_default_popup_xml extends flash.utils.ByteArray {}
+@:sound("C:/users/dell/flixel/4,3,0/assets/sounds/beep.ogg") @:keep #if display private #end class __ASSET__flixel_sounds_beep_ogg extends flash.media.Sound {}
+@:sound("C:/users/dell/flixel/4,3,0/assets/sounds/flixel.ogg") @:keep #if display private #end class __ASSET__flixel_sounds_flixel_ogg extends flash.media.Sound {}
+@:font("C:/users/dell/flixel/4,3,0/assets/fonts/nokiafc22.ttf") @:keep #if display private #end class __ASSET__flixel_fonts_nokiafc22_ttf extends flash.text.Font {}
+@:font("C:/users/dell/flixel/4,3,0/assets/fonts/monsterrat.ttf") @:keep #if display private #end class __ASSET__flixel_fonts_monsterrat_ttf extends flash.text.Font {}
+@:bitmap("C:/users/dell/flixel/4,3,0/assets/images/ui/button.png") @:keep #if display private #end class __ASSET__flixel_images_ui_button_png extends flash.display.BitmapData {}
+@:bitmap("C:/users/dell/flixel/4,3,0/assets/images/logo/default.png") @:keep #if display private #end class __ASSET__flixel_images_logo_default_png extends flash.display.BitmapData {}
+@:bitmap("C:/users/dell/flixel-ui/2,2,0/assets/images/box.png") @:keep #if display private #end class __ASSET__flixel_flixel_ui_img_box_png extends flash.display.BitmapData {}
+@:bitmap("C:/users/dell/flixel-ui/2,2,0/assets/images/button.png") @:keep #if display private #end class __ASSET__flixel_flixel_ui_img_button_png extends flash.display.BitmapData {}
+@:bitmap("C:/users/dell/flixel-ui/2,2,0/assets/images/button_arrow_down.png") @:keep #if display private #end class __ASSET__flixel_flixel_ui_img_button_arrow_down_png extends flash.display.BitmapData {}
+@:bitmap("C:/users/dell/flixel-ui/2,2,0/assets/images/button_arrow_left.png") @:keep #if display private #end class __ASSET__flixel_flixel_ui_img_button_arrow_left_png extends flash.display.BitmapData {}
+@:bitmap("C:/users/dell/flixel-ui/2,2,0/assets/images/button_arrow_right.png") @:keep #if display private #end class __ASSET__flixel_flixel_ui_img_button_arrow_right_png extends flash.display.BitmapData {}
+@:bitmap("C:/users/dell/flixel-ui/2,2,0/assets/images/button_arrow_up.png") @:keep #if display private #end class __ASSET__flixel_flixel_ui_img_button_arrow_up_png extends flash.display.BitmapData {}
+@:bitmap("C:/users/dell/flixel-ui/2,2,0/assets/images/button_thin.png") @:keep #if display private #end class __ASSET__flixel_flixel_ui_img_button_thin_png extends flash.display.BitmapData {}
+@:bitmap("C:/users/dell/flixel-ui/2,2,0/assets/images/button_toggle.png") @:keep #if display private #end class __ASSET__flixel_flixel_ui_img_button_toggle_png extends flash.display.BitmapData {}
+@:bitmap("C:/users/dell/flixel-ui/2,2,0/assets/images/check_box.png") @:keep #if display private #end class __ASSET__flixel_flixel_ui_img_check_box_png extends flash.display.BitmapData {}
+@:bitmap("C:/users/dell/flixel-ui/2,2,0/assets/images/check_mark.png") @:keep #if display private #end class __ASSET__flixel_flixel_ui_img_check_mark_png extends flash.display.BitmapData {}
+@:bitmap("C:/users/dell/flixel-ui/2,2,0/assets/images/chrome.png") @:keep #if display private #end class __ASSET__flixel_flixel_ui_img_chrome_png extends flash.display.BitmapData {}
+@:bitmap("C:/users/dell/flixel-ui/2,2,0/assets/images/chrome_flat.png") @:keep #if display private #end class __ASSET__flixel_flixel_ui_img_chrome_flat_png extends flash.display.BitmapData {}
+@:bitmap("C:/users/dell/flixel-ui/2,2,0/assets/images/chrome_inset.png") @:keep #if display private #end class __ASSET__flixel_flixel_ui_img_chrome_inset_png extends flash.display.BitmapData {}
+@:bitmap("C:/users/dell/flixel-ui/2,2,0/assets/images/chrome_light.png") @:keep #if display private #end class __ASSET__flixel_flixel_ui_img_chrome_light_png extends flash.display.BitmapData {}
+@:bitmap("C:/users/dell/flixel-ui/2,2,0/assets/images/dropdown_mark.png") @:keep #if display private #end class __ASSET__flixel_flixel_ui_img_dropdown_mark_png extends flash.display.BitmapData {}
+@:bitmap("C:/users/dell/flixel-ui/2,2,0/assets/images/finger_big.png") @:keep #if display private #end class __ASSET__flixel_flixel_ui_img_finger_big_png extends flash.display.BitmapData {}
+@:bitmap("C:/users/dell/flixel-ui/2,2,0/assets/images/finger_small.png") @:keep #if display private #end class __ASSET__flixel_flixel_ui_img_finger_small_png extends flash.display.BitmapData {}
+@:bitmap("C:/users/dell/flixel-ui/2,2,0/assets/images/hilight.png") @:keep #if display private #end class __ASSET__flixel_flixel_ui_img_hilight_png extends flash.display.BitmapData {}
+@:bitmap("C:/users/dell/flixel-ui/2,2,0/assets/images/invis.png") @:keep #if display private #end class __ASSET__flixel_flixel_ui_img_invis_png extends flash.display.BitmapData {}
+@:bitmap("C:/users/dell/flixel-ui/2,2,0/assets/images/minus_mark.png") @:keep #if display private #end class __ASSET__flixel_flixel_ui_img_minus_mark_png extends flash.display.BitmapData {}
+@:bitmap("C:/users/dell/flixel-ui/2,2,0/assets/images/plus_mark.png") @:keep #if display private #end class __ASSET__flixel_flixel_ui_img_plus_mark_png extends flash.display.BitmapData {}
+@:bitmap("C:/users/dell/flixel-ui/2,2,0/assets/images/radio.png") @:keep #if display private #end class __ASSET__flixel_flixel_ui_img_radio_png extends flash.display.BitmapData {}
+@:bitmap("C:/users/dell/flixel-ui/2,2,0/assets/images/radio_dot.png") @:keep #if display private #end class __ASSET__flixel_flixel_ui_img_radio_dot_png extends flash.display.BitmapData {}
+@:bitmap("C:/users/dell/flixel-ui/2,2,0/assets/images/swatch.png") @:keep #if display private #end class __ASSET__flixel_flixel_ui_img_swatch_png extends flash.display.BitmapData {}
+@:bitmap("C:/users/dell/flixel-ui/2,2,0/assets/images/tab.png") @:keep #if display private #end class __ASSET__flixel_flixel_ui_img_tab_png extends flash.display.BitmapData {}
+@:bitmap("C:/users/dell/flixel-ui/2,2,0/assets/images/tab_back.png") @:keep #if display private #end class __ASSET__flixel_flixel_ui_img_tab_back_png extends flash.display.BitmapData {}
+@:bitmap("C:/users/dell/flixel-ui/2,2,0/assets/images/tooltip_arrow.png") @:keep #if display private #end class __ASSET__flixel_flixel_ui_img_tooltip_arrow_png extends flash.display.BitmapData {}
+@:file("C:/users/dell/flixel-ui/2,2,0/assets/xml/defaults.xml") @:keep #if display private #end class __ASSET__flixel_flixel_ui_xml_defaults_xml extends flash.utils.ByteArray {}
+@:file("C:/users/dell/flixel-ui/2,2,0/assets/xml/default_loading_screen.xml") @:keep #if display private #end class __ASSET__flixel_flixel_ui_xml_default_loading_screen_xml extends flash.utils.ByteArray {}
+@:file("C:/users/dell/flixel-ui/2,2,0/assets/xml/default_popup.xml") @:keep #if display private #end class __ASSET__flixel_flixel_ui_xml_default_popup_xml extends flash.utils.ByteArray {}
 
 
 
@@ -2238,42 +2238,42 @@ class DefaultAssetLibrary extends AssetLibrary {
 #if (windows || mac || linux || cpp)
 
 
-@:file("C:/Users/Dell/flixel/4,3,0/assets/sounds/beep.ogg") #if display private #end class __ASSET__flixel_sounds_beep_ogg extends lime.utils.ByteArray {}
-@:file("C:/Users/Dell/flixel/4,3,0/assets/sounds/flixel.ogg") #if display private #end class __ASSET__flixel_sounds_flixel_ogg extends lime.utils.ByteArray {}
-@:font("C:/Users/Dell/flixel/4,3,0/assets/fonts/nokiafc22.ttf") #if display private #end class __ASSET__flixel_fonts_nokiafc22_ttf extends lime.text.Font {}
-@:font("C:/Users/Dell/flixel/4,3,0/assets/fonts/monsterrat.ttf") #if display private #end class __ASSET__flixel_fonts_monsterrat_ttf extends lime.text.Font {}
-@:image("C:/Users/Dell/flixel/4,3,0/assets/images/ui/button.png") #if display private #end class __ASSET__flixel_images_ui_button_png extends lime.graphics.Image {}
-@:image("C:/Users/Dell/flixel/4,3,0/assets/images/logo/default.png") #if display private #end class __ASSET__flixel_images_logo_default_png extends lime.graphics.Image {}
-@:image("C:/Users/Dell/flixel-ui/2,2,0/assets/images/box.png") #if display private #end class __ASSET__flixel_flixel_ui_img_box_png extends lime.graphics.Image {}
-@:image("C:/Users/Dell/flixel-ui/2,2,0/assets/images/button.png") #if display private #end class __ASSET__flixel_flixel_ui_img_button_png extends lime.graphics.Image {}
-@:image("C:/Users/Dell/flixel-ui/2,2,0/assets/images/button_arrow_down.png") #if display private #end class __ASSET__flixel_flixel_ui_img_button_arrow_down_png extends lime.graphics.Image {}
-@:image("C:/Users/Dell/flixel-ui/2,2,0/assets/images/button_arrow_left.png") #if display private #end class __ASSET__flixel_flixel_ui_img_button_arrow_left_png extends lime.graphics.Image {}
-@:image("C:/Users/Dell/flixel-ui/2,2,0/assets/images/button_arrow_right.png") #if display private #end class __ASSET__flixel_flixel_ui_img_button_arrow_right_png extends lime.graphics.Image {}
-@:image("C:/Users/Dell/flixel-ui/2,2,0/assets/images/button_arrow_up.png") #if display private #end class __ASSET__flixel_flixel_ui_img_button_arrow_up_png extends lime.graphics.Image {}
-@:image("C:/Users/Dell/flixel-ui/2,2,0/assets/images/button_thin.png") #if display private #end class __ASSET__flixel_flixel_ui_img_button_thin_png extends lime.graphics.Image {}
-@:image("C:/Users/Dell/flixel-ui/2,2,0/assets/images/button_toggle.png") #if display private #end class __ASSET__flixel_flixel_ui_img_button_toggle_png extends lime.graphics.Image {}
-@:image("C:/Users/Dell/flixel-ui/2,2,0/assets/images/check_box.png") #if display private #end class __ASSET__flixel_flixel_ui_img_check_box_png extends lime.graphics.Image {}
-@:image("C:/Users/Dell/flixel-ui/2,2,0/assets/images/check_mark.png") #if display private #end class __ASSET__flixel_flixel_ui_img_check_mark_png extends lime.graphics.Image {}
-@:image("C:/Users/Dell/flixel-ui/2,2,0/assets/images/chrome.png") #if display private #end class __ASSET__flixel_flixel_ui_img_chrome_png extends lime.graphics.Image {}
-@:image("C:/Users/Dell/flixel-ui/2,2,0/assets/images/chrome_flat.png") #if display private #end class __ASSET__flixel_flixel_ui_img_chrome_flat_png extends lime.graphics.Image {}
-@:image("C:/Users/Dell/flixel-ui/2,2,0/assets/images/chrome_inset.png") #if display private #end class __ASSET__flixel_flixel_ui_img_chrome_inset_png extends lime.graphics.Image {}
-@:image("C:/Users/Dell/flixel-ui/2,2,0/assets/images/chrome_light.png") #if display private #end class __ASSET__flixel_flixel_ui_img_chrome_light_png extends lime.graphics.Image {}
-@:image("C:/Users/Dell/flixel-ui/2,2,0/assets/images/dropdown_mark.png") #if display private #end class __ASSET__flixel_flixel_ui_img_dropdown_mark_png extends lime.graphics.Image {}
-@:image("C:/Users/Dell/flixel-ui/2,2,0/assets/images/finger_big.png") #if display private #end class __ASSET__flixel_flixel_ui_img_finger_big_png extends lime.graphics.Image {}
-@:image("C:/Users/Dell/flixel-ui/2,2,0/assets/images/finger_small.png") #if display private #end class __ASSET__flixel_flixel_ui_img_finger_small_png extends lime.graphics.Image {}
-@:image("C:/Users/Dell/flixel-ui/2,2,0/assets/images/hilight.png") #if display private #end class __ASSET__flixel_flixel_ui_img_hilight_png extends lime.graphics.Image {}
-@:image("C:/Users/Dell/flixel-ui/2,2,0/assets/images/invis.png") #if display private #end class __ASSET__flixel_flixel_ui_img_invis_png extends lime.graphics.Image {}
-@:image("C:/Users/Dell/flixel-ui/2,2,0/assets/images/minus_mark.png") #if display private #end class __ASSET__flixel_flixel_ui_img_minus_mark_png extends lime.graphics.Image {}
-@:image("C:/Users/Dell/flixel-ui/2,2,0/assets/images/plus_mark.png") #if display private #end class __ASSET__flixel_flixel_ui_img_plus_mark_png extends lime.graphics.Image {}
-@:image("C:/Users/Dell/flixel-ui/2,2,0/assets/images/radio.png") #if display private #end class __ASSET__flixel_flixel_ui_img_radio_png extends lime.graphics.Image {}
-@:image("C:/Users/Dell/flixel-ui/2,2,0/assets/images/radio_dot.png") #if display private #end class __ASSET__flixel_flixel_ui_img_radio_dot_png extends lime.graphics.Image {}
-@:image("C:/Users/Dell/flixel-ui/2,2,0/assets/images/swatch.png") #if display private #end class __ASSET__flixel_flixel_ui_img_swatch_png extends lime.graphics.Image {}
-@:image("C:/Users/Dell/flixel-ui/2,2,0/assets/images/tab.png") #if display private #end class __ASSET__flixel_flixel_ui_img_tab_png extends lime.graphics.Image {}
-@:image("C:/Users/Dell/flixel-ui/2,2,0/assets/images/tab_back.png") #if display private #end class __ASSET__flixel_flixel_ui_img_tab_back_png extends lime.graphics.Image {}
-@:image("C:/Users/Dell/flixel-ui/2,2,0/assets/images/tooltip_arrow.png") #if display private #end class __ASSET__flixel_flixel_ui_img_tooltip_arrow_png extends lime.graphics.Image {}
-@:file("C:/Users/Dell/flixel-ui/2,2,0/assets/xml/defaults.xml") #if display private #end class __ASSET__flixel_flixel_ui_xml_defaults_xml extends lime.utils.ByteArray {}
-@:file("C:/Users/Dell/flixel-ui/2,2,0/assets/xml/default_loading_screen.xml") #if display private #end class __ASSET__flixel_flixel_ui_xml_default_loading_screen_xml extends lime.utils.ByteArray {}
-@:file("C:/Users/Dell/flixel-ui/2,2,0/assets/xml/default_popup.xml") #if display private #end class __ASSET__flixel_flixel_ui_xml_default_popup_xml extends lime.utils.ByteArray {}
+@:file("C:/users/dell/flixel/4,3,0/assets/sounds/beep.ogg") #if display private #end class __ASSET__flixel_sounds_beep_ogg extends lime.utils.ByteArray {}
+@:file("C:/users/dell/flixel/4,3,0/assets/sounds/flixel.ogg") #if display private #end class __ASSET__flixel_sounds_flixel_ogg extends lime.utils.ByteArray {}
+@:font("C:/users/dell/flixel/4,3,0/assets/fonts/nokiafc22.ttf") #if display private #end class __ASSET__flixel_fonts_nokiafc22_ttf extends lime.text.Font {}
+@:font("C:/users/dell/flixel/4,3,0/assets/fonts/monsterrat.ttf") #if display private #end class __ASSET__flixel_fonts_monsterrat_ttf extends lime.text.Font {}
+@:image("C:/users/dell/flixel/4,3,0/assets/images/ui/button.png") #if display private #end class __ASSET__flixel_images_ui_button_png extends lime.graphics.Image {}
+@:image("C:/users/dell/flixel/4,3,0/assets/images/logo/default.png") #if display private #end class __ASSET__flixel_images_logo_default_png extends lime.graphics.Image {}
+@:image("C:/users/dell/flixel-ui/2,2,0/assets/images/box.png") #if display private #end class __ASSET__flixel_flixel_ui_img_box_png extends lime.graphics.Image {}
+@:image("C:/users/dell/flixel-ui/2,2,0/assets/images/button.png") #if display private #end class __ASSET__flixel_flixel_ui_img_button_png extends lime.graphics.Image {}
+@:image("C:/users/dell/flixel-ui/2,2,0/assets/images/button_arrow_down.png") #if display private #end class __ASSET__flixel_flixel_ui_img_button_arrow_down_png extends lime.graphics.Image {}
+@:image("C:/users/dell/flixel-ui/2,2,0/assets/images/button_arrow_left.png") #if display private #end class __ASSET__flixel_flixel_ui_img_button_arrow_left_png extends lime.graphics.Image {}
+@:image("C:/users/dell/flixel-ui/2,2,0/assets/images/button_arrow_right.png") #if display private #end class __ASSET__flixel_flixel_ui_img_button_arrow_right_png extends lime.graphics.Image {}
+@:image("C:/users/dell/flixel-ui/2,2,0/assets/images/button_arrow_up.png") #if display private #end class __ASSET__flixel_flixel_ui_img_button_arrow_up_png extends lime.graphics.Image {}
+@:image("C:/users/dell/flixel-ui/2,2,0/assets/images/button_thin.png") #if display private #end class __ASSET__flixel_flixel_ui_img_button_thin_png extends lime.graphics.Image {}
+@:image("C:/users/dell/flixel-ui/2,2,0/assets/images/button_toggle.png") #if display private #end class __ASSET__flixel_flixel_ui_img_button_toggle_png extends lime.graphics.Image {}
+@:image("C:/users/dell/flixel-ui/2,2,0/assets/images/check_box.png") #if display private #end class __ASSET__flixel_flixel_ui_img_check_box_png extends lime.graphics.Image {}
+@:image("C:/users/dell/flixel-ui/2,2,0/assets/images/check_mark.png") #if display private #end class __ASSET__flixel_flixel_ui_img_check_mark_png extends lime.graphics.Image {}
+@:image("C:/users/dell/flixel-ui/2,2,0/assets/images/chrome.png") #if display private #end class __ASSET__flixel_flixel_ui_img_chrome_png extends lime.graphics.Image {}
+@:image("C:/users/dell/flixel-ui/2,2,0/assets/images/chrome_flat.png") #if display private #end class __ASSET__flixel_flixel_ui_img_chrome_flat_png extends lime.graphics.Image {}
+@:image("C:/users/dell/flixel-ui/2,2,0/assets/images/chrome_inset.png") #if display private #end class __ASSET__flixel_flixel_ui_img_chrome_inset_png extends lime.graphics.Image {}
+@:image("C:/users/dell/flixel-ui/2,2,0/assets/images/chrome_light.png") #if display private #end class __ASSET__flixel_flixel_ui_img_chrome_light_png extends lime.graphics.Image {}
+@:image("C:/users/dell/flixel-ui/2,2,0/assets/images/dropdown_mark.png") #if display private #end class __ASSET__flixel_flixel_ui_img_dropdown_mark_png extends lime.graphics.Image {}
+@:image("C:/users/dell/flixel-ui/2,2,0/assets/images/finger_big.png") #if display private #end class __ASSET__flixel_flixel_ui_img_finger_big_png extends lime.graphics.Image {}
+@:image("C:/users/dell/flixel-ui/2,2,0/assets/images/finger_small.png") #if display private #end class __ASSET__flixel_flixel_ui_img_finger_small_png extends lime.graphics.Image {}
+@:image("C:/users/dell/flixel-ui/2,2,0/assets/images/hilight.png") #if display private #end class __ASSET__flixel_flixel_ui_img_hilight_png extends lime.graphics.Image {}
+@:image("C:/users/dell/flixel-ui/2,2,0/assets/images/invis.png") #if display private #end class __ASSET__flixel_flixel_ui_img_invis_png extends lime.graphics.Image {}
+@:image("C:/users/dell/flixel-ui/2,2,0/assets/images/minus_mark.png") #if display private #end class __ASSET__flixel_flixel_ui_img_minus_mark_png extends lime.graphics.Image {}
+@:image("C:/users/dell/flixel-ui/2,2,0/assets/images/plus_mark.png") #if display private #end class __ASSET__flixel_flixel_ui_img_plus_mark_png extends lime.graphics.Image {}
+@:image("C:/users/dell/flixel-ui/2,2,0/assets/images/radio.png") #if display private #end class __ASSET__flixel_flixel_ui_img_radio_png extends lime.graphics.Image {}
+@:image("C:/users/dell/flixel-ui/2,2,0/assets/images/radio_dot.png") #if display private #end class __ASSET__flixel_flixel_ui_img_radio_dot_png extends lime.graphics.Image {}
+@:image("C:/users/dell/flixel-ui/2,2,0/assets/images/swatch.png") #if display private #end class __ASSET__flixel_flixel_ui_img_swatch_png extends lime.graphics.Image {}
+@:image("C:/users/dell/flixel-ui/2,2,0/assets/images/tab.png") #if display private #end class __ASSET__flixel_flixel_ui_img_tab_png extends lime.graphics.Image {}
+@:image("C:/users/dell/flixel-ui/2,2,0/assets/images/tab_back.png") #if display private #end class __ASSET__flixel_flixel_ui_img_tab_back_png extends lime.graphics.Image {}
+@:image("C:/users/dell/flixel-ui/2,2,0/assets/images/tooltip_arrow.png") #if display private #end class __ASSET__flixel_flixel_ui_img_tooltip_arrow_png extends lime.graphics.Image {}
+@:file("C:/users/dell/flixel-ui/2,2,0/assets/xml/defaults.xml") #if display private #end class __ASSET__flixel_flixel_ui_xml_defaults_xml extends lime.utils.ByteArray {}
+@:file("C:/users/dell/flixel-ui/2,2,0/assets/xml/default_loading_screen.xml") #if display private #end class __ASSET__flixel_flixel_ui_xml_default_loading_screen_xml extends lime.utils.ByteArray {}
+@:file("C:/users/dell/flixel-ui/2,2,0/assets/xml/default_popup.xml") #if display private #end class __ASSET__flixel_flixel_ui_xml_default_popup_xml extends lime.utils.ByteArray {}
 
 
 

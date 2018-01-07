@@ -23,6 +23,7 @@ HX_DECLARE_CLASS2(flixel,text,FlxText)
 HX_DECLARE_CLASS2(flixel,tile,FlxBaseTilemap)
 HX_DECLARE_CLASS2(flixel,tile,FlxTilemap)
 HX_DECLARE_CLASS2(flixel,util,IFlxDestroyable)
+HX_DECLARE_CLASS2(lib,hxudp,UdpSocket)
 HX_DECLARE_CLASS2(util,mechanica,MechGroup)
 
 
@@ -68,31 +69,21 @@ class HXCPP_CLASS_ATTRIBUTES Global_obj : public hx::Object
 		::String __ToString() const { return HX_HCSTRING("Global","\x83","\xa5","\x46","\xdc"); }
 
 		static void __boot();
-		static int findInList_dat_Part( ::Dynamic item,::Array< ::Dynamic> list);
-		static ::Dynamic findInList_dat_Part_dyn();
-
 		static  ::flixel::addons::ui::FlxUIText text;
 		static  ::Player player;
 		static  ::flixel::_hx_system::debug::log::LogStyle logStyle;
+		static bool server;
 		static Float speedScale;
 		static  ::flixel::group::FlxTypedSpriteGroup colliders;
 		static  ::flixel::tile::FlxTilemap map;
+		static  ::lib::hxudp::UdpSocket socket;
 		static  ::util::mechanica::MechGroup mechGroupA;
 		static  ::util::mechanica::MechGroup mechGroupB;
 		static void add( ::flixel::FlxSprite v);
 		static ::Dynamic add_dyn();
 
-		static void log(::String _text);
-		static ::Dynamic log_dyn();
-
 		static void setup();
 		static ::Dynamic setup_dyn();
-
-		static void setupDebugLogText( ::Dynamic initMessage);
-		static ::Dynamic setupDebugLogText_dyn();
-
-		static bool partExists(::String part);
-		static ::Dynamic partExists_dyn();
 
 };
 

@@ -42,7 +42,7 @@
 #endif
 
 HX_DEFINE_STACK_FRAME(_hx_pos_d5253f7ba6304495_6_new,"util.control.PlayerController","new",0x5669038c,"util.control.PlayerController.new","util/control/PlayerController.hx",6,0x6d7431a2)
-HX_LOCAL_STACK_FRAME(_hx_pos_d5253f7ba6304495_25_populateBuffer,"util.control.PlayerController","populateBuffer",0x505a7fde,"util.control.PlayerController.populateBuffer","util/control/PlayerController.hx",25,0x6d7431a2)
+HX_LOCAL_STACK_FRAME(_hx_pos_d5253f7ba6304495_25_retrieveInputs,"util.control.PlayerController","retrieveInputs",0xe936dd19,"util.control.PlayerController.retrieveInputs","util/control/PlayerController.hx",25,0x6d7431a2)
 static const int _hx_array_data_31ad8d9a_2[] = {
 	(int)38,(int)87,
 };
@@ -59,14 +59,16 @@ static const int _hx_array_data_31ad8d9a_6[] = {
 	(int)32,(int)70,
 };
 static const int _hx_array_data_31ad8d9a_7[] = {
-	(int)90,(int)74,
+	(int)90,(int)186,
 };
 static const int _hx_array_data_31ad8d9a_8[] = {
-	(int)75,(int)88,
+	(int)74,(int)67,
 };
 static const int _hx_array_data_31ad8d9a_9[] = {
-	(int)76,(int)67,
+	(int)75,(int)86,
 };
+HX_LOCAL_STACK_FRAME(_hx_pos_d5253f7ba6304495_36_populateBuffer,"util.control.PlayerController","populateBuffer",0x505a7fde,"util.control.PlayerController.populateBuffer","util/control/PlayerController.hx",36,0x6d7431a2)
+HX_LOCAL_STACK_FRAME(_hx_pos_d5253f7ba6304495_42_processInputs,"util.control.PlayerController","processInputs",0x8a2e3b24,"util.control.PlayerController.processInputs","util/control/PlayerController.hx",42,0x6d7431a2)
 namespace util{
 namespace control{
 
@@ -103,108 +105,124 @@ bool PlayerController_obj::_hx_isInstanceOf(int inClassId) {
 	}
 }
 
+void PlayerController_obj::retrieveInputs(){
+            	HX_STACKFRAME(&_hx_pos_d5253f7ba6304495_25_retrieveInputs)
+HXLINE(  26)		this->upInput = ::flixel::FlxG_obj::keys->checkKeyArrayState(::Array_obj< int >::fromData( _hx_array_data_31ad8d9a_2,2),(int)1);
+HXLINE(  27)		this->downInput = ::flixel::FlxG_obj::keys->checkKeyArrayState(::Array_obj< int >::fromData( _hx_array_data_31ad8d9a_3,2),(int)1);
+HXLINE(  28)		this->leftInput = ::flixel::FlxG_obj::keys->checkKeyArrayState(::Array_obj< int >::fromData( _hx_array_data_31ad8d9a_4,2),(int)1);
+HXLINE(  29)		this->rightInput = ::flixel::FlxG_obj::keys->checkKeyArrayState(::Array_obj< int >::fromData( _hx_array_data_31ad8d9a_5,2),(int)1);
+HXLINE(  30)		this->boostInput = ::flixel::FlxG_obj::keys->checkKeyArrayState(::Array_obj< int >::fromData( _hx_array_data_31ad8d9a_6,2),(int)1);
+HXLINE(  31)		this->strafeInput = ::flixel::FlxG_obj::keys->checkKeyArrayState(::Array_obj< int >::fromData( _hx_array_data_31ad8d9a_7,2),(int)1);
+HXLINE(  32)		this->fire1Input = ::flixel::FlxG_obj::keys->checkKeyArrayState(::Array_obj< int >::fromData( _hx_array_data_31ad8d9a_8,2),(int)1);
+HXLINE(  33)		this->fire2Input = ::flixel::FlxG_obj::keys->checkKeyArrayState(::Array_obj< int >::fromData( _hx_array_data_31ad8d9a_9,2),(int)1);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(PlayerController_obj,retrieveInputs,(void))
+
 void PlayerController_obj::populateBuffer(){
-            	HX_STACKFRAME(&_hx_pos_d5253f7ba6304495_25_populateBuffer)
-HXLINE(  26)		this->super::populateBuffer();
-HXLINE(  29)		this->upInput = ::flixel::FlxG_obj::keys->checkKeyArrayState(::Array_obj< int >::fromData( _hx_array_data_31ad8d9a_2,2),(int)1);
-HXLINE(  30)		this->downInput = ::flixel::FlxG_obj::keys->checkKeyArrayState(::Array_obj< int >::fromData( _hx_array_data_31ad8d9a_3,2),(int)1);
-HXLINE(  31)		this->leftInput = ::flixel::FlxG_obj::keys->checkKeyArrayState(::Array_obj< int >::fromData( _hx_array_data_31ad8d9a_4,2),(int)1);
-HXLINE(  32)		this->rightInput = ::flixel::FlxG_obj::keys->checkKeyArrayState(::Array_obj< int >::fromData( _hx_array_data_31ad8d9a_5,2),(int)1);
-HXLINE(  33)		this->boostInput = ::flixel::FlxG_obj::keys->checkKeyArrayState(::Array_obj< int >::fromData( _hx_array_data_31ad8d9a_6,2),(int)1);
-HXLINE(  34)		this->strafeInput = ::flixel::FlxG_obj::keys->checkKeyArrayState(::Array_obj< int >::fromData( _hx_array_data_31ad8d9a_7,2),(int)1);
-HXLINE(  35)		this->fire1Input = ::flixel::FlxG_obj::keys->checkKeyArrayState(::Array_obj< int >::fromData( _hx_array_data_31ad8d9a_8,2),(int)1);
-HXLINE(  36)		this->fire2Input = ::flixel::FlxG_obj::keys->checkKeyArrayState(::Array_obj< int >::fromData( _hx_array_data_31ad8d9a_9,2),(int)1);
-HXLINE(  41)		if (this->strafeInput) {
-HXLINE(  41)			this->bufferAction(HX_("strafe",cf,0f,2a,11),null(),null());
+            	HX_STACKFRAME(&_hx_pos_d5253f7ba6304495_36_populateBuffer)
+HXLINE(  37)		this->super::populateBuffer();
+HXLINE(  38)		this->retrieveInputs();
+HXLINE(  39)		this->processInputs();
+            	}
+
+
+void PlayerController_obj::processInputs(){
+            	HX_STACKFRAME(&_hx_pos_d5253f7ba6304495_42_processInputs)
+HXLINE(  43)		if (this->strafeInput) {
+HXLINE(  43)			this->bufferAction(HX_("strafe",cf,0f,2a,11),null(),null());
             		}
-HXLINE(  42)		if (this->fire1Input) {
-HXLINE(  44)			this->bufferAction(HX_("fire1",bb,6b,9d,00),null(),null());
+HXLINE(  44)		if (this->fire1Input) {
+HXLINE(  46)			this->bufferAction(HX_("fire1",bb,6b,9d,00),null(),null());
             		}
-HXLINE(  46)		if (this->fire2Input) {
-HXLINE(  48)			this->bufferAction(HX_("fire2",bc,6b,9d,00),null(),null());
+HXLINE(  48)		if (this->fire2Input) {
+HXLINE(  50)			this->bufferAction(HX_("fire2",bc,6b,9d,00),null(),null());
             		}
-HXLINE(  50)		bool _hx_tmp;
-HXDLIN(  50)		if (this->upInput) {
-HXLINE(  50)			_hx_tmp = this->downInput;
-            		}
-            		else {
-HXLINE(  50)			_hx_tmp = false;
-            		}
-HXDLIN(  50)		if (_hx_tmp) {
-HXLINE(  51)			this->upInput = (this->downInput = false);
-            		}
-HXLINE(  53)		bool _hx_tmp1;
-HXDLIN(  53)		if (this->leftInput) {
-HXLINE(  53)			_hx_tmp1 = this->rightInput;
+HXLINE(  52)		bool _hx_tmp;
+HXDLIN(  52)		if (this->upInput) {
+HXLINE(  52)			_hx_tmp = this->downInput;
             		}
             		else {
-HXLINE(  53)			_hx_tmp1 = false;
+HXLINE(  52)			_hx_tmp = false;
             		}
-HXDLIN(  53)		if (_hx_tmp1) {
-HXLINE(  54)			this->leftInput = (this->rightInput = false);
+HXDLIN(  52)		if (_hx_tmp) {
+HXLINE(  53)			this->upInput = (this->downInput = false);
             		}
-HXLINE(  58)		bool _hx_tmp2;
-HXDLIN(  58)		bool _hx_tmp3;
-HXDLIN(  58)		bool _hx_tmp4;
-HXDLIN(  58)		if (!(this->upInput)) {
-HXLINE(  58)			_hx_tmp4 = this->downInput;
+HXLINE(  55)		bool _hx_tmp1;
+HXDLIN(  55)		if (this->leftInput) {
+HXLINE(  55)			_hx_tmp1 = this->rightInput;
             		}
             		else {
-HXLINE(  58)			_hx_tmp4 = true;
+HXLINE(  55)			_hx_tmp1 = false;
             		}
-HXDLIN(  58)		if (!(_hx_tmp4)) {
-HXLINE(  58)			_hx_tmp3 = this->leftInput;
+HXDLIN(  55)		if (_hx_tmp1) {
+HXLINE(  56)			this->leftInput = (this->rightInput = false);
+            		}
+HXLINE(  60)		bool _hx_tmp2;
+HXDLIN(  60)		bool _hx_tmp3;
+HXDLIN(  60)		bool _hx_tmp4;
+HXDLIN(  60)		if (!(this->upInput)) {
+HXLINE(  60)			_hx_tmp4 = this->downInput;
             		}
             		else {
-HXLINE(  58)			_hx_tmp3 = true;
+HXLINE(  60)			_hx_tmp4 = true;
             		}
-HXDLIN(  58)		if (!(_hx_tmp3)) {
-HXLINE(  58)			_hx_tmp2 = this->rightInput;
+HXDLIN(  60)		if (!(_hx_tmp4)) {
+HXLINE(  60)			_hx_tmp3 = this->leftInput;
             		}
             		else {
-HXLINE(  58)			_hx_tmp2 = true;
+HXLINE(  60)			_hx_tmp3 = true;
             		}
-HXDLIN(  58)		if (_hx_tmp2) {
-HXLINE(  60)			if (this->upInput) {
-HXLINE(  60)				this->bufferAction(HX_("locomote",c2,a0,46,f0),HX_("direction",3f,62,40,10),HX_("-1",64,27,00,00))->set(HX_("axis",a1,1c,79,40),HX_("y",79,00,00,00));
+HXDLIN(  60)		if (!(_hx_tmp3)) {
+HXLINE(  60)			_hx_tmp2 = this->rightInput;
+            		}
+            		else {
+HXLINE(  60)			_hx_tmp2 = true;
+            		}
+HXDLIN(  60)		if (_hx_tmp2) {
+HXLINE(  62)			if (this->upInput) {
+HXLINE(  62)				this->bufferAction(HX_("locomote",c2,a0,46,f0),HX_("direction",3f,62,40,10),HX_("-1",64,27,00,00))->set(HX_("axis",a1,1c,79,40),HX_("y",79,00,00,00));
             			}
             			else {
-HXLINE(  61)				if (this->downInput) {
-HXLINE(  61)					this->bufferAction(HX_("locomote",c2,a0,46,f0),HX_("direction",3f,62,40,10),HX_("1",31,00,00,00))->set(HX_("axis",a1,1c,79,40),HX_("y",79,00,00,00));
+HXLINE(  63)				if (this->downInput) {
+HXLINE(  63)					this->bufferAction(HX_("locomote",c2,a0,46,f0),HX_("direction",3f,62,40,10),HX_("1",31,00,00,00))->set(HX_("axis",a1,1c,79,40),HX_("y",79,00,00,00));
             				}
             			}
-HXLINE(  62)			if (this->strafeInput) {
-HXLINE(  64)				if (this->leftInput) {
-HXLINE(  64)					this->bufferAction(HX_("locomote",c2,a0,46,f0),HX_("direction",3f,62,40,10),HX_("-1",64,27,00,00))->set(HX_("axis",a1,1c,79,40),HX_("x",78,00,00,00));
+HXLINE(  64)			if (this->strafeInput) {
+HXLINE(  66)				if (this->leftInput) {
+HXLINE(  66)					this->bufferAction(HX_("locomote",c2,a0,46,f0),HX_("direction",3f,62,40,10),HX_("-1",64,27,00,00))->set(HX_("axis",a1,1c,79,40),HX_("x",78,00,00,00));
             				}
-HXLINE(  65)				if (this->rightInput) {
-HXLINE(  65)					this->bufferAction(HX_("locomote",c2,a0,46,f0),HX_("direction",3f,62,40,10),HX_("1",31,00,00,00))->set(HX_("axis",a1,1c,79,40),HX_("x",78,00,00,00));
+HXLINE(  67)				if (this->rightInput) {
+HXLINE(  67)					this->bufferAction(HX_("locomote",c2,a0,46,f0),HX_("direction",3f,62,40,10),HX_("1",31,00,00,00))->set(HX_("axis",a1,1c,79,40),HX_("x",78,00,00,00));
             				}
             			}
             			else {
-HXLINE(  70)				if (this->leftInput) {
-HXLINE(  70)					this->bufferAction(HX_("steer",11,72,0e,84),HX_("direction",3f,62,40,10),HX_("-1",64,27,00,00));
+HXLINE(  72)				if (this->leftInput) {
+HXLINE(  72)					this->bufferAction(HX_("steer",11,72,0e,84),HX_("direction",3f,62,40,10),HX_("-1",64,27,00,00));
             				}
             				else {
-HXLINE(  71)					if (this->rightInput) {
-HXLINE(  71)						this->bufferAction(HX_("steer",11,72,0e,84),HX_("direction",3f,62,40,10),HX_("1",31,00,00,00));
+HXLINE(  73)					if (this->rightInput) {
+HXLINE(  73)						this->bufferAction(HX_("steer",11,72,0e,84),HX_("direction",3f,62,40,10),HX_("1",31,00,00,00));
             					}
             				}
             			}
             		}
             		else {
-HXLINE(  78)			this->bufferAction(HX_("locomote",c2,a0,46,f0),HX_("direction",3f,62,40,10),HX_("0",30,00,00,00));
-HXLINE(  79)			this->bufferAction(HX_("steer",11,72,0e,84),HX_("direction",3f,62,40,10),HX_("0",30,00,00,00));
-HXLINE(  80)			this->bufferAction(HX_("boost",23,27,f8,b6),HX_("mode",63,d3,60,48),HX_("shutoff",bb,11,25,ee));
+HXLINE(  80)			this->bufferAction(HX_("locomote",c2,a0,46,f0),HX_("direction",3f,62,40,10),HX_("0",30,00,00,00));
+HXLINE(  81)			this->bufferAction(HX_("steer",11,72,0e,84),HX_("direction",3f,62,40,10),HX_("0",30,00,00,00));
+HXLINE(  82)			this->bufferAction(HX_("boost",23,27,f8,b6),HX_("mode",63,d3,60,48),HX_("shutoff",bb,11,25,ee));
             		}
-HXLINE(  82)		if (this->boostInput) {
-HXLINE(  82)			this->bufferAction(HX_("boost",23,27,f8,b6),HX_("mode",63,d3,60,48),HX_("fire",b6,d3,bb,43));
+HXLINE(  84)		if (this->boostInput) {
+HXLINE(  84)			this->bufferAction(HX_("boost",23,27,f8,b6),HX_("mode",63,d3,60,48),HX_("fire",b6,d3,bb,43));
             		}
             		else {
-HXLINE(  83)			this->bufferAction(HX_("boost",23,27,f8,b6),HX_("mode",63,d3,60,48),HX_("shutoff",bb,11,25,ee));
+HXLINE(  85)			this->bufferAction(HX_("boost",23,27,f8,b6),HX_("mode",63,d3,60,48),HX_("shutoff",bb,11,25,ee));
             		}
             	}
 
+
+HX_DEFINE_DYNAMIC_FUNC0(PlayerController_obj,processInputs,(void))
 
 
 hx::ObjectPtr< PlayerController_obj > PlayerController_obj::__new() {
@@ -277,7 +295,11 @@ hx::Val PlayerController_obj::__Field(const ::String &inName,hx::PropertyAccess 
 	case 11:
 		if (HX_FIELD_EQ(inName,"strafeInput") ) { return hx::Val( strafeInput ); }
 		break;
+	case 13:
+		if (HX_FIELD_EQ(inName,"processInputs") ) { return hx::Val( processInputs_dyn() ); }
+		break;
 	case 14:
+		if (HX_FIELD_EQ(inName,"retrieveInputs") ) { return hx::Val( retrieveInputs_dyn() ); }
 		if (HX_FIELD_EQ(inName,"populateBuffer") ) { return hx::Val( populateBuffer_dyn() ); }
 	}
 	return super::__Field(inName,inCallProp);
@@ -350,7 +372,9 @@ static ::String PlayerController_obj_sMemberFields[] = {
 	HX_HCSTRING("fire2Input","\xae","\xbe","\x41","\x52"),
 	HX_HCSTRING("virtualPad","\x08","\x84","\xc7","\x60"),
 	HX_HCSTRING("PRESSED","\x82","\xa6","\xba","\xb9"),
+	HX_HCSTRING("retrieveInputs","\xc5","\x58","\x6e","\x11"),
 	HX_HCSTRING("populateBuffer","\x8a","\xfb","\x91","\x78"),
+	HX_HCSTRING("processInputs","\xf8","\xd8","\x40","\x72"),
 	::String(null()) };
 
 static void PlayerController_obj_sMarkStatics(HX_MARK_PARAMS) {
