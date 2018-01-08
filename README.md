@@ -2,7 +2,7 @@
 ## Intro
 Chaos Mechanica is a simple build-a-bot topdown shootem'up game.
 
-## Features
+## To-Do List
 - [X] Mech-customization (building assemblies/schematics)
 - [ ] Part-customization (paint jobs)
 - [X] Mech input processing utilizing a generic Controller which can be specialized for input from different sources (player, AI, network, etc)
